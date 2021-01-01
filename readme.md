@@ -3,7 +3,7 @@
  <img width=200px height=200px src="https://githubcampus.expert/assets/images/ce-flag.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Vanilla JavaScript App</h3>
+<h3 align="center">Pagina de mi portafolio</h3>
 
 <div align="center">
 
@@ -20,7 +20,7 @@
 
 <p align="center"> Url to the my try of website:
   <br>
-  https://icy-moss-0cdff5d10.azurestaticapps.net/
+  https://wonderful-glacier-0e7f31c10.azurestaticapps.net/
   <br>
 </p>
 
