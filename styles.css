@@ -48,10 +48,16 @@ text > h3 {
   font-size: 1.5em;
 }
 
-.my-image {
+.image {
   background-repeat: no-repeat;
   max-width: 45%;
   max-height: 45%;
+}
+
+#sennin {
+  background-repeat: no-repeat;
+  max-width: 25%;
+  max-height: 25%;
 }
 
 figure {
