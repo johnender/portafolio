@@ -18,7 +18,7 @@ header {
 
 main {
   margin: auto;
-  width: 50%;
+  width: 75%;
   padding: 20px;
   color: #afcfb1;
 }
@@ -48,6 +48,20 @@ text > h3 {
   font-size: 1.5em;
 }
 
+.lista {
+  font-size: 1.5em;
+  margin: auto;
+  list-style: none;
+}
+
+.lista_item a {
+  color: rgb(55, 143, 81);
+}
+
+.lista_item a:hover {
+  color: blue;
+}
+
 .image {
   background-repeat: no-repeat;
   max-width: 45%;
@@ -62,11 +76,6 @@ text > h3 {
 
 figure {
   text-align: center;
-}
-
-ol {
-  margin: auto;
-  color: #6cad70;
 }
 
 form {
