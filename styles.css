@@ -11,6 +11,10 @@ html, body {
   background-size: auto auto; 
 }
 
+header {
+  border-style:ridge;
+}
+
 main {
   margin: auto;
   width: 50%;
@@ -18,9 +22,10 @@ main {
   color: #afcfb1;
 }
 
-main > h1 {
+h1 {
   text-align: center;
   font-size: 3.5em;
+  color: #afcfb1;
 }
 
 text {
@@ -50,6 +55,11 @@ img {
 
 div {
   text-align: center;
+}
+
+ul {
+  margin: auto;
+  color: #6cad70;
 }
 
 form {
