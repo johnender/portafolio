@@ -13,6 +13,7 @@ html, body {
 
 header {
   border-style:ridge;
+  background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
 }
 
 main {
@@ -24,7 +25,7 @@ main {
 
 h1 {
   text-align: center;
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: #afcfb1;
 }
 
@@ -57,7 +58,7 @@ div {
   text-align: center;
 }
 
-ul {
+ol {
   margin: auto;
   color: #6cad70;
 }
@@ -67,4 +68,10 @@ form {
   margin: auto;
   color: #6cad70;
 
+}
+
+footer {
+  text-align: center;
+  border-style:solid;
+  background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
 }
