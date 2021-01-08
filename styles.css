@@ -24,14 +24,14 @@ main > h1 {
 }
 
 text {
-  margin: 300px;
+  margin: auto;
   width: 50%;
-  padding: 20px;
+  padding: 15px;
   color: #ecdfdf;
 }
 
 text > h2 {
-  margin: 1px 300px;
+  margin: auto;
   text-align: center;
   font-size: 2.0em;
 }
