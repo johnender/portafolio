@@ -14,7 +14,7 @@ html, body {
 header {
   border: ridge rgb(70, 68, 107);
   background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
-  position: fixed; /* Set the navbar to fixed position */
+  position: sticky;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   padding: 0;
@@ -22,7 +22,6 @@ header {
 
 main {
   margin: auto;
-  margin-top: 1%;
   width: 75%;
   padding: 20px;
   color: #afcfb1;
