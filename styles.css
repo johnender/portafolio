@@ -12,11 +12,11 @@ html, body {
 }
 
 header {
-  border: ridge rgb(70, 68, 107);
+  border: 5px ridge rgb(70, 68, 107);
   background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
   position: sticky;
   top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  width: 100% -10px; /* Full width, substarcting the border (equal to don put anything) */
   padding: 0;
 }
 
@@ -92,6 +92,6 @@ form {
 
 footer {
   text-align: center;
-  border-style:solid;
+  border: 5px solid;
   background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
 }
