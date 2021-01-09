@@ -1,6 +1,16 @@
+:root {
+  --primaryColor: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
+  --secondaryColor: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
+  --listFontColor: rgb(14, 122, 46);
+  --textFontSize: 2.0rem;
+  --littleTextFontSize: 1.5rem;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box; /* important responsive feature (padding and border) */
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
@@ -8,8 +18,7 @@ html, body {
   margin: auto;
   border: 0;
   padding: 0;
-  background: rgb(11,6,98);
-  background: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
+  background: var(--primaryColor);
   background-size: auto auto; 
   position: relative;
   min-height: 100vh;
@@ -17,7 +26,7 @@ html, body {
 
 header {
   border: 5px ridge rgb(70, 68, 107);
-  background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
+  background: var(--secondaryColor);
   position: sticky;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -80,26 +89,23 @@ h1 {
 }
 
 h2 {
-  margin: auto;
-  text-align: center;
   font-size: 2.5rem;
 }
 
 text > h3 {
-  margin: auto;
-  text-align: center;
   font-size: 2.0rem;
 }
 
 text {
   margin: auto;
+  text-align: center;
   width: 50%;
   padding: 15px;
   color: #ecdfdf;
 }
 
 .lista {
-  font-size: 2.0rem;
+  font-size: var(--textFontSize);
   margin: auto;
   list-style: none;
   padding: 0.5rem;
@@ -111,7 +117,7 @@ text {
 }
 
 .lista_item a {
-  color: rgb(14, 122, 46);
+  color: var(--listFontColor);
   padding: 0.5rem;
 }
 
@@ -134,7 +140,7 @@ text {
 
 .pikachu {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--littleTextFontSize);
   
   /*solo para probar, se ve mejor sin esto*/
   display: flex;
@@ -147,7 +153,7 @@ text {
 
 form {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--littleTextFontSize);
   margin: auto;
   color: #6cad70;
 
@@ -163,6 +169,6 @@ footer {
 }
 
 footer p {
-  font-size: 2rem;
+  font-size: var(--textFontSize);
   margin: auto;
 }
