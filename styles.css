@@ -1,9 +1,10 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
+  box-sizing: border-box; /* important responsive feature (padding and border) */
 }
 
 html, body {
+  /*font-size: 62.5%;*/
   margin: auto;
   border: 0;
   padding: 0;
@@ -21,6 +22,11 @@ header {
   padding: 0;
 }
 
+nav {
+  margin: auto;
+  text-align: right;
+}
+
 main {
   margin: auto;
   width: 75%;
@@ -31,7 +37,7 @@ main {
 h1 {
   margin: auto;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: #afcfb1;
 }
 
@@ -45,17 +51,17 @@ text {
 text > h2 {
   margin: auto;
   text-align: center;
-  font-size: 2.0em;
+  font-size: 2.0rem;
 }
 
 text > h3 {
   margin: auto;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .lista {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin: auto;
   list-style: none;
 }
