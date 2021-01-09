@@ -4,13 +4,15 @@
 }
 
 html, body {
-  /*font-size: 62.5%;*/
+  font-size: 62.5%;/*makes the root sizes of 10px*/
   margin: auto;
   border: 0;
   padding: 0;
   background: rgb(11,6,98);
   background: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
   background-size: auto auto; 
+  position: relative;
+  min-height: 100vh;
 }
 
 header {
@@ -20,24 +22,52 @@ header {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   padding: 0;
+  min-height: 1vh;
+  z-index: 999;
 }
 
-nav {
-  margin: auto;
+/* header nav {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
   text-align: right;
-}
+  font-size: 2rem;
+} */
 
 main {
   margin: auto;
-  width: 75%;
+  width: 100%;
+  min-height: 100%;
   padding: 20px;
   color: #afcfb1;
+}
+
+
+.content {
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  padding-bottom: 4rem;
+}
+
+.paginas{
+  display: inline-block;
+  min-height: 100vh;
+  background-color: royalblue;
+  opacity: 0.7;
+}
+
+.paginas h2 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 2.5rem;
 }
 
 h1 {
   margin: auto;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 4.0rem;
   color: #afcfb1;
 }
 
@@ -48,26 +78,28 @@ text {
   color: #ecdfdf;
 }
 
-text > h2 {
+h2 {
   margin: auto;
   text-align: center;
-  font-size: 2.0rem;
+  font-size: 2.5rem;
 }
 
 text > h3 {
   margin: auto;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.0rem;
 }
 
 .lista {
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   margin: auto;
   list-style: none;
+  padding: 0;
 }
 
 .lista_item a {
   color: rgb(55, 143, 81);
+  padding: 1rem;
 }
 
 .lista_item a:hover {
@@ -81,6 +113,7 @@ text > h3 {
 }
 
 #sennin {
+  position: static;
   background-repeat: no-repeat;
   max-width: 25%;
   max-height: 25%;
@@ -88,10 +121,12 @@ text > h3 {
 
 figure {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 form {
   text-align: center;
+  font-size: 1.5rem;
   margin: auto;
   color: #6cad70;
 
@@ -101,4 +136,12 @@ footer {
   text-align: center;
   border: 5px solid;
   background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+footer p {
+  font-size: 2rem;
+  margin: auto;
 }
