@@ -176,10 +176,10 @@ footer p {
 
 /* Example of using media queries, always at the end */
 
-@media (min-width: 600px){
+/* @media (min-width: 600px){
   main {
     flex-direction: row; 
-    justify-content: space-evenly; /*para ordenar, reparte el espacio libre*/
+    justify-content: space-evenly; 
   }
   .paginas{
     max-width: 25%;
@@ -195,5 +195,5 @@ footer p {
     flex-direction: row;
     align-items: flex-end;
   }
-}
+} */
 

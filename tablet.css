@@ -1,0 +1,11 @@
+main {
+    flex-direction: row; 
+    justify-content: space-evenly; /*para ordenar, reparte el espacio libre*/
+}
+.paginas{
+    max-width: 25%;
+    min-height: 85vh;
+}
+.content {
+    max-width: 75%;
+}
