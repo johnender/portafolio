@@ -2,3 +2,8 @@
     flex-direction: row;
     align-items: flex-end;
 }
+
+h1 {
+    font-size: 4.0rem;
+    text-align: left;
+}

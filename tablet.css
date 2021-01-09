@@ -9,3 +9,12 @@ main {
 .content {
     max-width: 75%;
 }
+
+h1 {
+    text-align: left;
+    font-size: 3.0rem;
+}
+
+header {
+  justify-content: space-between;
+}

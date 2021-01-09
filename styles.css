@@ -34,15 +34,30 @@ header {
   min-height: 1vh;
   z-index: 999; /*le da prioridad para que este siempre al frente*/
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/*
-header nav {
+.index {
   right: 1rem;
-  padding-top: 1rem;
-  text-align: center;
   font-size: 2rem;
-} */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+} 
+
+.index li {
+  padding: 1rem;
+  list-style: none;
+  color: white;
+  text-decoration: none;
+}
+
+.index li:hover {
+  color: rebeccapurple;
+}
 
 main {
   margin: auto;
@@ -82,9 +97,8 @@ main {
 }
 
 h1 {
-  margin: auto;
   text-align: center;
-  font-size: 4.0rem;
+  font-size: 2.0rem;
   color: #afcfb1;
 }
 
@@ -173,6 +187,23 @@ footer p {
   margin: auto;
 }
 
+footer .social {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  list-style: none;
+}
+
+footer .social li {
+  padding: 1rem;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* Example of using media queries, always at the end */
 
