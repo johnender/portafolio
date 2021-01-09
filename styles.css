@@ -24,13 +24,14 @@ header {
   padding: 0;
   min-height: 1vh;
   z-index: 999; /*le da prioridad para que este siempre al frente*/
+  display: flex;
 }
 
-/* header nav {
-  position: absolute;
-  bottom: 0;
+/*
+header nav {
   right: 1rem;
-  text-align: right;
+  padding-top: 1rem;
+  text-align: center;
   font-size: 2rem;
 } */
 
@@ -41,6 +42,9 @@ main {
   padding: 20px;
   color: #afcfb1;
   display: flex;
+  flex-direction: row; /*default*/
+  flex-wrap: wrap; /*para que se acomode el contenerdor si cambia el tamanho*/
+  justify-content: space-evenly; /*para ordenar, reparte el espacio libre*/
 }
 
 
@@ -48,7 +52,7 @@ main {
   display: inline-block;
   /*position: absolute; no se necesita gracias al display flex en main */
   padding-bottom: 4rem; 
-  max-width: 75%;
+  max-width: 60%;
 }
 
 .paginas{
@@ -99,11 +103,16 @@ text {
   margin: auto;
   list-style: none;
   padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  
+  flex-wrap: wrap; /*para que se acomode el contenerdor si cambia el tamanho*/
+  justify-content: center; /*para ordenar, reparte el espacio libre*/
 }
 
 .lista_item a {
   color: rgb(14, 122, 46);
-  padding: 0;
+  padding: 0.5rem;
 }
 
 .lista_item a:hover {
@@ -123,9 +132,17 @@ text {
   max-height: 25%;
 }
 
-figure {
+.pikachu {
   text-align: center;
   font-size: 1.5rem;
+  
+  /*solo para probar, se ve mejor sin esto*/
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-end; /*donde van los items en relacion con el contenedor (vertical)*/
+  flex-wrap: wrap; /*para que se acomode el contenerdor si cambia el tamanho*/
+  justify-content: center; /*para ordenar, reparte el espacio libre*/
 }
 
 form {
