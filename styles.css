@@ -57,6 +57,7 @@ header {
 
 .index li:hover {
   color: rebeccapurple;
+  transform: scale(1.2);
 }
 
 main {
@@ -174,17 +175,11 @@ form {
 }
 
 footer {
-  text-align: center;
-  color: white;
+  text-align: left;
   background: black;
   width: 100%;
   position: fixed;
   bottom: 0;
-}
-
-footer p {
-  font-size: var(--textFontSize);
-  margin: auto;
 }
 
 footer .social {
@@ -193,11 +188,14 @@ footer .social {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
-  list-style: none;
 }
 
-footer .social li {
-  padding: 1rem;
+footer .social img {
+  max-width: 4rem;
+}
+
+footer .social img:hover{
+  transform: scale(1.5);
 }
 
 a, a:hover, a:focus, a:active {
