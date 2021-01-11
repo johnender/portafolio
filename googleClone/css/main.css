@@ -14,10 +14,10 @@ a, a:hover, a:focus, a:active {
     color: inherit;
     cursor: pointer;
 }
-
+/*
 body {
-    /*Lo que esta en html podria ir aqui*/
-}
+    Lo que esta en html podria ir aqui
+}*/
 
 header {
     width: 100%;
