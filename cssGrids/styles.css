@@ -71,21 +71,42 @@ h1 {
 
 
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 .container {
     display: grid;
-    grid-template-columns: 25% 200px 25%;
+    justify-content: center;
+    /* grid-template-columns: 25% 200px 25%;
+    grid-auto-rows: 10rem; */
+    /* grid-template: 15rem 20rem / 25% 20rem 25%; */
+    /* grid-template: 15rem 20rem / repeat(4, 1fr); */
+    grid-template: 15rem 20rem / repeat(4, minmax(40rem, 1fr));
+    grid-gap: 1rem 2rem;
 }
 .item {
     background: lightblue;
     padding: 10px;
     border: 1px solid red;
     font-size: 1.6rem;
+    text-align: left;
 }
 
+/* Comando para seleccionar un elemento */
+.container > .item:nth-of-type(4){
+    background: blue;
+    overflow: auto; /*Para tener scroll dentro del elemento*/
+    /* display: subgrid; */
+    /* display: inline-grid; */
+    display: grid;
+    grid-template: repeat(3, 15rem) / repeat(3, 30rem);
+}
 
+.item .item {
+    background: yellow;
+}
+
+.item .item:hover {
+    background: white;
+}
 
 
 
