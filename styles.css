@@ -1,7 +1,7 @@
 :root {
   --primaryColor: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
   --secondaryColor: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
-  --listFontColor: rgb(14, 122, 46);
+  --listFontColor: rgb(169, 221, 185);
   --textFontSize: 2.0rem;
   --littleTextFontSize: 1.5rem;
 }
@@ -137,7 +137,7 @@ text {
 }
 
 .lista_item a:hover {
-  color: blue;
+  color: white;
 }
 
 .image {
