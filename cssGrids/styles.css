@@ -21,16 +21,16 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
-
+/* 
 header {
     border: 5px ridge rgb(70, 68, 107);
     background: var(--secondaryColor);
     position: sticky;
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    top: 0; 
+    width: 100%; /
     padding: 0;
     min-height: 1vh;
-    z-index: 999; /*le da prioridad para que este siempre al frente*/
+    z-index: 999; 
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -62,7 +62,7 @@ h1 {
 .index li:hover {
     color: rebeccapurple;
     transform: scale(1.2);
-}
+} */
 
 /*Todo lo anterior es generico del portafolio, junto con los media queries (breakpoints)*/
 
@@ -75,6 +75,7 @@ h1 {
 .container {
     display: grid;
     justify-content: center;
+    padding: 1rem;
     /* grid-template-columns: 25% 200px 25%;
     grid-auto-rows: 10rem; */
     /*Ejemplos para manejar filas y columnas por separado*/
@@ -84,7 +85,7 @@ h1 {
     /* grid-template: repeat(3, 20rem) / repeat(4, minmax(10rem, 20rem)); */
     /* grid-template: repeat(3, 1fr) / repeat(4, minmax(10rem, 1fr)); */
 
-    grid-template: repeat(3, 1fr) / repeat(2, minmax(10rem, 1fr));
+    grid-template: minmax(4.5rem, 6.6rem) 1fr 4.5rem / 20rem 1fr;
     grid-template-areas: "header header" 
                         "left contenido" 
                         "footer footer";
@@ -117,9 +118,21 @@ h1 {
     background: white;
 }
 
+.header {
+    grid-area: header;
+}
 
+.left {
+    grid-area: left;
+}
 
+.contenido {
+    grid-area: contenido;
+}
 
+.footer {
+    grid-area: footer;
+}
 /* Example of using media queries, always at the end */
 
 @media (min-width: 600px){
