@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Tamaño de item en filas</title>
+
+  <style>
+        :root {
+            --primaryColor: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
+            --secondaryColor: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
+            --listFontColor: rgb(169, 221, 185);
+            --textFontSize: 2.0rem;
+            --littleTextFontSize: 1.5rem;
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box; /* important responsive feature (padding and border) */
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            font-size: 62.5%;
+        }
+
+        a, a:hover, a:focus, a:active {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            display: grid;
+            justify-content: center;
+            padding: 1rem;
+
+            grid-template-columns: repeat(7, minmax(4.5rem, 1fr));
+            grid-template-rows: repeat(6, minmax(4.5rem, 1fr));
+
+            grid-gap: 1rem 2rem;
+            height: 100vh;
+        }
+        .item {
+            background: lightblue;
+            padding: 10px;
+            border: 1px solid red;
+            font-size: 1.6rem;
+            text-align: left;
+        }
+
+        .container > .item:nth-of-type(1){
+            background: rgb(144, 144, 221);
+            overflow: auto;
+            grid-column: 1 / -1;
+            grid-row: 1 / span 4;
+        }
+
+        /* Comando para seleccionar un elemento */
+        .container > .item:nth-of-type(2){
+            background: rgb(76, 145, 118);
+            overflow: auto;
+            grid-column: 1 / span 3;
+            grid-row: span 2;  /*usa dos filas desde donde esta*/
+        }
+
+        .container > .item:nth-of-type(3){
+            background: rgb(30, 30, 82);
+            overflow: auto;
+            grid-column:  span 2;
+            grid-row: span 2;  /*usa dos filas desde donde esta*/
+        }
+
+        .container > .item:nth-of-type(4){
+            background: rgb(30, 30, 82);
+            overflow: auto;
+            grid-column:  span 2;
+        }
+
+        .container > .item:nth-of-type(8){
+            background: rgb(144, 144, 221);
+            overflow: auto;
+            /* grid-column: 1 / 4; */
+            /* grid-column: 2 / span 2; */
+            grid-column: 1 / -1;
+        }
+
+  </style>
+
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="item">item #1</div>
+            <div class="item">item #2</div>
+            <div class="item">item #3</div>
+            <div class="item">item #4</div>
+            <div class="item">item #5</div>
+            <div class="item">item #6</div>
+          </section>
+    </main>
+
+    <footer>
+
+    </footer>
+  
+</body>
+</html>

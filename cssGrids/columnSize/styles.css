@@ -1,0 +1,125 @@
+:root {
+    --primaryColor: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
+    --secondaryColor: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
+    --listFontColor: rgb(169, 221, 185);
+    --textFontSize: 2.0rem;
+    --littleTextFontSize: 1.5rem;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* important responsive feature (padding and border) */
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 62.5%;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+/* 
+header {
+    border: 5px ridge rgb(70, 68, 107);
+    background: var(--secondaryColor);
+    position: sticky;
+    top: 0; 
+    width: 100%; /
+    padding: 0;
+    min-height: 1vh;
+    z-index: 999; 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.0rem;
+    color: #afcfb1;
+  }
+  
+.index {
+    right: 1rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} 
+  
+.index li {
+    padding: 1rem;
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+  
+.index li:hover {
+    color: rebeccapurple;
+    transform: scale(1.2);
+} */
+
+/*Todo lo anterior es generico del portafolio, junto con los media queries (breakpoints)*/
+
+
+
+
+.container {
+    display: grid;
+    justify-content: center;
+    padding: 1rem;
+
+    grid-template-columns: repeat(4, minmax(4.5rem, 1fr));
+    grid-template-rows: repeat(4, minmax(4.5rem, 1fr));
+
+    grid-gap: 1rem 2rem;
+    height: 100vh;
+}
+.item {
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid red;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+
+/* Comando para seleccionar un elemento */
+.container > .item:nth-of-type(1){
+    background: rgb(144, 144, 221);
+    overflow: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.container > .item:nth-of-type(7){
+    background: rgb(30, 30, 82);
+    overflow: auto;
+    grid-column: 2 / span 2;
+}
+
+.container > .item:nth-of-type(8){
+    background: rgb(144, 144, 221);
+    overflow: auto;
+    /* grid-column: 1 / 4; */
+    /* grid-column: 2 / span 2; */
+    grid-column: 1 / -1;
+}
+
+/* Comando para seleccionar un elemento */
+
+    /* display: subgrid; */
+    /* display: inline-grid; */
+
+/* .container > .item:nth-of-type(4){
+    background: rgb(144, 144, 221);
+    overflow: auto; 
+    display: grid;
+    grid-template: repeat(3, 5rem) / repeat(3, 20rem);
+} */
+
