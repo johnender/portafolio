@@ -38,8 +38,11 @@
             justify-content: center;
             padding: 1rem;
 
-            grid-template-columns: repeat(7, minmax(4.5rem, 1fr));
-            grid-template-rows: repeat(6, minmax(4.5rem, 1fr));
+            /* grid-template-columns: repeat(7, minmax(4.5rem, 1fr));
+            grid-template-rows: repeat(6, minmax(4.5rem, 1fr)); */
+
+            grid-template-columns:[inicio] minmax(4.5rem, 3fr) [linea2] minmax(4.5rem, 1fr) [linea3] minmax(4.5rem, 1fr) [linea4] minmax(4.5rem, 1fr) [linea5] minmax(4.5rem, 1fr)[final];
+            grid-template-rows: [inicio] minmax(4.5rem, 4fr) [linea2] minmax(4.5rem, 1fr) [linea3] minmax(4.5rem, 1fr) [final];
 
             grid-gap: 1rem 2rem;
             height: 100vh;
@@ -55,29 +58,36 @@
         .container > .item:nth-of-type(1){
             background: rgb(144, 144, 221);
             overflow: auto;
-            grid-column: 1 / -1;
-            grid-row: 1 / span 4;
+            /* grid-column: 1 / -1; */
+            /* grid-row: 1 / span 4; */
+            grid-column: inicio / final;
         }
 
         /* Comando para seleccionar un elemento */
         .container > .item:nth-of-type(2){
             background: rgb(76, 145, 118);
             overflow: auto;
-            grid-column: 1 / span 3;
-            grid-row: span 2;  /*usa dos filas desde donde esta*/
+            /* grid-column: 1 / span 3; */
+            /*grid-row: span 2;  /*usa dos filas desde donde esta*/
+            
+            grid-column: inicio / linea2;
+            grid-row: linea2 / final;
         }
 
         .container > .item:nth-of-type(3){
             background: rgb(30, 30, 82);
             overflow: auto;
-            grid-column:  span 2;
-            grid-row: span 2;  /*usa dos filas desde donde esta*/
+            /* grid-column:  span 2; */
+            /*grid-row: span 2;  /*usa dos filas desde donde esta*/
+            grid-column: linea2 /linea4;
+            grid-row: linea2 / final;
         }
 
         .container > .item:nth-of-type(4){
             background: rgb(30, 30, 82);
             overflow: auto;
-            grid-column:  span 2;
+            /* grid-column:  span 2; */
+            grid-column: linea4 / final;
         }
 
         .container > .item:nth-of-type(8){
@@ -85,7 +95,7 @@
             overflow: auto;
             /* grid-column: 1 / 4; */
             /* grid-column: 2 / span 2; */
-            grid-column: 1 / -1;
+            /* grid-column: 1 / -1; */
         }
 
   </style>
