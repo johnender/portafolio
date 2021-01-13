@@ -77,10 +77,19 @@ h1 {
     justify-content: center;
     /* grid-template-columns: 25% 200px 25%;
     grid-auto-rows: 10rem; */
+    /*Ejemplos para manejar filas y columnas por separado*/
     /* grid-template: 15rem 20rem / 25% 20rem 25%; */
     /* grid-template: 15rem 20rem / repeat(4, 1fr); */
-    grid-template: 15rem 20rem / repeat(4, minmax(40rem, 1fr));
+    /* grid-template: 15rem 20rem / repeat(4, minmax(10rem, 1fr)); */
+    /* grid-template: repeat(3, 20rem) / repeat(4, minmax(10rem, 20rem)); */
+    /* grid-template: repeat(3, 1fr) / repeat(4, minmax(10rem, 1fr)); */
+
+    grid-template: repeat(3, 1fr) / repeat(2, minmax(10rem, 1fr));
+    grid-template-areas: "header header" 
+                        "left contenido" 
+                        "footer footer";
     grid-gap: 1rem 2rem;
+    min-height: 100vh;
 }
 .item {
     background: lightblue;
@@ -97,7 +106,7 @@ h1 {
     /* display: subgrid; */
     /* display: inline-grid; */
     display: grid;
-    grid-template: repeat(3, 15rem) / repeat(3, 30rem);
+    grid-template: repeat(3, 5rem) / repeat(3, 20rem);
 }
 
 .item .item {
