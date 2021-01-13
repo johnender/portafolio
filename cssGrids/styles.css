@@ -72,10 +72,9 @@ h1 {
 
 
 
-.container {
+body {
     display: grid;
     justify-content: center;
-    padding: 1rem;
     /* grid-template-columns: 25% 200px 25%;
     grid-auto-rows: 10rem; */
     /*Ejemplos para manejar filas y columnas por separado*/
@@ -89,49 +88,37 @@ h1 {
     grid-template-areas: "header header" 
                         "left contenido" 
                         "footer footer";
-    grid-gap: 1rem 2rem;
     min-height: 100vh;
 }
-.item {
-    background: lightblue;
-    padding: 10px;
-    border: 1px solid red;
-    font-size: 1.6rem;
-    text-align: left;
-}
 
-/* Comando para seleccionar un elemento */
-.container > .item:nth-of-type(4){
-    background: blue;
-    overflow: auto; /*Para tener scroll dentro del elemento*/
-    /* display: subgrid; */
-    /* display: inline-grid; */
-    display: grid;
-    grid-template: repeat(3, 5rem) / repeat(3, 20rem);
-}
-
+/* 
 .item .item {
     background: yellow;
-}
-
+} */
+/* 
 .item .item:hover {
     background: white;
-}
+} */
 
-.header {
+header {
     grid-area: header;
+    background: var(--secondaryColor);
 }
 
 .left {
     grid-area: left;
+    padding: 1rem;
+    background: rgb(88, 88, 224);
 }
 
 .contenido {
     grid-area: contenido;
+    background: var(--primaryColor);
 }
 
-.footer {
+footer {
     grid-area: footer;
+    background: black;
 }
 /* Example of using media queries, always at the end */
 
