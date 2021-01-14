@@ -1,0 +1,52 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* important responsive feature (padding and border) */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    display: flex;
+    padding: 4px 16px;
+    height: 80px;
+}
+
+.container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 252px);
+    /*autofit or autofill creates the responsive efect*/
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.item {
+    border-radius: 5px;
+    padding: 10px;
+    background: white;
+    width: 252px;
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+.level3 {
+    grid-row-end: span 15;
+}
+
+.level2 {
+    grid-row-end: span 10;
+}
+
+.level1 {
+    grid-row-end: span 7;
+}
+
+
+
