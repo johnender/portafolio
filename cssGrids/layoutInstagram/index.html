@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"> <!-- corazon y comentario -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- icono de flecha abajo-->
+  <title>Layout Instagram</title>
+
+  <style type="text/css">
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        background: #FAFAFA;
+        color: #262626;
+    }
+
+    /*starts header section*/
+    header {
+        background: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+        font-size: 11px;
+        margin-bottom: 25px;
+    }
+
+    .search-container{
+        display: grid;
+        justify-content: center;
+        overflow: hidden;
+        min-width: 125px;
+        width: 215px;
+    }
+
+    .search-box{
+        background: #FAFAFA;
+        width: fit-content;
+        border: solid #dbdbdb 1px;
+        width: 199px;
+        padding: 2px;
+        border-radius: 3px;
+        text-align: center;
+        color: rgba(var(--f52,142,142,142),1);
+        cursor: text;
+    }
+
+    .search-box input[type="search"] {
+        border: none;
+        background: no-repeat;
+        font-size: 14px;
+        padding: 3px;
+        width: 72px;
+    }
+
+    
+    .search-box input[type="search"]:focus {
+        width: 170px;
+    }
+    /*ends header section*/
+
+    /*starts profile section*/
+    .profile{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 30px;
+        justify-content: center;
+        max-width: 932px;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .picture-container{
+        display: grid;
+        justify-content: center;
+        align-items: top;
+        margin: 0;
+    }
+
+    .profile-pic{
+        width: 150px;
+        margin: 0;
+    }
+
+    .profile-pic img{
+        width: 100%;
+        border-radius: 50%;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .title-bar h1, .follow-section, .more-horiz{
+        float: left;
+        padding-right: 20px;
+        margin: 0;
+    }
+
+    ul.numbers-section{
+        padding: 0;
+        margin: 20px 0 ;
+        width: 100%;
+        float: left;
+    }
+
+    .numbers-section li{
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    h2{
+        margin: 0;
+        padding: 0;
+    }
+    .options-icons{
+        display: inline;
+        overflow: hidden;
+    }
+
+    button{
+        font-size: 16px;
+        height: 26px;
+        background: none;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        margin-right: 10px;
+    }
+
+    .more-horiz{
+        border: none;
+    }
+
+    .morearrow i{
+        padding-right: 0;
+        padding-left:0;  
+        margin: -7px
+    }
+
+    .follow-section{
+        padding: 0;
+        bottom: 0;
+        display: flex;
+        align-items: top;
+    }    
+
+    button.following{
+        padding: 0 24px;
+    }
+
+    .text-section{
+        float: left;
+    }
+
+    .title-bar{
+        width: 100%;
+        display: block;
+    }
+
+    .title-bar h1{
+        font-size: 28px;
+        font-weight: normal;
+    }    
+        
+    .text-section h2 {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    p.profile-description {
+        margin: 6px 0;
+        line-height: 1.5;
+    }
+
+    .friends-following {
+        margin: 10px 0;
+        font-size: 12px;
+    }
+
+    .friends-following a {
+        text-decoration: none;
+    }
+
+    a.profile-link {
+        color: #262626;
+    }
+
+    a.more-friends {
+        color: #A8A8A8;
+    }
+    /*ends profile section*/
+
+    /*starts stories section*/
+    section.stories-section {
+        margin-bottom: 50px;
+    }        
+
+    ul.stories-list {
+        width: fit-content;
+        margin: auto;
+        min-width: 1024px;
+    }
+
+    li.story {
+        list-style: none;
+        display: inline-grid;
+        margin: 0 auto;
+        text-align: center;
+        width: 130px;
+        height: 130px;
+    }
+
+    .storie-image img {
+    border-radius: 50%;
+    width: 77px;
+    cursor: pointer;
+    }
+    /*ends stories section*/
+
+    /*starts post section*/
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 293px));
+        justify-content: center;
+        grid-gap: 28px;
+    }
+
+    .post{
+        cursor: pointer;
+        position: relative; /*para que el positio absolute lo siga*/
+        display: block;
+    }
+
+    .post-image{
+        margin: 0;
+    }
+
+    .post-image img{
+        width: 100%;
+        vertical-align: top;
+    }
+
+    .post-overlay{
+        background: rgba(0,0,0, 0.4);
+        position: absolute; /*sigue al mas cercano con position relative*/ 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: none; /*para que no se muestre inicialmente*/
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+
+    .post:hover .post-overlay{
+        display: flex;
+    }
+
+    .post-likes,
+    .post-comments{
+        width: 40px;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .post-comments {
+        margin-left: 20px;
+    }
+    /*ends post section*/
+
+    @media screen and (max-width: 768px){
+        .post-list{
+            grid-gap: 3px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+    <header>
+        <div class="instagram-logos">
+            <figure class="logo"><img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"></figure>
+        </div>
+        <div class="search-container">
+            <div class="search-box" >
+                <span class="icon icon-search"><i class="fa fa-search"></i></span>
+                <input type="search" placeholder="Buscar..." />
+            </div>
+        </div>
+        <div class="header-icons"></div>
+    </header>
+
+    <section class="profile">
+        <section class="picture-container">
+            <figure class="profile-pic">
+                <img src="https://picsum.photos/290?random=17" alt="">
+            </figure>
+        </section>
+        <section class="profile-info">
+            <section class="title-bar">
+                <h1>johnender</h1>
+                <span class="follow-section">
+                    <button class="following">Siguiendo</button>
+                    <button class="morearrow">
+                        <i class="material-icons">
+                                arrow_drop_down
+                        </i>
+                    </button>
+                </span>
+                <button class="more-horiz">
+                    <i class="material-icons">more_horiz</i>
+                </button>
+            </section>
+            <ul class="numbers-section">
+                <li class="post-qty"><b>1</b> publicaciones</li>
+                <li class="followers-qty"><b>1024</b> seguidores</li>
+                <li class="following-qty"><b>2</b> seguidos</li>
+            </ul>
+            <section class="text-section">
+                <h2>Johnn Hernandez</h2>
+                <p class="profile-description">
+                    Cada d&iacute;a intento aprendo algo nuevo.
+                    <br><a href="https://johnender.github.io/portafolio/" target="_blank" class="website">johnender.github</a>
+                </p>
+                <div class="friends-following">
+                    <a href="" class="profile-link">fulano</a>, 
+                    <a href="" class="profile-link">zutano</a>, 
+                    <a href="" class="profile-link">mengano</a>
+                    <a href="" class="more-friends">y 4 más siguen a esta cuenta.</a>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <section class="stories-section">
+        <ul class="stories-list">
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=18" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=19" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=20" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=21" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=22" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=23" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=24" alt=""></figure><span class="story-name">Historia</span></li>
+        </ul>
+    </section>
+
+    <section class="post-list">
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu2.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu3.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu2.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu3.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu2.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu3.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu2.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../images/compu3.jpg" alt="">
+            </figure>
+            <div class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <i class="fas fa-heart"></i> <!-- Corazon -->
+                    <span class="post-comments">10</span>
+                    <i class="fas fa-comments"></i> <!-- Comentario -->
+                </p>
+            </div>
+        </a>
+    </section>
+
+</body>
+</html>
