@@ -126,6 +126,34 @@ h1 {
     grid-area: left;
 }
 
+/*agregando para manejar la lista de paginas*/
+.left {
+    display: inline-block;
+    opacity: 0.7;
+    max-width: 85%;
+    border-radius: 2.5%;
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+}
+
+.lista {
+    font-size: 14px;
+    margin: auto;
+    list-style: none;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    
+    flex-wrap: wrap; /*para que se acomode el contenerdor si cambia el tamanho*/
+    justify-content: center; /*para ordenar, reparte el espacio libre*/
+}
+
+.lista_item a:hover {
+    color: white;
+}
+/*acaba el agregado*/
+
+
 .contenido {
     grid-area: contenido;
 }
