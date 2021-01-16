@@ -18,13 +18,13 @@
     <br> 
 </p> 
 
-<p align="center"> Url to the my try of website (azure Webapps):
+<p align="center"> Url to the my website (azure Webapps):
   <br>
   https://wonderful-glacier-0e7f31c10.azurestaticapps.net/
   <br>
 </p>
 
-<p align="center"> Url to the my try of website (Github pages):
+<p align="center"> Url to the my website (Github pages):
   <br>
   https://johnender.github.io/portafolio/
   <br>
