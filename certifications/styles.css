@@ -115,6 +115,12 @@ figcaption {
   font-size: 2rem;
 }
 
+.container .container--text--little {
+  text-align: center;
+  grid-column-start: 1;
+  margin-bottom: 1rem;
+}
+
 
 /*end main stuff*/
 
