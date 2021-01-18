@@ -29,6 +29,8 @@ html {
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
     /*Solo agregamos esta porque es la mas utilzada, la otra se agrega cuando se necesite*/
+
+    scroll-behavior: smooth;
 }
 
 header {
@@ -94,7 +96,7 @@ header img {
     transform: translate(-50%, -50%);
 
     /* Tambien podria ser
-    transform: translate(-50%, -24px); 
+    transform: translate(-50%, -24px);
     porque el width es de 48px*/
 
     display: block;
@@ -345,7 +347,7 @@ main {
     line-height: 1.8rem;
     color: #808080;
 }
- 
+
 .produc-detail--clard {
     width: 100%;
     min-width: 288px;
@@ -385,7 +387,7 @@ main {
 .check {
     background-image: url(./assets/icons/check-circle.svg);
 }
-    
+
 .product--card-title {
     margin-bottom: 15px;
     font-size: 1.8rem;
@@ -403,7 +405,7 @@ main {
 }
 /* termina seccion de articulos*/
 
-/* seccion comodin */
+/* inicia seccion comodin */
 .bitcoin-img-container{
     width: 100%;
     min-width: 320px;
@@ -424,6 +426,148 @@ main {
     color: var(--just-white);
     text-align: center;
 }
+/* termina seccion comodin */
+
+
+/* inicia seccion de planes*/
+.main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding: 65px 0;
+    text-align: center;
+}
+
+.plans--title {
+    width: 90%;
+    min-width: 288px;
+    margin: 0 auto 50px auto;
+}
+
+.plans--title h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--warm-blackplus1);
+}
+
+.plans--title p{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+/* Estilo para que funcione el scroll horizontal */
+.plans-container--slider {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    height: 316px;
+}
+
+/* Barra que indica el scroll */
+.plans-container--slider::-webkit-scrollbar {
+    background-color: var(--soft-orange);
+    height: 3px;
+}
+.plans-container--slider::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoin-orage);
+}
+
+
+
+.plans-container--card {
+    position: relative;
+    /*regla necesaria para el scroll horizontal*/
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    /* margin: 50px auto 0; */
+    
+    margin: 50px 30px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.recommended {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    /* left: calc(50%-60px);
+    top: 15px; */
+    background-color: var(--bitcoin-orage);
+    /* Posicion utilizando translate */
+	top: 0;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    color:var(--just-white);
+    font-size: 1.2rem;
+}
+
+.plan-card--title {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500px;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan-card--price {
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5rem;
+    color: black;
+}
+
+.plan-card--price sup{
+    font-size: 1.2rem;
+    font-weight: 300;
+    vertical-align: 25px;
+}
+
+.plan-card--saving {
+    font-size: 1.2rem;
+    font-weight: 500px;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.plan-card--ca {
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: var(--off-white);
+    border: 2px solid var(--bitcoin-orage);
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--warm-blackplus1);
+}
+
+.plan-card--ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/icons/orange-right-arrow.svg);
+    /*siempre que se usa una imagen de background*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: text-bottom;
+}
+/* termina seccion de planes*/
+
 
 /*necesarios para agregar la animacion*/
 @-webkit-keyframes bgAnimateBitcoin {
