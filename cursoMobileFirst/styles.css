@@ -150,7 +150,7 @@ main {
     height: 200px;
     margin: 0 auto; /*para que se posicione en el centro*/
     margin-bottom: 50px;
-    background-image: url(./assets/img/bitcoin.svg);
+    background-image: url(./assets/img/bitcoin2.svg);
 
     /*buenas practicas*/
     background-size: cover;
