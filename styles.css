@@ -40,8 +40,8 @@ header {
 }
 
 .index {
-  right: 1rem;
-  font-size: 2rem;
+  right: 10px;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -49,7 +49,7 @@ header {
 } 
 
 .index li {
-  padding: 1rem;
+  padding: 10px;
   list-style: none;
   color: white;
   text-decoration: none;
@@ -77,7 +77,7 @@ main {
 .content {
   display: inline-block;
   /*position: absolute; no se necesita gracias al display flex en main */
-  padding-bottom: 4rem; 
+  padding-bottom: 40px; 
   max-width: 80%;
 }
 
@@ -87,8 +87,8 @@ main {
   opacity: 0.7;
   max-width: 85%;
   border-radius: 2.5%;
-  padding-top: 0.5rem;
-  padding-bottom: 4rem;
+  padding-top: 5px;
+  padding-bottom: 40px;
 }
 
 .paginas h2 {
@@ -105,7 +105,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 text > h3 {
@@ -124,7 +124,7 @@ text {
   font-size: var(--textFontSize);
   margin: auto;
   list-style: none;
-  padding: 0.5rem;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   
@@ -134,7 +134,7 @@ text {
 
 .lista_item a {
   color: var(--listFontColor);
-  padding: 0.5rem;
+  padding: 5px;
 }
 
 .lista_item a:hover {
@@ -145,7 +145,7 @@ text {
   background-repeat: no-repeat;
   max-width: 90%;
   max-height: 90%;
-  margin-right: 2rem;
+  margin-right: 20px;
 }
 
 #sennin {
@@ -156,7 +156,8 @@ text {
 }
 
 .pikachu {
-  margin-top: 5rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
   font-size: var(--littleTextFontSize);
   
@@ -194,7 +195,7 @@ footer .social {
 }
 
 footer .social img {
-  max-width: 4rem;
+  max-width: 40px;
 }
 
 footer .social img:hover{

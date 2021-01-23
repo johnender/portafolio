@@ -37,7 +37,7 @@ header {
 }
 
 .index {
-  right: 1rem;
+  right: 10px;
   font-size: 2rem;
   display: flex;
   flex-direction: row;
@@ -46,7 +46,7 @@ header {
 } 
 
 .index li {
-  padding: 1rem;
+  padding: 10px;
   list-style: none;
   color: white;
   text-decoration: none;
@@ -69,7 +69,7 @@ h1 {
 main {
   max-width: 100vw;
   min-height: 100%;
-  padding: 1rem;
+  padding: 10px;
   color: #afcfb1;
   display: grid;
   grid-template-columns: repeat(auto-fill, 400px);
@@ -80,7 +80,7 @@ main {
   align-items: center;
   align-content: center;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
 }
 
 h2 {
@@ -93,7 +93,7 @@ h3 {
 
 .item {
   border-radius: 5px;
-  padding: 1rem;
+  padding: 10px;
   width: auto;
   align-self: center;
   width: 400px;
@@ -107,7 +107,7 @@ h3 {
 .container .container--text {
   text-align: center;
   grid-column: 1 / -1;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 figcaption {
@@ -118,7 +118,7 @@ figcaption {
 .container .container--text--little {
   text-align: center;
   grid-column-start: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 
@@ -144,7 +144,7 @@ footer .social {
 }
 
 footer .social img {
-  max-width: 4rem;
+  max-width: 40px;
 }
 
 footer .social img:hover{
