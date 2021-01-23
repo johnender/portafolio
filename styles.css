@@ -132,6 +132,10 @@ text {
   justify-content: center; /*para ordenar, reparte el espacio libre*/
 }
 
+.lista_item {
+  margin-top: 20px;
+}
+
 .lista_item a {
   color: var(--listFontColor);
   padding: 5px;
@@ -143,8 +147,8 @@ text {
 
 .image {
   background-repeat: no-repeat;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 75%;
+  max-height: 75%;
   margin-right: 20px;
 }
 
