@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"> 
+  <title>Login page</title>
 </head>
 
 <style>
@@ -20,8 +21,8 @@ html{
 body {
   margin: 0px;
   font-family: 'Muli', sans-serif;
-  background: linear-gradient(rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%);
-  height: 100vh;
+  background: linear-gradient(#21c08b, #ab88ff);
+  min-height: 100vh;
 }
 .header {
   width: 100%;
@@ -37,19 +38,137 @@ body {
   margin-left: 10px;
 }
 
-.main{
+main{
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  align-items: center;
+  padding: 30px 0;
+  min-height: calc(100vh - 200px);
 }
 
 .login-container {
-  margin: 0 auto;
-  width: 300px;
-  text-align: center;
+  background-color: rgba(255,255,255,0.1);
+  border: 2px solid white;
+  border-radius: 40px;
+  color: white;
+  padding: 60px 68px 40px;
+  min-height: 800px; /*   */
+  width: 436px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
+.login-container h2{
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
 
+.login-container-form {
+  display: flex;
+  flex-direction: column;
+}
 
+.login-container-form label{
+  font-size: 1.4rem;
+}
 
+.login-container--rememberMe{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.login-container--rememberMe a{
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+}
+
+.login-container--rememberMe a:hover{
+  text-decoration: underline;
+}
+
+.login-container-socialMedia > div {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.login-container-socialMedia > div > img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.login-container-register {
+  font-size: 1.4rem;
+}
+
+.login-container-register a {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-container-register a:hover {
+  text-decoration: underline;
+}
+
+.login-container-form > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  font-size: 1.6rem;
+  font-family: 'Muli', sans-serif;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  outline: none;
+  height: 50px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.button {
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: 'Muli', sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 10px 0px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+}
+
+footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
 
 </style>
 
@@ -81,7 +200,7 @@ body {
         <div><img src="./assets/twitter-icon.png" alt="Twitter">Inicia sesi&oacute;n con Twitter</div>
       </section>
 
-      <p class="login-container-register">No tienes ninguna cuenta <a href="#">Regi&iacute;strate</a></p>
+      <p class="login-container-register">No tienes ninguna cuenta <a href="#">Reg&iacute;strate</a></p>
     </section>
 
   </main>
