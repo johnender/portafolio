@@ -164,6 +164,30 @@ input:focus, input:active, input:hover {
   bottom: 0;
 }
 
+.carousel-container-item-details img{
+  width: 20px;
+}
+
 .carousel-container-item-details:hover {
   opacity: 1;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+}
+
+footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
 }

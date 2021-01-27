@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"> 
+  <title>Login page</title>
+</head>
+
+<style>
+* {
+  box-sizing: border-box; /* important responsive feature (padding and border) */
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Muli', sans-serif;
+  background: linear-gradient(#21c08b, #ab88ff);
+  min-height: 100vh;
+}
+
+
+.carousel {
+  width: 100%;
+  overflow: scroll;
+  padding: 30px;
+  position: relative;
+}
+
+.carousel-container {
+  white-space: nowrap;/* permite que la lista siga hacia la derecha */
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+
+.carousel-container-item {
+  display: inline-block;
+  background: black;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 450ms all; /* hace mas lenta la animacion del hover */
+  transform-origin: center left; /* evita que se salga a la izquierda */
+  position: relative;
+}
+
+.carousel-container-item:hover ~ .carousel-container-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel-container:hover .carousel-container-item{
+  opacity: 0.3;
+}
+
+.carousel-container:hover .carousel-container-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-container-item--img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-container-item-details {
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.9), 0%, rgba(0, 0, 0, 0), 100%); */
+  font-size: 1rem;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.carousel-container-item-details:hover {
+  opacity: 1;
+}
+
+</style>
+
+<!-- Los iconos solo estan bien llamados en la primer imagen -->
+
+
+<body>
+  <section class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/1921336/pexels-photo-1921336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Foto de un atardecer">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="../assets/play-icon.png" alt="Play">
+            <img src="../assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Un gato">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Otro gato">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Un zorro">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+      
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Un perro">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/1921336/pexels-photo-1921336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Foto de un atardecer">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Un gato">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Otro gato">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Un zorro">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+
+      
+      <div class="carousel-container-item">
+        <img class="carousel-container-item--img" src="https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Un perro">
+        <div class="carousel-container-item-details">
+          <div>
+            <img src="./assets/play-icon.png" alt="Play">
+            <img src="./assets/plus-icon.png" alt="Plus">
+          </div>
+          <p class="carousel-container-item-details--title">T&iacute;tulo descriptivo</p>
+          <p class="carousel-container-item-details--subtitle">2019 16+ 114 minutos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -98,6 +98,7 @@ main{
   align-items: center;
   font-size: 1.4rem;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .login-container-socialMedia > div > img {
@@ -169,6 +170,21 @@ footer a {
 footer a:hover{
   text-decoration: underline;
 }
+
+@media screen and (max-width: 600px){
+  .login-container{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  footer{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
 
 </style>
 
