@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"> 
+  <title>Error</title>
+</head>
+
+<style>
+  * {
+    box-sizing: border-box; /* important responsive feature (padding and border) */
+    margin: 0;
+    padding: 0;
+  }
+  
+  html{
+    font-size: 62.5%;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'Muli', sans-serif;
+    background: linear-gradient(#21c08b, #ab88ff);
+    min-height: 100vh;
+  }
+  
+  
+  .header {
+    width: 100%;
+    height: 80px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__img {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  /* inicia estilo del main */
+  .error__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    min-height: calc(100vh - 200px);
+    font-size: 1.6rem;
+  }
+  .error__container--tittle{
+    width: 100%;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+  }
+  .text-bounce {
+    text-align: center;
+    margin-top: 56px;
+    color: #fff;
+    font-size: 10.0em;
+    text-transform: uppercase;
+  }
+  .animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+  @keyframes bounce {
+    0%, 25%, 50%, 75%, 100% {transform: translateY(0);}
+    12.5% {transform: translateY(-45px);}
+    37.5% {transform: translateY(-30px);}
+    62.5% {transform: translateY(-15px);}
+  }
+  .bounce {
+    animation-name: bounce;
+  }
+  .error__containerp{
+    margin-top: -60px;
+  }
+
+  /* termina estilo del main */
+
+
+  footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding-left: 30px;
+    text-decoration: none;
+  }
+  
+  footer a:hover{
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 600px){
+    .login-container{
+      background-color: transparent;
+      border: none;
+      width: 100%;
+    }
+  
+    footer{
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  
+  </style>
+  
+  <body>
+
+    <header class="header">
+      <img class="header__img" src="./assets/logo-platzi.png" alt="">
+    </header>
+
+    <main>
+      <section class="error__container">
+        <section class="error__container--tittle">
+            <h2 class="text-bounce animated bounce">404</h2>
+        </section>
+        <p>P&aacute;gina no encontrada</p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="#">Terminos de uso</a>
+      <a href="#">Declaraci&oacute;n de privacidad</a>
+      <a href="#">Centro de ayuda</a>
+    </footer>
+  </body>
+  </html>

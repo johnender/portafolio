@@ -193,15 +193,15 @@ footer a:hover{
 <body>
 
   <header class="header">
-    <img class="header__img" src="./assets/logo-platzi.png" alt="">
+    <img tabindex="0" class="header__img" src="./assets/logo-platzi.png" alt="">
   </header>
 
   <main>
     <section class="login-container">
-      <h2>Inicia sesi&oacute;n</h2>
+      <h2 tabindex="0">Inicia sesi&oacute;n</h2>
       <form class="login-container-form" action="">
-        <input type="text" placeholder="Correo">
-        <input type="password" placeholder="Contraseña">
+        <input aria-label="Correo" type="text" placeholder="Correo">
+        <input aria-label="Contraseña" type="password" placeholder="Contraseña">
         <button class="button">Iniciar sesi&oacute;n</button>
         <div class="login-container--rememberMe">
           <label for="">
