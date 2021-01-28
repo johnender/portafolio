@@ -22,12 +22,12 @@ html, body {
 
 /*start header stuff*/
 header {
-  border: 5px solid rgb(70, 68, 107);
+  border: 5px ridge rgb(70, 68, 107);
   background: var(--secondaryColor);
   position: sticky;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-  padding: 0;
+  padding: 0 10px;
   min-height: 1vh;
   z-index: 999; /*le da prioridad para que este siempre al frente*/
   display: flex;
