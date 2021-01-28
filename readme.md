@@ -3,7 +3,7 @@
  <img width=200px height=200px src="https://githubcampus.expert/assets/images/ce-flag.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Pagina de mi portafolio</h3>
+<h3 align="center">Personal portfolio page</h3>
 
 <div align="center">
 
@@ -14,9 +14,9 @@
 
 ---
 
-<p align="center"> Learn the skills to build and grow diverse technology communities on campus with training, mentorship, and support from GitHub.
+<!-- <p align="center"> Learn the skills to build and grow diverse technology communities on campus with training, mentorship, and support from GitHub.
     <br> 
-</p> 
+</p>  -->
 
 <p align="center"> Url to the my website (azure Webapps):
   <br>
@@ -44,20 +44,20 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This is just a personal portfolio, I will be adding to this repository any web project that I create while studying by my own.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+<!-- ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system. -->
 
 ### Prerequisites
 
 What things you need to install the software and how to install them.
 
 ```
-Give examples
+Visual studio code (recommended IDE)
 ```
-
+<!-- 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running.
@@ -102,7 +102,7 @@ Add notes about how to use the system.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+Add additional notes about how to deploy this on a live system. -->
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -113,6 +113,7 @@ Add additional notes about how to deploy this on a live system.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
+- Platzi (a great online learning platform)
+<!-- - Hat tip to anyone whose code was used
 - Inspiration
-- References
+- References -->
