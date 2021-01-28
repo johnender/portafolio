@@ -111,6 +111,11 @@ Add additional notes about how to deploy this on a live system. -->
 - [VueJs](https://vuejs.org/) - Web Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [@johnender](https://github.com/johnender) - Idea & Initial work
+
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - Platzi (a great online learning platform)
