@@ -46,16 +46,15 @@ html, body {
 header {
   width: 100%;
   text-align: center;
-  margin: 50px 0;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 6rem;
-  margin-top: 20px;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .score-board {
@@ -65,8 +64,8 @@ h2 {
   width: 250px;
   padding: 60px 10px;
   position: relative;
-  margin: 70px auto;
-  font-size: 6rem;
+  margin: 10px auto;
+  font-size: 4rem;
 }
 
 .score-board div{
@@ -102,7 +101,7 @@ h2 {
 
 .options-container img  {
   width: 75px;
-  margin: 0 40px;
+  margin: 0 10px;
   cursor: pointer;
 }
 
@@ -119,7 +118,7 @@ img:hover{
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .button-container-restart {
@@ -150,4 +149,45 @@ img:hover{
 
 .modal-content p{
   font-size: 18px;
+}
+
+@media screen and (min-width: 500px){
+  .options-container img  {
+    margin: 0 40px;
+  }
+}
+
+@media screen and (min-height: 600px){
+  header {
+    margin: 10px auto;
+  }
+
+  .button-container {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-height: 900px){
+  header {
+    margin: 50px auto;
+  }
+
+  h1 {
+    font-size: 6rem;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 4rem;
+  }
+
+  .score-board {
+    padding: 60px 10px;
+    margin: 70px auto;
+    font-size: 6rem;
+  }
+
+  .button-container {
+    margin-top: 100px;
+  }
 }
