@@ -18,13 +18,13 @@
     <br> 
 </p>  -->
 
-<p align="center"> Url to the my portfolio (azure Webapps):
+<p align="center"> Url to my portfolio (azure Webapps):
   <br>
   https://wonderful-glacier-0e7f31c10.azurestaticapps.net/
   <br>
 </p>
 
-<p align="center"> Url to the my portfolio (Github pages):
+<p align="center"> Url to my portfolio (Github pages):
   <br>
   https://johnender.github.io/portafolio/
   <br>
@@ -44,7 +44,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-This is just a personal portfolio, I will be adding to this repository any web project that I create while studying by my own.
+This is just a personal portfolio, I will be adding to this repository any web project that I create while studying by my own. As the portfolio itself, this readme is work in progress.
 
 <!-- ## 🏁 Getting Started <a name = "getting_started"></a>
 
