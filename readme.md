@@ -5,12 +5,12 @@
 
 <h3 align="center">Personal portfolio page</h3>
 
-<div align="center">
+<!-- <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![Version](https://img.shields.io/badge/Version-4.0-red)](/LICENSE)
 
-</div>
+</div> -->
 
 ---
 
@@ -18,13 +18,13 @@
     <br> 
 </p>  -->
 
-<p align="center"> Url to the my website (azure Webapps):
+<p align="center"> Url to the my portfolio (azure Webapps):
   <br>
   https://wonderful-glacier-0e7f31c10.azurestaticapps.net/
   <br>
 </p>
 
-<p align="center"> Url to the my website (Github pages):
+<p align="center"> Url to the my portfolio (Github pages):
   <br>
   https://johnender.github.io/portafolio/
   <br>
