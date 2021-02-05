@@ -35,7 +35,7 @@ function fetchData(url_api, callback){
         depende del servidor cuanto demore en cada estado haces un pedido por datos
         (request) y solo es aplicar lógica.
         */
-       console.log(xhttp.readyState);
+       //console.log(xhttp.readyState);
         if(xhttp.readyState === 4){
             //Verificar estado, aqui un resumen de los casos mas comunes:
             /*
