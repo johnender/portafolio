@@ -331,3 +331,134 @@ console.log(Object.fromEntries(entries))
 let mySymbl = 'My Symbol';
 let symbol = Symbol(mySymbl);
 console.log(symbol.description);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Closure
+ */
+
+ /*fucion normal*/
+
+const moneyBox = (coins) => {
+  var saveCoins = 0;  //puede ser let
+	saveCoins += coins;
+  console.log(`MoneyBox: $${saveCoins}`);
+}
+
+moneyBox(3); // 3
+moneyBox(4); // 7
+moneyBox(7); // 14
+
+/* funcion utilizando closure */
+
+const moneyBox = () => {
+  var saveCoins = 0;
+  const countCoins = (coins) => {
+      saveCoins += coins;
+      console.log(`MoneyBox: $${saveCoins}`);
+  }
+  return countCoins;
+};
+let myMoneyBox = moneyBox();  //solo en esta declaracion pasa el saveCoins = 0
+myMoneyBox(4); // 4
+myMoneyBox(6); // 10
+myMoneyBox(10); // 20
+
+
+//Ámbito léxico en closures
+const buildCount = (i)=>{
+  let count = i;
+  const displayCount = () =>{
+    count++;
+    console.log(count);
+  }
+  return displayCount;
+};
+
+let mybuildCount = buildCount(1); //en la declaracion solo corre la primera parte, da valor inicial al count
+mybuildCount(); //2
+mybuildCount(); //3 
+mybuildCount(); //4
+
+/*si el count++; se encontrara dentro del log, imprimiria el valor antes de incrementarlo*/
+
+
+
+/* Variable privadas con closure */
+const person = () => {
+  let saveName = "Name";
+  return {
+    getName: () => saveName,
+    setName: (name) => {
+      saveName = name;
+    },
+  };
+};
+
+const newPerson = person();
+console.log(newPerson.getName());
+newPerson.setName('Edward');
+console.log(newPerson.getName());
+
+
+
+
+
+const anotherFunction = () => {
+  //let i = 0; //con la asignacion afuera la variable sale del closure y el resultado va dar siempre 10
+  for(let i = 0; i < 10; i++) { //lo mismo pasa al usar var dentro del for
+    setTimeout(() => {
+      console.log(i)
+    }, 1000)
+  }
+}
+anotherFunction();
+
+
+
+
+
+
+
+
+/*
+ * Preguntas examen curso de Closures y Scope en JavaScript
+ */
+nameOfDog("Elmo"); 
+
+function nameOfDog(name) 
+{ console.log(name); };
+
+
+
+const fruits = () => { 
+	if (true) { 
+		var fruit1 = 'apple'; 
+		const fruit2 = 'banana'; 
+		let fruit3 = 'kiwi'; 
+		} 
+    console.log(fruit3);
+} 
+fruits();
+
+
+
+const helloWorld = () => {globalVar = "I'm global"; }
+helloWorld();
+console.log(globalVar);
