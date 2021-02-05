@@ -462,3 +462,80 @@ fruits();
 const helloWorld = () => {globalVar = "I'm global"; }
 helloWorld();
 console.log(globalVar);
+
+
+
+const fruits = () => { 
+  var fruit = 'apple'; 
+  console.log(fruit); 
+}
+fruits();
+
+
+/**
+ * Curso de asincronismo
+ */
+
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+function calc(num1, num2, callback) {
+  return callback(num1, num2);
+}
+
+console.log(calc(6, 1, sum));
+
+
+//usando ECMAScript6
+const sum = (a, b) => {
+  return a + b;
+}
+
+const call = (a, b, callback) => {
+  return callback(a, b);
+}
+
+console.log(call(2, 2, sum));
+
+
+//resumiendo la funcion con arrow funcitons
+const suma = (num1, num2) => num1 + num2;
+
+const call = (num1, num2, callback) => callback(num1, num2);
+
+console.log(call(2, 6, suma));
+
+
+
+
+
+
+function date(callback) {
+  console.log(new Date);
+  setTimeout(() => {
+      let date = new Date;
+      callback(date);
+  }, 3000);
+}
+
+function printDate(dateNow) {
+  console.log(dateNow);
+}
+
+date(printDate);
+
+
+
+//implementando arrow functions
+const date = (callback) => {
+  console.log(new Date);
+  setTimeout(() => {
+      let date = new Date;
+      callback(date);
+  }, 2000);
+}
+
+const printDate = (dateNow) => console.log(dateNow);
+
+date(printDate);
