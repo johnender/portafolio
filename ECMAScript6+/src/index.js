@@ -362,8 +362,8 @@ const moneyBox = (coins) => {
 }
 
 moneyBox(3); // 3
-moneyBox(4); // 7
-moneyBox(7); // 14
+moneyBox(4); // 4
+moneyBox(7); // 7
 
 /* funcion utilizando closure */
 

@@ -79,11 +79,14 @@ fetchData(api, (error1, data1) => {
   if(error1) 
     return console.error(error1);
   // luego buscamos en la api el id de Rick
+  
+  //fetchData(api + data1.results[0].id, function (error2, data2) {
   fetchData(api + data1.results[0].id, (error2, data2) => {
     // si error, matamos retornando un error
     if(error2) 
       return console.error(error2);
     // por ultimo la consulta a la api que contiene su dimension
+    //fetchData(data2.origin.url, function (error3, data3) {
     fetchData(data2.origin.url, (error3, data3) => {
       // si error, matamos retornando un error
       if(error3) 
