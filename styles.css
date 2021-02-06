@@ -64,6 +64,10 @@ header {
   transform: scale(1.2);
 }
 
+#contact {
+  text-decoration: line-through;
+}
+
 main {
   margin: auto;
   width: 100%;

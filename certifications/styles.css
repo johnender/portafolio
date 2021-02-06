@@ -57,6 +57,10 @@ header {
   transform: scale(1.2);
 }
 
+#contact {
+  text-decoration: line-through;
+}
+
 h1 {
   text-align: center;
   font-size: 2.0rem;
