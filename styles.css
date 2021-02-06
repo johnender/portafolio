@@ -112,6 +112,11 @@ h2 {
   margin-bottom: 10px;
 }
 
+h2 a{
+  font-size: 3rem;
+  color: white;
+}
+
 h2 a:hover {
   color: purple;
   font-size: 3rem;
