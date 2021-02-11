@@ -263,9 +263,39 @@ myLinkedList.preppend(15);
 /**
  * Stack
  */
+class Node {
+  constructor(value){
+      this.value = value
+      this.prev = null
+  }
+}
+
+class Stack{
+  constructor(){
+      this.top = null;
+      this.bottom = null;
+      this.lenght = 0;
+  }
+
+  push(value){
+      let newNode = new Node(value);
+      if (this.lenght == 0){
+          this.bottom = newNode;
+      }
+      newNode.prev = this.top;
+      this.top = newNode;
+      this.lenght++;
+      return this;
+  }
+}
+
+let stack = new Stack();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.push(4);
+console.log(stack.push(5))
 
 
 
 
-
- 
