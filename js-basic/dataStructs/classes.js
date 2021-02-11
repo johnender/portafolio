@@ -299,3 +299,51 @@ console.log(stack.push(5))
 
 
 
+/**
+ * Queue
+ */
+
+class Node{
+  constructor(value){
+      this.value = value;
+      this.next = null;
+  }
+}
+
+class Queue{
+  constructor(){
+      this.last = null;
+      this.first = null;
+      this.length = 0;
+  }
+
+  enqueue(value){
+      const element = new Node(value);
+      if(this.length === 0) {
+          this.first = element;
+          this.last = this.first;
+      }else{
+          this.last.next = element;
+          this.last = element;
+      }
+      this.length++;
+      return this;
+  }
+
+  dequeue(){
+      // const newFirst = this.first.next;
+      // this.first = newFirst;
+      this.first = this.first.next;
+      this.length--;
+      return this.first;
+  }
+
+  peek(){
+      return this.first;
+  }
+}
+
+const queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+console.log(queue.enqueue(3));
