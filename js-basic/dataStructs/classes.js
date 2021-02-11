@@ -137,5 +137,126 @@ console.log(myHashTable.getAllKeys());
 
 
 
+/**
+ * Linked List
+ */
+
+class Node {
+  constructor(value){
+      this.value = value;
+      this.next = null;
+  }
+}
+
+class MySinglyLinkedList{
+  constructor(value){
+      this.head ={
+          value: value,
+          next: null,
+      };
+      this.tail = this.head;
+      this.length = 1;
+  }
+
+  append(value){
+      //Recibimos un valor
+      const newNode = new Node(value);
+
+      //Agregamos el nuevo nodo
+      this.tail.next = newNode;
+
+      //recolocamos el puntero de la cola
+      this.tail = newNode;
+      this.length++;
+      return this;
+  }
+
+  preppend(value){
+    //Recibimos un valor
+    const newNode = new Node(value);
+
+    //El anterior head al nuevo next
+    newNode.next = this.head;
+
+    //recolocamos el puntero del head
+    this.head = newNode;
+    this.length++;
+    return this;
+  }
+
+  get(index) {
+    let pointer = this.head;
+    let count = 0;
+    while (pointer != null) {
+      if (count === index) 
+        return pointer;
+      pointer = pointer.next;
+      count++;
+    }
+    return null;
+  }
+  insert(value, index) {
+    if (index === 0) //caso agregar al head
+      return this.prepend(value);
+    if (index >= this.length) //caso agregar al tail
+      return this.append(value);
+    if (index > 0 && index < this.length) { //caso intermedio
+      const prevPointer = this.get(index - 1); //busca el nodo anterior
+      if (prevPointer) {
+        const nextPointer = prevPointer.next;
+        const node = new Node(value);
+        node.next = nextPointer;
+        prevPointer.next = node;
+        this.length++;
+        return;
+      }
+    }
+    // console.log("index out of bounds: " + index);
+  }
+
+  remove(index) {
+    if (index === 0) {
+      this.head = this.head.next;
+      this.length--;
+      return;
+    }
+    if (index > 0 && index < this.length) {
+      const prevPointer = this.get(index - 1);
+      if (prevPointer) {
+        const pointer = prevPointer.next;
+        if (pointer) prevPointer.next = pointer.next;
+        if (pointer === this.tail) this.tail = prevPointer;
+        this.length--;
+        return;
+      }
+    }
+    console.log("index out of bounds: " + index);
+  }
+
+  // toString() {
+  //   let pointer = this.head;
+  //   let s = "";
+  //   while (pointer != null) {
+  //     s +=
+  //       pointer === this.head
+  //         ? "(H: "
+  //         : pointer === this.tail
+  //         ? "(T: "
+  //         : "(N: ";
+  //     s += pointer.value + ") -> ";
+  //     pointer = pointer.next;
+  //   }
+  //   s += "NULL | length = " + this.length;
+  //   console.log(s);
+  // }
+}
+
+let myLinkedList = new MySinglyLinkedList(1);
+myLinkedList.append(12);
+myLinkedList.append(13);
+myLinkedList.preppend(15);
+
+
+
 
 
