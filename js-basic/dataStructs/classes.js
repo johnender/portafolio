@@ -260,3 +260,12 @@ myLinkedList.preppend(15);
 
 
 
+/**
+ * Stack
+ */
+
+
+
+
+
+ 
