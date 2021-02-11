@@ -351,7 +351,7 @@ console.log(queue.enqueue(3));
 
 
 /**
- * Binary search tree
+ * Binary search tree implemented in arrays
  */
 class BinaryTree {
   constructor() {
@@ -423,3 +423,96 @@ binaryTree.add(170);
 
 console.log(binaryTree.data);
 console.log(binaryTree.search(8));
+
+
+/**
+ * Graph
+ */
+
+ //edge list
+const graph = [
+  [0, 2],
+  [2, 3],
+  [2, 1],
+  [1, 3]
+];
+
+
+// Adyacent list
+//            ===== INDICES =====
+//              0    1       2          3
+const graph = [[2], [2, 3], [0, 1, 3], [1, 2]];
+
+const graph = {
+  0: [2],
+  1: [2, 3],
+  2: [0, 1, 3],
+  3: [1, 2]
+};
+
+//Adjacent Matrix
+const graph = [
+// ==== NODOS ====
+// 1  2  3  4 
+  [0, 0, 1, 0], // 0
+  [0, 0, 1, 1], // 1
+  [1, 1, 0, 1], // 2
+  [0, 1, 1, 0]  // 3
+];
+
+const graph = {
+  0: [0, 0, 1, 0],
+  1: [0, 0, 1, 1],
+  2: [1, 1, 0, 1],
+  3: [0, 1, 1, 0]
+};
+
+//grafo con clase
+class Grafo {
+  constructor() {
+      this.nodos = 0;
+      this.AdjacentList = {};
+  }
+
+  // Add Vertice/Nodo
+  addVertice(node){
+      this.AdjacentList[node] = [];
+      this.nodos++;
+  }
+
+  // Add Conexion/Edge
+  addConex(nodo1, nodo2){
+      // Conexion entre gragos
+      this.AdjacentList[nodo1].push(nodo2);
+      this.AdjacentList[nodo2].push(nodo1);
+  }
+}
+
+const myGraph = new Grafo();
+
+// Vertices
+myGraph.addVertice(1);
+myGraph.addVertice(3);
+myGraph.addVertice(4);
+myGraph.addVertice(5);
+myGraph.addVertice(6);
+myGraph.addVertice(8);
+
+// Conexiones
+myGraph.addConex(8,4)
+myGraph.addConex(4,1)
+myGraph.addConex(1,3)
+myGraph.addConex(1,6)
+myGraph.addConex(3,6)
+myGraph.addConex(3,5)
+myGraph.addConex(5,4)
+
+/**
+  // RESULTADO:
+  1: (3) [4, 3, 6]
+  3: (3) [1, 6, 5]
+  4: (3) [8, 1, 5]
+  5: (2) [3, 4]
+  6: (2) [1, 3]
+  8: [4] 
+*/
