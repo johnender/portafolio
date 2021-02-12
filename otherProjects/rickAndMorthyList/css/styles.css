@@ -15,6 +15,7 @@ html, body {
   min-height: 100vh;
 }
 
+/*Tunning the scroll bar*/
 body::-webkit-scrollbar {
   background-color: #3b2f2f;
   width: 10px;

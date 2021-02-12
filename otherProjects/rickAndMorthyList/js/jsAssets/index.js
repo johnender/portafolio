@@ -17,6 +17,7 @@ const getDataRickAndMorty = async (page) => {
   }
 }
 
+//main function that calls the logic function
 (function() {
   for (let i = 1; i <= maxPageForAPI; i++) {
     getDataRickAndMorty(i);
