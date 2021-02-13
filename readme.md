@@ -46,6 +46,8 @@
 
 This is just a personal portfolio, I will be adding to this repository any web project that I create while studying by my own. As the portfolio itself, this readme is work in progress.
 
+ECMAScript6+>src>index.js -> examples of javascript fundaments and others.
+
 <!-- ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system. -->
