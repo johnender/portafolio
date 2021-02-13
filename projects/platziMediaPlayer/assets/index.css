@@ -3,6 +3,9 @@
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
+html{
+  font-size: 62.5%;/*makes the root sizes of 10px*/
+}
 
 body {
   background: #eeeeee;
@@ -13,26 +16,38 @@ body {
 
 header {
   text-align: center;
-  padding: 3rem 0;
+  padding: 30px 0;
   background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   color: white;
 }
 
 header > h1 {
+  font-size: 2.4rem;
   font-weight: normal;
   font-style: italic;
 }
 
+header > p {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
 main {
-  padding: 1rem 0;
+  padding: 16px 0;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
 }
 
 .movie {
   width: 100%;
+  margin: 0 auto;
+}
+
+button {
+  font-size: 1.6rem;
+  font-weight: normal;
 }
