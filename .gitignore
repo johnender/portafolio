@@ -1,0 +1,2 @@
+# node_modules/
+#es recomendable no subir los modulos de node, se deben identificar en el readme e instalar al clonar de nuevo
