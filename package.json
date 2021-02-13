@@ -1,0 +1,25 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <a href=\"\" rel=\"noopener\">\r  <img width=200px height=200px src=\"https://githubcampus.expert/assets/images/ce-flag.png\" alt=\"Project logo\"></a>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnender/portafolio.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "html",
+    "css"
+  ],
+  "author": "Johnn Hernandez <johnenderhernandez@gmail.com>",
+  "license": "“MIT”",
+  "bugs": {
+    "url": "https://github.com/johnender/portafolio/issues"
+  },
+  "homepage": "https://github.com/johnender/portafolio#readme"
+}
