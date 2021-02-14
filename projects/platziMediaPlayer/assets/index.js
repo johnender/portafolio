@@ -25,6 +25,23 @@ muteButton.onclick = () => player.toggleMute();
 
 
 
+/**
+ * Prueba importante
+ * se pasa el Nodeliste como contexto del array mediante call, entonces se tienen las funciones de los array
+ */
+
+//probando call y Nodelist
+const testButton = document.getElementsByClassName("test");
+
+Array.prototype.forEach.call(testButton, element => {
+  element.onclick = () => alert("Test seccessful!");
+});
+
+
+
+
+
+
 /*
 //IIFE, function that is called inmediatly, sorrounded by ()
 (function() {
