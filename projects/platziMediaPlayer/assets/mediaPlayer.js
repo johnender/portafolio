@@ -18,6 +18,7 @@ function  MediaPlayer(config) {//coloca el video que resive como el media actual
   this._initPlugins();//metodo para inicializar los plugins
 }
 
+//usa prototype para heredar this de MediaPlayer
 //con arrow function no funciona
 MediaPlayer.prototype.play = function() {
   this.media.play();
