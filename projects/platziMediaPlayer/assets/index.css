@@ -55,3 +55,7 @@ button {
   font-weight: normal;
   margin: 20px auto 0 auto;
 }
+
+.buttonContainer {
+  display: flex;
+}

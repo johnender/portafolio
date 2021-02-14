@@ -350,10 +350,11 @@ console.log(symbol.description);
 
 
 /**
- * Closure
+ * Closure: regresan una función o un objeto con funciones que mantienen las variables que fueron declaradas fuera de su scope
+ * permite hacer variables privadas
  */
 
- /*fucion normal*/
+ /*funcion normal*/
 
 const moneyBox = (coins) => {
   var saveCoins = 0;  //puede ser let
