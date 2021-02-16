@@ -10,9 +10,9 @@
       <a href="../../../index.html" id="goBack">Go back</a>
 
       <ul class="container">
-        <li><button id="sequence">Get Top Movies in Sequence</button></li>
-        <li><button id="parallel">Get Top Movies in Parallel</button></li>
-        <li><button id="fastest">Get Fastest Top Movie</button></li>
+        <li><button id="sequence" title="Getr movies using secuencial promises">Get Top Movies in Sequence</button></li>
+        <li><button id="parallel" title="Get movies using promise.all">Get Top Movies in Parallel</button></li>
+        <li><button id="fastest" title="Get the promises.race winner">Get Fastest Top Movie</button></li>
       </ul>
     </header>
 
@@ -81,13 +81,17 @@
       //crear un elemento de html para cada pelicula, para poder vizualizarla
       function renderMovies(movies) {
         const movieList = document.getElementById('movies');
-        movieList.innerHTML = '';
 
+        //para limpiar la pagina
+        movieList.innerHTML = ''; 
+
+        //para agregar los elementos del array uno a uno
         movies.forEach(movie => {
           const listItem = document.createElement('li');
           listItem.innerHTML = `
             <img src="https://image.tmdb.org/t/p/w342${movie.poster_path}" />
             <h5>${movie.title}</h5>
+            <p>${movie.original_title}<p>
             <p>Released on <em>${movie.release_date}</em></p>
             `;
 
