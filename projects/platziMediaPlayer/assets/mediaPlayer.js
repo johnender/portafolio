@@ -39,8 +39,31 @@ MediaPlayer.prototype.togglePlay = function() {
 
 //inicializa cada plugin recibido
 MediaPlayer.prototype._initPlugins = function() {
+
+  //objeto para establecer cuanto acceso tienen los plugins, para no pasar todo el MediaPlayer(this)
+  const player = {
+    play: () => this.play(),
+    pause: () => this.pause(),
+    media: this.media, //para poder llamarlo en el getter
+
+    //creando una propiedad virtual con getter
+    get muted() {
+      return this.media.muted;
+    },
+
+    set muted(value){
+      this.media.muted = value;
+      /*
+      if (value ===true)
+        this.media.muted = true;
+      else 
+        this.media.muted = false;
+        */
+    }
+
+  }
   this.plugins.forEach(plugin => {
-    plugin.run(this);
+    plugin.run(player);//antes se pasaba this, ahora el objeto limitado
   });
 }
 
