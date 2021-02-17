@@ -1,0 +1,80 @@
+:root {
+  --primaryColor: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
+  --secondaryColor: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
+  --listFontColor: rgb(169, 221, 185);
+  --textFontSize: 2.0rem;
+  --littleTextFontSize: 1.5rem;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* important responsive feature (padding and border) */
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;/*makes the root sizes of 10px*/
+  border: 0;
+  padding: 0;
+  background: var(--primaryColor);
+  min-height: 100vh;
+}
+
+main {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#goBack{
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.title-text{
+  font-size: 4.5rem;
+  font-style:italic;
+  font-family: cursive;
+}
+
+#start-button{
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  width: auto;
+  text-align: center;
+  align-self: center;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 40px 80px rgba(89, 73, 30, 0.16); /*sombra*/
+  border: none;
+  cursor: pointer;
+  background-color: rgb(141, 231, 52);
+}
+
+#start-button:hover{
+  margin-top: 20px;
+  transform: scale(1.5);
+}
+
+#start-button:focus{
+  outline: none;
+  background-color: rgb(184, 14, 14);
+}
+
+@media screen and (min-height: 450px){
+  main{
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-height: 700px){
+  main{
+    margin-top: 200px;
+  }
+}
