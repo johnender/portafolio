@@ -97,6 +97,17 @@ main {
   border-radius: 2.5%;
   padding-top: 5px;
   padding-bottom: 40px;
+  overflow-y: scroll;
+}
+
+/*Tunning the scroll bar*/
+.paginas::-webkit-scrollbar {
+  background-color: var(--primaryColor);/*background color so it doesn't looks weird*/
+  width: 10px;
+}
+
+.paginas::-webkit-scrollbar-thumb {
+  background-color: var(--listFontColor);
 }
 
 .paginas h2 {
@@ -149,6 +160,7 @@ text {
   
   flex-wrap: wrap; /*para que se acomode el contenerdor si cambia el tamanho*/
   justify-content: center; /*para ordenar, reparte el espacio libre*/
+  
 }
 
 .lista_item {
