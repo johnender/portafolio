@@ -70,3 +70,52 @@ function makeCounter(n){
 let counter = makeCounter(5);
 counter.increase();
 console.log(counter.getCount());*/
+
+
+
+
+
+
+
+
+
+
+/**
+ * Ejemplo uso de proxy
+ */
+/*
+const dialogosRamirez = {
+  accion: "Para saber si es cocaina enviaremos una muestra al laboratorio",
+  sugerencia: "¿Seguro no quiere esperar a los analisis de laboratorio?",
+  pregunta: "¿Y supo si era o no cocaina?"
+}
+
+const dialogosComandante = {
+  get(obj, prop) {
+    switch (prop) {
+      case "accion":
+      console.log(obj[prop])  
+      console.log("Que muestra ramirez que muestra?")
+        break
+      case "sugerencia":
+      console.log(obj[prop])  
+      console.log("Ahorita vemos que onda... ahorita vemos que pe...")
+        break
+      case "pregunta":
+      console.log(obj[prop])  
+      console.log("Nel... no es coca... es harina... ay papaya de celayaaaa, ay papantla tus hijos vuelan!!! VAMONOS PE...!!!")
+        break
+      default:
+        console.log("Que se armen los p$%·% ch%&/zos!!! PUM!!!!")
+        break
+    }
+
+    return obj[prop]
+  }
+}
+
+const oficialRamirez = new Proxy(dialogosRamirez, dialogosComandante);
+oficialRamirez.accion
+oficialRamirez.sugerencia
+oficialRamirez.pregunta
+*/
