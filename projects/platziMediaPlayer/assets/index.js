@@ -90,6 +90,7 @@ const dialogosRamirez = {
   pregunta: "¿Y supo si era o no cocaina?"
 }
 
+//normalmente el handle es al reves, cuando si existe la propiedad no devuelve nada, cuando no existe, devuelve la sugerencia
 const dialogosComandante = {
   get(obj, prop) {
     switch (prop) {
@@ -114,8 +115,10 @@ const dialogosComandante = {
   }
 }
 
+//new Proxy(target, handle)
 const oficialRamirez = new Proxy(dialogosRamirez, dialogosComandante);
 oficialRamirez.accion
 oficialRamirez.sugerencia
+oficialRamirez.otro//cuando la propiedad no existe
 oficialRamirez.pregunta
 */
