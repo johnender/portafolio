@@ -40,6 +40,10 @@ header {
   list-style: none;
 }
 
+.container button{
+  cursor: pointer;
+}
+
 #movies {
   margin: 15px auto;
   width: 95%;
@@ -58,4 +62,12 @@ header {
 
 #movies h5{
   font-size: 2rem;
+}
+
+#abort{
+  padding: 5px;
+  border: solid 1px white;
+  background-color: rgb(218, 51, 51);
+  border-radius: 5px;
+  color: white;
 }
