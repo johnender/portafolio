@@ -122,3 +122,29 @@ oficialRamirez.sugerencia
 oficialRamirez.otro//cuando la propiedad no existe
 oficialRamirez.pregunta
 */
+
+
+
+
+/**
+ * Usando generador para serie fibonacci desde el inicio
+ */
+/*
+function* fibonacci() {
+  let a = 1;
+  let b = 1;
+  while (true) {
+    const nextNumber = a + b;
+    a= b 
+    b = nextNumber;
+    yield nextNumber;
+  }
+}
+
+const gen = fibonacci()
+gen.next()//2
+gen.next()//3
+gen.next()//5
+gen.next()//8
+gen.next()//13
+*/
