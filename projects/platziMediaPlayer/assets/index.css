@@ -37,7 +37,7 @@ main {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 100vw;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -46,7 +46,7 @@ main {
 }
 
 .movie {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -57,5 +57,41 @@ button {
 }
 
 .buttonContainer {
-  display: flex;
+  margin: 0 auto;
+}
+
+.comments {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 321px){
+  .movie{
+    width: 75%;
+  }
+
+  .comments{
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 769px){
+  .movie{
+    width: 50%;
+  }
+
+  .comments{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1025px){
+  .movie{
+    width: 25%;
+  }
+
+  .comments{
+    width: 50%;
+  }
 }
