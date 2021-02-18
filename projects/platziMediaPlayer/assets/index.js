@@ -38,6 +38,15 @@ Array.prototype.forEach.call(testButton, element => {
 });
 
 
+//revisar si el navegador da tiene serviceWorkers
+if('serviceWorker' in navigator){
+  //registramos el archivo del service worker del proyecto
+  navigator.serviceWorker.register('./sw.js').catch(error => {
+    console.log(error.message)
+  })
+}
+
+
 
 
 
