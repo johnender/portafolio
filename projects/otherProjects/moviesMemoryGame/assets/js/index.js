@@ -36,11 +36,9 @@ class memoryGame {
 
 	fetchCharacters = async () => {
 		this.dataAPI = { loading: true, error: null }
-
 		try {
 			const response = await fetch(url)// ojito
 			const data = await response.json()
-
 			this.dataAPI = {
 				loading: false,
 				data: {
@@ -48,18 +46,28 @@ class memoryGame {
 					results: data.results
 				}
 			}
+      console.log("pasa por aqui")
 		} catch (error) {
 			this.dataAPI = { loading: false, error: error }
+      console.log("pasa por error")
 		}
 	}
 
-	async iniciarJuego() {
-		this.NivelActual = 0
+  async iniciarJuego(){
+    await this.loadGame()
+    this.startGame()
+  }
+
+  async loadGame(){
+    this.NivelActual = 0
 		this.elegirtarjeta = this.elegirtarjeta.bind(this)
 		await this.fetchCharacters()
+  }
 
+	startGame() {
+    this.NumerosAPI = []
 		for (let i = 0; i < 20; i++) {
-			this.NumerosAPI.push(i + 1)
+			this.NumerosAPI.push(i)
 		}
 
 		this.NumerosAPI = this.NumerosAPI.sort(function() {
@@ -80,10 +88,17 @@ class memoryGame {
 			return Math.random() - 0.5
 		})
 
+      for (let i = 0; i < this.NumerosAPI.length; i++){
+        console.log(this.NumerosAPI[i])
+      }
+
+    //limpiar pantalla antes de agregar las tarjetas
+    this.container.innerHTML = ''; 
 		for (let i = 0; i < this.tarjetas.length; i++) {
 			this.PersonajeTemporal = {}
 
       let number = this.NumerosAPI[i]
+      console.log(this.dataAPI.data.results[number].id)
       this.PersonajeTemporal = this.dataAPI.data.results[number]
 			this.tarjetas[i] = document.createElement('div')
 			this.tarjetas[i].classList.add('tarjeta')
@@ -163,7 +178,7 @@ class memoryGame {
 	victoria() {
 		this.PausarTiempo()
 		swal(
-			'Ganaste!',
+			'You won!',
 			`Moves: ${this.movimientos} \n\n Time: ${this.tiempo}`,
 			'success'
 		).then(() => {
@@ -173,6 +188,7 @@ class memoryGame {
 
 	juegoNuevo() {
 		location.reload()
+    start.iniciarJuego()
 	}
 
 	getRndInteger(min, max) {
