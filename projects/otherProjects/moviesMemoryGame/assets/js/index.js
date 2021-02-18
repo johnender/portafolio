@@ -80,19 +80,11 @@ class memoryGame {
 			return Math.random() - 0.5
 		})
 
-    try {
-      const response = await fetch(url)
-      this.data = await response.json()
-
-    } catch (error) {
-      console.log(error.message)
-    }
-
 		for (let i = 0; i < this.tarjetas.length; i++) {
 			this.PersonajeTemporal = {}
 
-
-      this.PersonajeTemporal = this.data.results[i]
+      let number = this.NumerosAPI[i]
+      this.PersonajeTemporal = this.dataAPI.data.results[number]
 			this.tarjetas[i] = document.createElement('div')
 			this.tarjetas[i].classList.add('tarjeta')
 			this.tarjetas[i].innerText = this.NumerosAPI[i]
