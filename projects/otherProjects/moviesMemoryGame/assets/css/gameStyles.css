@@ -108,3 +108,25 @@
 		transform: rotate(359deg);
 	}
 }
+
+
+@media screen and (max-width: 500px){
+	.tarjeta{
+		height: 80px;
+		width: 60px;
+	}
+
+	#game {
+		display: none;
+		min-height: 500px;
+		max-width: 100%;
+		flex-wrap: wrap;
+		perspective: 600px;
+		justify-content: space-around;
+	}
+	
+	.game-info {
+		max-width: 300px;
+		height: 40px;
+	}
+}
