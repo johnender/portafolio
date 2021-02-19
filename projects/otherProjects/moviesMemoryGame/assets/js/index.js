@@ -130,7 +130,7 @@ class memoryGame {
 			this.container.appendChild(this.tarjetas[i])
 		}
 		this.containerCargando.style.display = 'none'
-		this.container.style.display = 'grid'
+		this.container.style.display = 'flex'
 	}
 
   //add event listener property for the cards in game
