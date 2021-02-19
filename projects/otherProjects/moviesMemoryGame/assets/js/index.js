@@ -113,7 +113,7 @@ class memoryGame {
 			this.PersonajeTemporal = {}
 
       let number = this.NumerosAPI[i]
-      console.log(this.dataAPI.data.results[number].id)
+      //console.log(this.dataAPI.data.results[number].id)
       this.PersonajeTemporal = this.dataAPI.data.results[number]
 			this.tarjetas[i] = document.createElement('div')
 			this.tarjetas[i].classList.add('tarjeta')
@@ -203,7 +203,7 @@ class memoryGame {
 			`Moves: ${this.movimientos} \n\n Time: ${this.tiempo}`,
 			'success'
 		).then(() => {
-			console.log('hola')
+			console.log('success')
 		})
 	}
 
