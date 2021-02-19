@@ -77,6 +77,7 @@ class memoryGame {
     this.NTarjetasSeleccionadas = 0
     this.primermovimiento = false
     this.reiniciarMovimientos()
+    this.ContadorVictoria = 0
 
 
     this.NumerosAPI = []
