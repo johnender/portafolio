@@ -71,3 +71,15 @@ header {
   border-radius: 5px;
   color: white;
 }
+
+@media screen and (max-width: 600px){
+  .container {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  
+  .container li {
+    margin: 5px;
+    list-style: none;
+  }
+}
