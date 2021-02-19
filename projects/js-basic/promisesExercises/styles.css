@@ -73,11 +73,15 @@ header {
 }
 
 @media screen and (max-width: 600px){
-  .container {
-    margin-top: 20px;
+  header {
     flex-direction: column;
   }
-  
+
+  .container {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
   .container li {
     margin: 5px;
     list-style: none;
