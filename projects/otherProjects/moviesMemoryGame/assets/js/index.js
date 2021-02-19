@@ -71,6 +71,14 @@ class memoryGame {
 
   //calc the random posters to use and put it into cards
 	startGame() {
+
+    //restat every counter, in case the game is not the first one
+    this.ReiniciarTiempo()
+    this.NTarjetasSeleccionadas = 0
+    this.primermovimiento = false
+    this.reiniciarMovimientos()
+
+
     this.NumerosAPI = []
 		for (let i = 0; i < 20; i++) {
 			this.NumerosAPI.push(i)
@@ -122,7 +130,7 @@ class memoryGame {
 			this.container.appendChild(this.tarjetas[i])
 		}
 		this.containerCargando.style.display = 'none'
-		this.container.style.display = 'flex'
+		this.container.style.display = 'grid'
 	}
 
   //add event listener property for the cards in game
@@ -202,6 +210,11 @@ class memoryGame {
 		location.reload()
     start.iniciarJuego()
 	}
+
+  //restart movements counter
+  reiniciarMovimientos(){
+    this.movimientos = 0
+  }
 
   //return random number between min and max
 	getRndInteger(min, max) {

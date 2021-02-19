@@ -6,11 +6,13 @@
 
 #game {
 	display: none;
-	height: 500px;
-	width: 500px;
+	min-height: 500px;
+	max-width: 500px;
 	flex-wrap: wrap;
 	perspective: 600px;
 	justify-content: space-around;
+	grid-template-columns: repeat(auto-fill, 100px);
+	grid-auto-flow: row;
 }
 
 .game-info {
@@ -45,7 +47,7 @@
 
 .tarjeta {
 	display: flex;
-	height: 90px;
+	height: 120px;
 	width: 90px;
 	justify-content: center;
 	align-items: center;
