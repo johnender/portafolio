@@ -15,6 +15,9 @@ function  MediaPlayer(config) {//coloca el video que resive como el media actual
   this.media = config.el;
   this.plugins = config.plugins || [];//el [] es por si no hay plugins
 
+  this._initPlayer();//inicializa el contenedor de forma dinamica
+
+
   this._initPlugins();//metodo para inicializar los plugins
 }
 
@@ -37,6 +40,17 @@ MediaPlayer.prototype.togglePlay = function() {
   }
 };
 
+//crando un contenedor mayor y metiendo el player dentro
+MediaPlayer.prototype._initPlayer = function() {
+  this.container = document.createElement('div') 
+  this.container.style.position = 'relative'
+  
+  this.container.style.display = 'flex'
+  this.media.parentNode.insertBefore(this.container, this.media)
+  this.container.appendChild(this.media)
+}
+
+
 //inicializa cada plugin recibido
 MediaPlayer.prototype._initPlugins = function() {
 
@@ -45,6 +59,7 @@ MediaPlayer.prototype._initPlugins = function() {
     play: () => this.play(),
     pause: () => this.pause(),
     media: this.media, //para poder llamarlo en el getter
+    container: this.container, //agregando a los elementos del player
 
     //creando una propiedad virtual con getter
     get muted() {

@@ -1,6 +1,6 @@
 # node_modules/
 #es recomendable no subir los modulos de node, se deben identificar en el readme e instalar al clonar de nuevo
-*.json
+#*.json
 node_modules/
 #en package.json hay ejemplos de como ejecutar codigo con scripts, para llamarlo es npm run <nombre>, desde la terminal
 #el script es el siguiente

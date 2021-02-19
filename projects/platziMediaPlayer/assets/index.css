@@ -66,6 +66,30 @@ button {
   font-size: 1.6rem;
 }
 
+
+
+/* Styling the div created trought .js*/
+.ads {
+  position: absolute;
+  bottom: 10px;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 60%;
+}
+
+.ads:hover {
+  opacity: 100%;
+}
+
+.ads__link{
+  display: flex;
+}
+
+.ads__img{
+  width: 10%;
+}
+
+
 @media screen and (min-width: 321px){
   .movie{
     width: 75%;
@@ -73,6 +97,10 @@ button {
 
   .comments{
     width: 75%;
+  }
+
+  .ads {
+    left: 5%;
   }
 }
 
@@ -84,6 +112,10 @@ button {
   .comments{
     width: 50%;
   }
+
+  .ads {
+    left: 15%;
+  }
 }
 
 @media screen and (min-width: 1025px){
@@ -93,5 +125,9 @@ button {
 
   .comments{
     width: 50%;
+  }
+
+  .ads {
+    left: 32.5%;
   }
 }

@@ -3,6 +3,7 @@
 import MediaPlayer from './mediaPlayer.js';
 import AutoPlay from './plugins/autoplay.js'
 import AutoPause from './plugins/autoPause.js'
+import AdsPlugin from './plugins/ads/index.js'
 
 const video = document.querySelector("video")//agarrar el video para manipularlo, puede ser video, ya que es el unico elemento con esa etiqueta
 
@@ -14,7 +15,8 @@ const muteButton = document.querySelector("#muteButton")
 //const  player = new  MediaPlayer({ el:  video });//se le envia el video actual
 const  player = new  MediaPlayer({ el:  video, plugins: [
   new AutoPlay(),
-  new AutoPause()
+  new AutoPause(),
+  new AdsPlugin()
 ] });//se le envia el video actual
 
 playButton.onclick = () =>  player.togglePlay();
