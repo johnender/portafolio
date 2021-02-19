@@ -1,4 +1,8 @@
+
+//needed key for this API
 const apiKey = 'b89fc45c2067cbd33560270639722eae';
+
+//API link
 const url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${apiKey}`;
 
 class memoryGame {
@@ -24,7 +28,7 @@ class memoryGame {
 				results: []
 			}
 		}
-		//Cronometro
+		//counter values
 		this.primermovimiento = false
 		this.hora = 0
 		this.minutos = 0
@@ -34,10 +38,11 @@ class memoryGame {
 		this.stop = true
 	}
 
+  //bring the data from the API
 	fetchCharacters = async () => {
 		this.dataAPI = { loading: true, error: null }
 		try {
-			const response = await fetch(url)// ojito
+			const response = await fetch(url)
 			const data = await response.json()
 			this.dataAPI = {
 				loading: false,
@@ -46,24 +51,25 @@ class memoryGame {
 					results: data.results
 				}
 			}
-      console.log("pasa por aqui")
 		} catch (error) {
 			this.dataAPI = { loading: false, error: error }
-      console.log("pasa por error")
 		}
 	}
 
+  //load data and start game
   async iniciarJuego(){
     await this.loadGame()
     this.startGame()
   }
 
+  //load the info from the API
   async loadGame(){
     this.NivelActual = 0
 		this.elegirtarjeta = this.elegirtarjeta.bind(this)
 		await this.fetchCharacters()
   }
 
+  //calc the random posters to use and put it into cards
 	startGame() {
     this.NumerosAPI = []
 		for (let i = 0; i < 20; i++) {
@@ -88,9 +94,9 @@ class memoryGame {
 			return Math.random() - 0.5
 		})
 
-      for (let i = 0; i < this.NumerosAPI.length; i++){
-        console.log(this.NumerosAPI[i])
-      }
+      // for (let i = 0; i < this.NumerosAPI.length; i++){
+      //   console.log(this.NumerosAPI[i])
+      // }
 
     //limpiar pantalla antes de agregar las tarjetas
     this.container.innerHTML = ''; 
@@ -119,14 +125,19 @@ class memoryGame {
 		this.container.style.display = 'flex'
 	}
 
+  //add event listener property for the cards in game
 	agregarEventos(n) {
 		this.tarjetas[n].addEventListener('click', this.elegirtarjeta)
 	}
 
+  //remoce event listener property for the cards out of the game
 	eliminarEventos(n) {
 		this.tarjetas[n].removeEventListener('click', this.elegirtarjeta)
 	}
 
+  //choose card, first move estar counter
+  //case 1, rotate card
+  //case 2, compare the selected cards 
 	elegirtarjeta(e) {
 		if (this.time === true) {
 			switch (this.NTarjetasSeleccionadas) {
@@ -175,6 +186,7 @@ class memoryGame {
 		}
 	}
 
+  //create modal to show data of the game in winning
 	victoria() {
 		this.PausarTiempo()
 		swal(
@@ -191,11 +203,12 @@ class memoryGame {
     start.iniciarJuego()
 	}
 
+  //return random number between min and max
 	getRndInteger(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min
 	}
 
-	//Cronometro
+	//start counter
 	IniciarCronometro() {
 		if (this.stop == true) {
 			this.stop = false
@@ -203,6 +216,7 @@ class memoryGame {
 		}
 	}
 
+  //add second by second with a Timeout
 	cronometro() {
 		if (this.stop == false) {
 			this.decimales++
@@ -222,6 +236,8 @@ class memoryGame {
 			setTimeout('start.cronometro()', 100)
 		}
 	}
+
+  //update the counter on the screen
 	verCronometro() {
 		if (this.hora < 10) this.tiempo = ''
 		else this.tiempo = this.hora
@@ -231,9 +247,13 @@ class memoryGame {
 		this.tiempo = this.tiempo + this.segundos
 		document.getElementById('time').innerHTML = this.tiempo
 	}
+
+  //stops counter
 	PausarTiempo() {
 		this.stop = true
 	}
+
+  //restart counter
 	ReiniciarTiempo() {
 		if (this.stop == false) {
 			this.stop = true
