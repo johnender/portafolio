@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px;
+      font-family: "Lato", sans-serif;
+      width: 550px;
+      margin: auto;
+    }
+
+    .container {
+      background: turquoise;
+      width: 180px;
+      height: 180px;
+      position: relative;
+    }
+
+    .element, .element9, .element8, .element7, .element6, .element5, .element4, .element3, .element2, .element1 {
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      padding-top: 10px;
+      box-sizing: border-box;
+    }
+
+    .element1 {
+      background: papayawhip;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .element2 {
+      background: papayawhip;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 30px);   /*Otra de forma de hacer el posicionamiento, calc de la mitad del padre, menos la mitad del elemento*/
+      /* top: 50%;
+      transform: translate(0, -50%); */
+    }
+
+    .element3 {
+      background: papayawhip;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      transform: translate(0, -100%);
+    }
+
+    .element4 {
+      background: pink;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .element5 {
+      background: pink;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .element6 {
+      background: pink;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -100%);
+    }
+
+    .element7 {
+      background: lightcyan;
+      position: absolute;
+      left: 100%;
+      transform: translate(-100%, 0);
+    }
+
+    .element8 {
+      background: lightcyan;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translate(-100%, -50%);
+    }
+
+    .element9 {
+      background: lightcyan;
+      position: absolute;
+      left: 100%;
+      top: 100%;
+      transform: translate(-100%, -100%);
+    }
+  </style>
+  <title>Align positions</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="element1">top left</div>
+    </div>
+  
+    <div class="container">
+      <div class="element2">center left</div>
+    </div>
+  
+    <div class="container">
+      <div class="element3">bottom left</div>
+    </div>
+  
+    <div class="container">
+      <div class="element4">top center</div>
+    </div>
+  
+    <div class="container">
+      <div class="element5">center center</div>
+    </div>
+  
+    <div class="container">
+      <div class="element6">bottom center</div>
+    </div>
+    
+    <div class="container">
+      <div class="element7">top right</div>
+    </div>
+    
+    <div class="container">
+      <div class="element8">center right</div>
+    </div>
+  
+    <div class="container">
+      <div class="element9">bottom right</div>
+    </div>
+  </div>
+</body>
+</html>
