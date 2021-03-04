@@ -5,6 +5,7 @@ main {
 .paginas{
     max-width: 25%;
     min-height: 85vh;
+    max-height: 85vh;
 }
 .content {
     max-width: 75%;

@@ -102,7 +102,7 @@ main {
 
 /*Tunning the scroll bar*/
 .paginas::-webkit-scrollbar {
-  background-color: var(--primaryColor);/*background color so it doesn't looks weird*/
+  background-color: black;/*background color so it doesn't looks weird*/
   width: 10px;
 }
 
