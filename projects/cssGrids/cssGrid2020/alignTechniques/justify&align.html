@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px;
+      font-family: "Lato", sans-serif;
+      width: 550px;
+      margin: auto;
+    }
+
+    .container, .container9, .container8, .container7, .container6, .container5, .container4, .container3, .container2, .container1 {
+      background: turquoise;
+      width: 180px;
+      height: 180px;
+    }
+
+    .element, .element3, .element2, .element1 {
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      padding-top: 10px;
+      box-sizing: border-box;
+    }
+
+    .element1 {
+      background: papayawhip;
+    }
+
+    .element2 {
+      background: pink;
+    }
+
+    .element3 {
+      background: lightcyan;
+    }
+
+    .container1 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .container2 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .container3 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    .container4 {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .container5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container6 {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .container7 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+
+    .container8 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .container9 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container1">
+      <div class="element1">top left</div>
+    </div>
+  
+    <div class="container2">
+      <div class="element1">center left</div>
+    </div>
+  
+    <div class="container3">
+      <div class="element1">bottom left</div>
+    </div>
+  
+    <div class="container4">
+      <div class="element2">top center</div>
+    </div>
+  
+    <div class="container5">
+      <div class="element2">center center</div>
+    </div>
+  
+    <div class="container6">
+      <div class="element2">bottom center</div>
+    </div>
+    
+    <div class="container7">
+      <div class="element3">top right</div>
+    </div>
+    
+    <div class="container8">
+      <div class="element3">center right</div>
+    </div>
+  
+    <div class="container9">
+      <div class="element3">bottom right</div>
+    </div>
+  </div>
+</body>
+</html>
