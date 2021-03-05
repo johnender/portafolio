@@ -34,6 +34,9 @@ header .header-icons-container {
     width: 100%;
     height: 50px;
     display: grid;
+    /*same effect*/
+    /* display: flex;
+    justify-content: flex-end; */ 
     background-color: #47cfac;
 }
 header .header-icons-container .icons {
