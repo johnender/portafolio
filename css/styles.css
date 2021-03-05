@@ -77,7 +77,7 @@ main {
   display: flex;
   flex-direction: column; /*default*/
   flex-wrap: wrap; /*para que se acomode el contenerdor si cambia el tamanho*/
-  justify-content: center; /*para ordenar, reparte el espacio libre*/
+  justify-content: space; /*para ordenar, reparte el espacio libre*/
   align-items: center;
 }
 
