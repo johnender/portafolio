@@ -256,3 +256,12 @@ footer p {
 .proyect-container {
     padding: 0 5px;
 }
+
+.profile-container img{
+    border-radius: 50%;
+    box-shadow: 8px 16px 32px 0px black;
+}
+
+.profile-container-text{
+    align-self: center;
+}
