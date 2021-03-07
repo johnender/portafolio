@@ -93,7 +93,7 @@ nav .profile-link a {
 }
 .home-main-text {
     font-family: 'Roboto mono', monospace;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 700px;
     letter-spacing: 10px;
     color: black;
@@ -106,7 +106,7 @@ nav .profile-link a {
     background: #48cfad;
     text-align: center;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 50px;
 }
 
@@ -145,7 +145,7 @@ nav .profile-link a {
 .blogs-button {
     border: 1px solid #47cfac;
     padding: 10px 15px;
-    font-size: 12px;
+    font-size: 0.75rem;
     transition: all .5s;
 }
 
@@ -157,10 +157,19 @@ nav .profile-link a {
 
 .blogs-posts-container .post-container {
     display: inline-block;
-    padding-left: 10px;
+    padding: 10px;
     max-width: 30%;
+    padding-bottom: 30px;
     margin-bottom: 50px;
+    border: 2px solid #634545;
+    border-radius: 5px;
+    box-shadow: 6px 9px 12px 0px rgb(34, 32, 32);
 }
+
+.blogs-posts-container .post-container:hover{
+    box-shadow: 18px 20px 12px 0px rgb(34 32 32);
+}
+
 .blogs-posts-container .post-container p {
     margin-bottom: 35px;
 }
@@ -193,7 +202,7 @@ footer p {
     padding-bottom: 20px;
 }
 .blogpost-main-container article h1 {
-    font-size: 35px;
+    font-size: 2.2rem;
 }
 
 .contact-main-container {
