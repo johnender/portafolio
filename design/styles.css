@@ -1,0 +1,36 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* important responsive feature (padding and border) */
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  width: 100%;
+}
+
+.card-image-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  margin: 0 auto;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card-image{
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.card-text{
+  width: auto;
+  margin: 25px auto;
+  text-align: center;
+  font-weight: 700;
+  color: rgb(81, 170, 100);
+}
