@@ -11,6 +11,13 @@ main{
   margin-bottom: 50px;
 }
 
+#goBack{
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 .container{
   width: 100%;
   display: grid;
