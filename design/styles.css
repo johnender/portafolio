@@ -10,13 +10,13 @@ main{
   flex-direction: row;
 }
 
-.card{
+.cards-container{
   width: 100%;
 }
 
 .card-image-container{
   display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
+  grid-template-columns: repeat(auto-fit, 400px);
   margin: 0 auto;
   justify-content: center;
   gap: 25px;
