@@ -1,4 +1,7 @@
-$(function() {
+$API = 'http://api.tvmaze.com/search/shows';
+
+
+$(function() { //it's not noccesary that this function contains the other ones, this once can be closed and then the other
   var $tvShowsContainer = $('#app-body').find('.tv-shows');
 
   function renderShows(shows) {
@@ -23,20 +26,20 @@ $(function() {
   $('#app-body')
     .find('form')
     .submit(function (ev) {
-      ev.preventDefault();
-      var busqueda = $(this)
-        .find('input[type="text"]')
-        .val();
+      ev.preventDefault();    //stop the default refresh
+      var busqueda = $(this)    //the format $() is to transform the element into a jQuery object
+        .find('input[type="text"]') //search for the specific atribute
+        .val();   //take the valur from the input atribute
 
       $tvShowsContainer.find('.tv-show').remove()
       var $loader = $('<div class="loader">');
       $loader.appendTo($tvShowsContainer);
       $.ajax({
-        url: 'http://api.tvmaze.com/search/shows',
+        url: $API,
         data: { q: busqueda },
         success: function (res, textStatus, xhr) {
           $loader.remove();
-          var shows = res.map(function (el) {
+          var shows = res.map(function (el) { //map works similar to the forEach
             return el.show;
           })
 
@@ -56,7 +59,7 @@ $(function() {
         '</article>';
 
   if (!localStorage.shows) {
-    $.ajax('http://api.tvmaze.com/shows')
+    $.ajax($API)
       .then(function (shows) {
         $tvShowsContainer.find('.loader').remove();
         localStorage.shows = JSON.stringify(shows);
