@@ -65,7 +65,7 @@ class Calculator {
     this.valueB = 0;
   }
 
-  sum(a, valueB) {
+  sum(valueA, valueB) {
     this.valueA = valueA;
     this.valueB = valueB;
     return this.valueA + this.valueB;
