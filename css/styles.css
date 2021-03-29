@@ -40,7 +40,20 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.big__index__container {
+  display: none;
+}
+
+.small__index{
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
 }
 
 .index {
@@ -50,12 +63,12 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  color: white;
 } 
 
 .index li {
   padding: 10px;
   list-style: none;
-  color: white;
   text-decoration: none;
 }
 

@@ -7,3 +7,12 @@ h1 {
     font-size: 4.0rem;
     text-align: left;
 }
+
+
+.big__index__container {
+    display: flex;
+}
+
+.small__index__container {
+    display: none;
+}
