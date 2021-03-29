@@ -33,13 +33,27 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.big__index__container {
+  display: none;
+}
+
+.small__index{
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
 }
 
 .index {
   right: 10px;
   font-size: 2rem;
   display: flex;
+  color: white;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -48,7 +62,6 @@ header {
 .index li {
   padding: 10px;
   list-style: none;
-  color: white;
   text-decoration: none;
 }
 
@@ -173,15 +186,20 @@ a, a:hover, a:focus, a:active {
       font-size: 3.0rem;
   }
 
-  header {
-    justify-content: space-between;
-  }
 }
 
 @media screen and (min-width: 1024px){
   h1 {
       font-size: 4.0rem;
       text-align: left;
+  }
+
+  .small__index__container{
+    display: none;
+  }
+
+  .big__index__container{
+    display: flex;
   }
 } 
 
