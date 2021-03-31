@@ -2,6 +2,8 @@ $API = 'http://api.tvmaze.com/search/shows';
 
 
 $(function() { //it's not noccesary that this function contains the other ones, this once can be closed and then the other
+  
+
   var $tvShowsContainer = $('#app-body').find('.tv-shows');
 
   function renderShows(shows) {
@@ -29,11 +31,12 @@ $(function() { //it's not noccesary that this function contains the other ones, 
       ev.preventDefault();    //stop the default refresh
       var busqueda = $(this)    //the format $() is to transform the element into a jQuery object
         .find('input[type="text"]') //search for the specific atribute
-        .val();   //take the valur from the input atribute
+        .val();   //take the value from the input atribute
 
       $tvShowsContainer.find('.tv-show').remove()
       var $loader = $('<div class="loader">');
       $loader.appendTo($tvShowsContainer);
+
       $.ajax({
         url: $API,
         data: { q: busqueda },
