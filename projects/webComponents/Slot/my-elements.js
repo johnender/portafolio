@@ -13,10 +13,12 @@ class myElement extends HTMLElement {
     template.innerHTML = `
       <section>
         <h2>
-          <slot></slot> <!---En el slot tendremos el texto que tenemos en la etiqueta de my element--->
+          <slot name="title"></slot> <!---En el slot tendremos el texto que tenemos en la etiqueta de my element--->
         </h2>
         <div>
-          <p>Soy un párrafo</p>
+          <p>
+            <slot name="paragraph"></slot>
+          </p>
         </div>
       </section>
       ${this.getStyles()} <!---Aplicamos los estilos--->
