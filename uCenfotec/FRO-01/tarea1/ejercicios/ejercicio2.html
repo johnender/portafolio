@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Return first and last name from a form - w3resource</title>
+  </head>
+  <body>
+    <form id="form1" onsubmit="getFormvalue()">
+      <label to="nombre">Nombre:</label> <input type="text" id="nombre" value="David" /><br />
+      <label to="apellidos">Apellidos:</label> <input type="text" id="apellidos" value="Beckham" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+
+
+
+    <script>
+      let name = document.querySelector("#nombre");
+      console.log(name.value);
+
+      
+      let lastName = document.querySelector("#apellidos");
+      console.log(lastName.value);
+
+      const node = document.createElement("button");
+      node.style.marginTop = "1rem";
+      node.textContent = "Refrescar consola (desde JS)";
+
+      document.querySelector("body").appendChild(node);
+
+      node2 = document.createElement("p");
+      document.querySelector("body").appendChild(node2);
+
+      node.addEventListener("click", ()=>{
+        console.log(name.value);
+        console.log(lastName.value);
+
+        node2.textContent = `Nombre: ${name.value}, Apellidos: ${lastName.value}`;
+      })
+
+    </script>
+  </body>
+</html>

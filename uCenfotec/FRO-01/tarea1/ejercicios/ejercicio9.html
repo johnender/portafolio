@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Change the content of a cell</title>
+  </head>
+  <body>
+    <table id="myTable" border="1">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+      <tr>
+        <td>Row3 cell1</td>
+        <td>Row3 cell2</td>
+      </tr>
+    </table>
+    <form>
+      <label to="row">Number of row:</label> 
+      <input type="text" placeholder="#" id="row">
+      <label to="column">Number of column:</label> 
+      <input type="text" placeholder="#" id="column">
+      <label to="newContent">New content:</label> 
+      <input type="text" placeholder="#" id="newContent">
+      <input type="button" onclick="changeContent()" value="Change content" />
+    </form>
+
+    <script>
+      function changeContent() {
+        const row = document.querySelector("#row");
+        const column = document.querySelector("#column");
+        const newContent = document.querySelector("#newContent");
+        const table = document.querySelector("#myTable");
+
+        const temp = document.createElement("p");
+        document.querySelector("body").appendChild(temp);
+
+        if(row.value == "" || column.value == ""){
+          console.log("Ingrese valores por favor");
+
+          temp.textContent = "Ingrese valores por favor";
+        }else{
+          //limpiar advertencia
+          const algo = document.querySelectorAll("p");
+          algo.forEach( param => {
+            param.remove();
+          })
+
+          //buscar celda
+          console.log(`row: ${row.value}, column: ${column.value}`)
+          if(table.rows[row.value-1]){
+            if(table.rows[row.value-1].cells[column.value-1]){
+              table.rows[row.value-1].cells[column.value-1].textContent = newContent.value;
+            }else{
+              temp.textContent = "Invalid column";
+              document.querySelector("body").appendChild(temp);
+            }
+          }else{
+            temp.textContent = "Invalid Row";
+            document.querySelector("body").appendChild(temp);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

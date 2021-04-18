@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+
+
+
+
+    <script>
+      node = document.createElement("p");
+      node.textContent = `Screen Width: ${screen.width}, Screen Height: ${screen.height}`;
+      document.querySelector("body").appendChild(node);
+
+      window.onresize = () =>{
+        node.textContent = `Screen Width: ${screen.width}, Screen Height: ${screen.height}`;
+      }
+
+    </script>
+  </body>
+</html>

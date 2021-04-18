@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <p id="text">Ejercicio 1</p>
+    <div>
+      <button id="boton-estilo" onclick="cambiarEstilo()">Style</button>
+    </div>
+
+    <script>
+    
+    function cambiarEstilo(){
+      const paragraph = document.querySelector("#text");
+
+      paragraph.style.color = "blue";
+      paragraph.style.background = "gray";
+      console.log(paragraph);
+    }
+    </script>
+  </body>
+</html>
