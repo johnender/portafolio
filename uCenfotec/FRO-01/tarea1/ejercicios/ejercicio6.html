@@ -35,7 +35,7 @@
       if(radius == ""){
         result = 0;
       }else{
-        result = (4/3)*(radius^3)*Math.PI;
+        result = (4/3)*Math.pow(radius, 3)*Math.PI;
       }
 
       node.textContent = `Sphere volume: ${result}`;
