@@ -16,3 +16,7 @@ h1 {
 .small__index__container {
     display: none;
 }
+
+#menuToggle{
+    display: none;
+}
