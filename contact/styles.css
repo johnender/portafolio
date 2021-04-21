@@ -1,0 +1,302 @@
+:root {
+  --primaryColor: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
+  --secondaryColor: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
+  --listFontColor: rgb(169, 221, 185);
+  --textFontSize: 2.0rem;
+  --littleTextFontSize: 1.5rem;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* important responsive feature (padding and border) */
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 62.5%;/*makes the root sizes of 10px*/
+  margin: auto;
+  border: 0;
+  padding: 0;
+  background: var(--primaryColor);
+  position: relative;
+  min-height: 100vh;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header styles starts */
+header {
+  border: 5px ridge rgb(70, 68, 107);
+  background: var(--secondaryColor);
+  position: sticky;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  padding: 0 10px;
+  min-height: 1vh;
+  z-index: 999; /*le da prioridad para que este siempre al frente*/
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.big__index__container {
+  display: none;
+}
+
+
+
+/* hamburger menu styles */
+#menuToggle
+{
+  display: block;
+  position: relative;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top right of the screen
+ */
+#menu
+{
+  position: absolute;
+  /* margin: -100px 0 0 -50px; */
+  width: 150px;
+  margin: 8px 0 0 -100px; /* position of the menu container */
+  padding: 15px;
+  
+  background: #ededed6b;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  
+}
+
+#menu li
+{
+  padding: 5px 0;
+  font-size: 22px;
+
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+/* Header styles ends */
+
+
+
+
+
+
+
+
+
+
+/* main styles starts */
+
+
+
+
+
+/* main styles ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer style starts */
+
+footer {
+  text-align: left;
+  background: black;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+footer .social {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+footer .social img {
+  max-width: 40px;
+}
+
+footer .social img:hover{
+  transform: scale(1.5);
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+/* footer style ends */
+
+
+
+
+@media (min-width: 1024px){
+  h1 {
+    font-size: 4.0rem;
+    text-align: left;
+  }
+
+  
+  .big__index__container {
+    display: flex;
+  }
+
+  #menuToggle{
+    display: none;
+  }
+
+  .index {
+    right: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+  } 
+
+  .index li {
+    padding: 10px;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .index li:hover {
+    color: rebeccapurple;
+    transform: scale(1.2);
+  }
+
+}

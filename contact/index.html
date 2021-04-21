@@ -7,18 +7,70 @@
   <meta name="robots" content="index,follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+  <link rel="stylesheet" href="./styles.css">
 
   <!-- usign image for favicon icon -->
   <link rel="shortcut icon" href="../images/monitor-web.png" type="image/x-icon">
 
-
-
-
-
   <title>Contact page</title>
 </head>
+
 <body>
+  <header>
+    <h1>Portfolio home page</h1>
+    <nav>
+      <div class="big__index__container">
+        <ol class="index">
+          <li><a href="../index.html" title="Back to home page">Home</a></li>
+          <li><a href="../certifications/index.html" title="List of the different certificates and diplomas obtained">Certificates</a></li>
+          <li><a href="#" title="Contact data" id="contact">Contact</a></li>
+        </ol>
+      </div>
+
+      <!-- trying hamburger menu -->
+      <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input type="checkbox" />
+        
+        <!--
+        Some spans to act as a hamburger.
+        
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+        <ul id="menu">
+          <li><a href="../index.html" title="Back to home page">Home</a></li>
+          <li><a href="../certifications/index.html" title="List of the different certificates and diplomas obtained">Certificates</a></li>
+          <li><a href="#" title="Contact data" id="contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
   
+
+  <main>
+    
+  </main>
+
+
+  <footer>
+    <!-- <p>Soy un footer</p> -->
+    <nav class="social">
+        <a href="https://www.facebook.com/"><img src= "../images/facebook_logos.png" alt="Logo de Facebook" title="Facebook profile link"></a>
+        <a href="https://www.linkedin.com/in/johnn-hern%C3%A1ndez-delgado-a974bbb3/"><img src= "../images/linkedin-png-logo-5.png" alt="Logo de LinkedIn" title="LinkedIn profile link"></a>
+    </nav>
+  </footer>
 </body>
 </html>
