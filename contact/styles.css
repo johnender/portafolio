@@ -28,6 +28,11 @@ body {
   width: 100vw;
 }
 
+/*hiddin the scrollbar*/
+body::-webkit-scrollbar{
+  display: none;
+}
+
 /* Header styles starts */
 header {
   border: 5px ridge rgb(70, 68, 107);
@@ -196,6 +201,9 @@ header {
 {
   transform: none;
 }
+/*Hamburger menu styles ends*/
+
+
 /* Header styles ends */
 
 
@@ -209,9 +217,51 @@ header {
 
 /* main styles starts */
 
+#slide1 { 
+  background: url(https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80) 50% 0 repeat fixed; 
+  min-height: 1000px;
+  height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+}
 
+#slide1 article { 
+  color: white;
+  font-size: 3rem;
+  height: 458px; 
+  position: absolute; 
+  text-align: center; 
+  top: 250px; 
+  width: 100%; 
+}
+  
+#slide2 { 
+  background: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1991&q=80) 50% 0 no-repeat; 
+  min-height: 1000px;  
+  height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
 
+#slide2 article { 
+  color: white;
+  font-size: 2rem;
+  height: 458px; 
+  position: absolute; 
+  text-align: center; 
+  top: 150px; 
+  width: 100%; 
+}
 
+#slide2 article ul{
+  margin-top: 25px;
+}
 
 /* main styles ends */
 
