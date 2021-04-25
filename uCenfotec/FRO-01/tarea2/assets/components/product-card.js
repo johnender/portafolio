@@ -97,6 +97,8 @@ class productCard extends HTMLElement {
           color: #444;
       }
       .container .details h3 {
+          position: absolute;
+          bottom: 5px;
           float: left;
           font-size: 2.5rem;
           color: #a2a2a2;
