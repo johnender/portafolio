@@ -28,6 +28,16 @@ h1{
   font-size: 4rem;
 }
 
+.header__banner {
+  margin: 15px auto;
+  background-image: url('../imgs/banner.jpg');
+  min-width: 300px;
+  max-width: 960px;
+  min-height: 250px;
+  object-fit: cover;
+  background-position: bottom;
+}
+
 .header__nav--big {
   width: 100%;
   align-content: center;
@@ -36,9 +46,11 @@ h1{
 
 .header__nav--big ul{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   list-style: none;
+  text-align: center;
+  margin: 0 25px;
 }
 
 .header__nav--big ul li {
@@ -80,11 +92,35 @@ h1{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 5rem;
   color: var(--primaryText);
 }
 
+.contact form{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 3rem;
+}
 
+.contact form label{
+  margin-top: 15px;
+}
+
+.contact form input{
+  min-width: 300px;
+}
+
+.contact #message{
+  height: 100px;
+}
+
+.contact button{
+  width: 100px;
+  height: 50px;
+  align-items: center;
+  margin: 10px auto;
+}
 /* Body styles end */
 
 
@@ -100,3 +136,23 @@ h1{
 
 
 /* Footer styles end */
+
+@media screen and (min-width: 530px){
+  
+  .header__banner{
+    height: 350px;
+  }
+
+  .header__nav--big ul{
+    flex-direction: row;
+    margin: 0 0;
+  }
+
+  .contact form input{
+    width: 400px;
+  }
+
+  .contact #message{
+    width: 500px;
+  }
+}

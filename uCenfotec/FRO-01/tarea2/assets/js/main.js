@@ -32,3 +32,17 @@ options.forEach((option) =>{
     })
   })
 })
+
+/**
+ * Function to print the values of the inputs
+ */
+const printButton = document.querySelector("#printButton")
+printButton.addEventListener('click', ()=>{
+  event.preventDefault();
+  const result = document.querySelectorAll('input')
+  const answer = [];
+  result.forEach((data)=>{
+    answer.push(data.value)
+  })
+  console.log(answer);
+})
