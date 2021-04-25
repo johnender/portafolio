@@ -79,6 +79,7 @@ class productCard extends HTMLElement {
         position: absolute;
         max-width: 100px;
         height: auto;
+        max-height: 120px;
       }
       .container .imgBox img:hover {
         transform: scale(1.2)
@@ -95,7 +96,7 @@ class productCard extends HTMLElement {
       }
       .container .details h2 {
           margin-bottom: 25px;
-          font-size: 2.5rem;
+          font-size: 2rem;
           line-height: 0.8em;
           color: #444;
       }
@@ -103,7 +104,7 @@ class productCard extends HTMLElement {
           position: absolute;
           bottom: 5px;
           float: left;
-          font-size: 2.5rem;
+          font-size: 2rem;
           color: #a2a2a2;
       }
       </style>

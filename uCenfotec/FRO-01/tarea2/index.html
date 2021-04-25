@@ -16,16 +16,16 @@
     <section class="header__banner"></section>
     <nav class="header__nav--big">
       <ul>
-        <li id="header__nav__individuals">Individual Items</li>
-        <li id="header__nav__combos">Combos</li>
-        <li id="header__nav__beverages">Beverages</li>
-        <li id="header__nav__contactForm">Contact</li>
+        <li class="header__nav__option" id="header__nav__individuals">Individual</li>
+        <li class="header__nav__option" id="header__nav__combos">Combos</li>
+        <li class="header__nav__option" id="header__nav__beverages">Beverages</li>
+        <li class="header__nav__option" id="header__nav__contactForm">Contact</li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="products" id="individual">
+    <section class="products hidden" id="Individual">
       <product-card
       img="./assets/imgs/individuals/burrito.png"
       imgAlt="burrito image"
@@ -97,9 +97,117 @@
       ></product-card>
 
     </section>
-    <section class="products" id="combos"></section>
-    <section class="products" id="beverages"></section>
-    <section class="products" id="contactForm"></section>
+
+
+
+    <section class="hidden" id="Combos">
+      <product-card
+      img="./assets/imgs/combos/hamburgerCombo.png"
+      imgAlt="hamburger combo image"
+      titlet="Double Hamburger combo"
+      price="$4"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/combos/hamburgerSandwichCombo.png"
+      imgAlt="hamburger and sandwich combo image"
+      titlet="Hamburger and Samdwich combo"
+      price="$8"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/combos/hotdogCombo1.png"
+      imgAlt="hotdog combo image"
+      titlet="Hotdog combo"
+      price="$3"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/combos/hotdogCombo2.png"
+      imgAlt="double hotdog combo image"
+      titlet="Double Hotdog combo"
+      price="$3"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/combos/hotdogCombo5.png"
+      imgAlt="hotdog penta combo image"
+      titlet="Hotdog penta combo"
+      price="$5"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/combos/pizzaHamburgerCombo.png"
+      imgAlt="pizza and hamburger combo image"
+      titlet="Pizza and Hamburger combo"
+      price="$6"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/combos/sandwichCombo.png"
+      imgAlt="sandwich combo image"
+      titlet="Sandwich combo"
+      price="$3"
+      ></product-card>
+    </section>
+
+
+
+
+    <section class="hidden" id="Beverages">
+      <product-card
+      img="./assets/imgs/drinks/cocacolaCan.png"
+      imgAlt="coca-cola can image"
+      titlet="Coca-cola can"
+      price="$1"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/drinks/pepsiCan.png"
+      imgAlt="pepsi can image"
+      titlet="Pepsi can"
+      price="$1"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/drinks/fantaCan.png"
+      imgAlt="fanta can image"
+      titlet="Fanta can"
+      price="$1"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/drinks/spriteCan.png"
+      imgAlt="sprite can image"
+      titlet="sprite can"
+      price="$1"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/drinks/cocacolaPlastic.png"
+      imgAlt="coca-cola plastic bottle image"
+      titlet="Coca-cola plastic bottle"
+      price="$1.5"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/drinks/pepsiPlastic.png"
+      imgAlt="pepsi plastic bottle image"
+      titlet="Pepsi plastic bottle"
+      price="$1.5"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/drinks/cocacolaGlass.png"
+      imgAlt="coca-cola glass bottle image"
+      titlet="Coca-cola glass bottle"
+      price="$2"
+      ></product-card>
+      <product-card
+      img="./assets/imgs/drinks/pepsiGlass.png"
+      imgAlt="pepsi glass bottle image"
+      titlet="Pepsi glass bottle"
+      price="$2"
+      ></product-card>
+    </section>
+      
+
+
+
+    <section class="hidden" id="Contact">
+      <form>
+        <label for="fname">Full name</label>
+        <input type="text" id="fname" name="fname" placeholder="Juanito Peres Lopez">
+      </form>
+    </section>
   </main>
 
 

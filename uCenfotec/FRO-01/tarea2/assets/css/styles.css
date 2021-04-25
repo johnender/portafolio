@@ -61,6 +61,10 @@ h1{
 
 
 /* Body styles start */
+.hidden{
+  display: none;
+}
+
 .products{
   max-width: 1300px;
   display: grid;
@@ -69,6 +73,17 @@ h1{
   justify-content: space-evenly;
   gap: 25px;
 }
+
+.contact{
+  display: flex;
+  margin: 25px auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: var(--primaryText);
+}
+
 
 /* Body styles end */
 
