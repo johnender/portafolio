@@ -140,7 +140,7 @@ h1{
 @media screen and (min-width: 530px){
   
   .header__banner{
-    height: 350px;
+    height: 320px;
   }
 
   .header__nav--big ul{
