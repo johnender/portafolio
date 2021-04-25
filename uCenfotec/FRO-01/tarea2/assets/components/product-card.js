@@ -80,6 +80,9 @@ class productCard extends HTMLElement {
         max-width: 100px;
         height: auto;
       }
+      .container .imgBox img:hover {
+        transform: scale(1.2)
+      }
       .container .details {
           display: flex;
           justify-content: center;
