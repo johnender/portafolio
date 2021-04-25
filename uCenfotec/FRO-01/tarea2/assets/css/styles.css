@@ -56,9 +56,10 @@ h1{
 
 /* Body styles start */
 .products{
-  max-width: 100px;
+  max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
+  margin: 25px auto;
 }
 
 /* Body styles end */
