@@ -279,7 +279,7 @@ header {
 
 
 /* footer style starts */
-
+/* 
 footer {
   text-align: left;
   background: black;
@@ -302,7 +302,7 @@ footer .social img {
 
 footer .social img:hover{
   transform: scale(1.5);
-}
+} */
 
 a, a:hover, a:focus, a:active {
   text-decoration: none;

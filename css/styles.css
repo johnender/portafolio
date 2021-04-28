@@ -362,7 +362,7 @@ form {
   color: #6cad70;
 
 }
-
+/* 
 footer {
   text-align: left;
   background: black;
@@ -385,7 +385,7 @@ footer .social img {
 
 footer .social img:hover{
   transform: scale(1.5);
-}
+} */
 
 a, a:hover, a:focus, a:active {
   text-decoration: none;
