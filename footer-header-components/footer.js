@@ -5,6 +5,36 @@ class footerBar extends HTMLElement {
     this.attachShadow({mode:"open"});
   }
 
+  static get observedAttributes(){
+    return ["link1", "img1", "img1Alt", "img1Title", "link2", "img2", "img2Alt",  "img2Title"];
+  }
+
+  attributeChangedCallback(attr, oldVal, newVal) {
+    if (attr === "link1") {
+      this.link1 = newVal;
+    }
+    if (attr === "img1") {
+      this.img1 = newVal;
+    }
+    if (attr === "img1Alt") {
+      this.img1Alt = newVal;
+    }
+    if (attr === "img1Title") {
+      this.img1Title = newVal;
+    }
+    if (attr === "link2") {
+      this.link2 = newVal;
+    }
+    if (attr === "img2") {
+      this.img2 = newVal;
+    }
+    if (attr === "img2Alt") {
+      this.img2Alt = newVal;
+    }
+    if (attr === "img2Title") {
+      this.img2Title = newVal;
+    }
+  }
 
   getTemplate(){ //*Esto será puro HTML
     const template = document.createElement('template');
@@ -12,8 +42,8 @@ class footerBar extends HTMLElement {
       <footer>
         <!-- <p>Soy un footer</p> -->
         <nav class="social">
-            <a href="https://www.facebook.com/"><img src= "../images/facebook_logos.png" alt="Logo de Facebook" title="Facebook profile link"></a>
-            <a href="https://www.linkedin.com/in/johnn-hern%C3%A1ndez-delgado-a974bbb3/"><img src= "../images/linkedin-png-logo-5.png" alt="Logo de LinkedIn" title="LinkedIn profile link"></a>
+            <a href="${this.link1}"><img src= "${this.img1}" alt="${this.img1Alt}" title="${this.img1Title}"></a>
+            <a href="${this.link2}"><img src= "${this.img2}" alt="${this.img2Alt}" title="${this.img2Title}"></a>
         </nav>
       </footer>
       ${this.getStyles()} <!---Aplicamos los estilos--->
