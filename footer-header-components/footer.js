@@ -42,8 +42,8 @@ class footerBar extends HTMLElement {
       <footer>
         <!-- <p>Soy un footer</p> -->
         <nav class="social">
-            <a href="${this.link1}"><img src= "${this.img1}" alt="${this.img1Alt}" title="${this.img1Title}"></a>
-            <a href="${this.link2}"><img src= "${this.img2}" alt="${this.img2Alt}" title="${this.img2Title}"></a>
+            <a href="${this.link1}"><img src= "${this.img1}" alt="${this.getAttribute("img1Alt")}" title="${this.getAttribute("img1Title")}"></a>
+            <a href="${this.link2}"><img src= "${this.img2}" alt="${this.getAttribute("img2Alt")}" title="${this.getAttribute("img2Title")}"></a>
         </nav>
       </footer>
       ${this.getStyles()} <!---Aplicamos los estilos--->
