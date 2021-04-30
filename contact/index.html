@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./styles.css">
+  <script src="../footer-header-components/header.js"></script>
   <script src="../footer-header-components/footer.js"></script>
 
   <!-- usign image for favicon icon -->
@@ -17,49 +18,13 @@
 </head>
 
 <body>
-  <header>
-    <h1>Contact page</h1>
-    <nav>
-      <div class="big__index__container">
-        <ol class="index">
-          <li><a href="../index.html" title="Back to home page">Home</a></li>
-          <li><a href="../certifications/index.html" title="List of the different certificates and diplomas obtained">Certificates</a></li>
-          <li><a href="#" title="Contact data" id="contact">Contact</a></li>
-        </ol>
-      </div>
-
-      <!-- trying hamburger menu -->
-      <div id="menuToggle">
-        <!--
-        A fake / hidden checkbox is used as click reciever,
-        so you can use the :checked selector on it.
-        -->
-        <input type="checkbox" />
-        
-        <!--
-        Some spans to act as a hamburger.
-        
-        They are acting like a real hamburger,
-        not that McDonalds stuff.
-        -->
-        <span></span>
-        <span></span>
-        <span></span>
-        
-        <!--
-        Too bad the menu has to be inside of the button
-        but hey, it's pure CSS magic.
-        -->
-        <ul id="menu">
-          <li><a href="../index.html" title="Back to home page">Home</a></li>
-          <li><a href="../certifications/index.html" title="List of the different certificates and diplomas obtained">Certificates</a></li>
-          <li><a href="#" title="Contact data" id="contact">Contact</a></li>
-        </ul>
-      </div>
-
-    </nav>
-  </header>
   
+  <my-header
+    text = "Contact page"
+    link1 = "../index.html"
+    link2 = "../certifications/index.html"
+    link3 = "#"
+  ></my-header>
 
   <main>
     

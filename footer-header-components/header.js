@@ -6,10 +6,13 @@ class headerBar extends HTMLElement {
   }
 
   static get observedAttributes(){
-    return ["link1", "link2", "link3"];
+    return ["text", "link1", "link2", "link3"];
   }
 
   attributeChangedCallback(attr, oldVal, newVal) {
+    if (attr === "text") {
+      this.text = newVal;
+    }
     if (attr === "link1") {
       this.link1 = newVal;
     }
@@ -25,7 +28,7 @@ class headerBar extends HTMLElement {
     const template = document.createElement('template');
     template.innerHTML = `
     <header>
-      <h1>Portfolio home page</h1>
+      <h1>${this.text}</h1>
       <nav>
         <div class="big__index__container">
           <ol class="index">
