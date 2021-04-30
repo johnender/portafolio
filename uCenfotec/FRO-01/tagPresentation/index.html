@@ -113,11 +113,118 @@
       </details>
     </section>
 
-    <section>
+    <section class="sabor">
       <h2>Ejemplo con sabor</h2>
+      <details>
+        <summary>Desarrollo de la interfaz web</summary>
+        <ul>
+          <li>Html</li>
+          <li>Selectores para aplicar estilos con CSS</li>
+          <li>CSS box model</li>
+          <li>Manipulaci&oacute;n del DOM con Javascript</li>
+          <li>Formularios con HTML</li>
+          <li>Formularios con Javascript</li>
+          <li>CSS para aplicar estilos al texto</li>
+          <li>Javascript para generar texto dinamicamente</li>
+          <li>Optimizaci&oacute;n del diseño para m&oacute;viles con media queries</li>
+          <li>Prueba de concepto con responsive layout</li>
+          <li>C&oacute;digo HTML semántico</li>
+          <li>Accesibilidad web</li>
+          <li>Animaciones con CSS3</li>
+          <li>Audio y video con HTML y Javascript</li>
+          <li>Frameworks de CSS: Bootstrap, Foundation</li>
+          <li>Desarrollo de componentes reutilizables</li>
+          <li>Preprocesadores de CSS</li>
+          <li>Manejadores de Tareas para compilar SASS</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Programaci&oacute;n con Javascript</summary>
+        <ul>
+          <li>Variables: num&eacute;ricas, string</li>
+          <li>Variables booleanas</li>
+          <li>Condicionales: if, else, elseif</li>
+          <li>Arrays</li>
+          <li>Prueba de concepto de Arrays y Condicionales</li>
+          <li>Ciclos</li>
+          <li>Anidaci&oacute;n de ciclos</li>
+          <li>Funciones. Scope. Closure.</li>
+          <li>Prueba de concepto con Ciclos y Funciones</li>
+          <li>Objetos. Prototype</li>
+          <li>Clases. Orientaci&oacute;n a objetos</li>
+          <li>Tipado de datos</li>
+          <li>Prueba de concepto de Orientaci&oacute;n</li>
+          <li>APIs del Browser</li>
+          <li>Creaci&oacute;n de m&oacute;dulos. </li>
+          <li>CommonJS.</li>
+          <li>AMD. ECMAScript</li>
+          <li>NPM. API de NodeJS.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Desarrollo de aplicaciones web con React</summary>
+        <ul>
+          <li>Conceptos de JavaScript y ES6</li>
+          <li>Ambiente de trabajo JSX</li>
+          <li>Rendereado de elementos</li>
+          <li>ReactDOM</li>
+          <li>Props</li>
+          <li>Componentes y clases</li>
+          <li>El estado y el ciclo de vida de una aplicaci&oacute;n en React</li>
+          <li>Elevando el estado</li>
+          <li>Los eventos</li>
+          <li>Las listas y los condicionales</li>
+          <li>Estilos en elementos y componentes</li>
+          <li>Formularios</li>
+          <li>Ajax</li>
+          <li>React Router</li>
+          <li>Redux</li>
+          <li>Componentes de alto nivel</li>
+          <li>El rendimiento de una aplicaci&oacute;n</li>
+          <li>Publicando la aplicaci&oacute;n</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Desarrollo de aplicaciones web con Angular</summary>
+        <ul>
+          <li>Angular y sus versiones</li>
+          <li>El ambiente de trabajo</li>
+          <li>La arquitectura de una aplicaci&oacute;n en Angular</li>
+          <li>M&oacute;dulos</li>
+          <li>Componentes y plantilla</li>
+          <li>Metadata</li>
+          <li>Data binding</li>
+          <li>Directivas</li>
+          <li>Servicios</li>
+          <li>Dependency injection</li>
+          <li>Angular Routing</li>
+          <li>Formularios</li>
+          <li>Observables y RxJS</li>
+          <li>Componentes reutilizables</li>
+          <li>Optimizaci&oacute;n de aplicaciones</li>
+          <li>Implementaci&oacute;n</li>
+        </ul>
+      </details>
     </section>
   </main>
 
   <footer></footer>
+
+
+  <script>
+    const detailsList = document.querySelectorAll(".sabor details")
+    detailsList.forEach((details)=>{
+      details.querySelector("summary")
+      .addEventListener('click', expand, false)
+    })
+
+    function expand(){
+      detailsList.forEach((details)=>{
+      details.removeAttribute('open')})
+    }
+  </script>
 </body>
 </html>
