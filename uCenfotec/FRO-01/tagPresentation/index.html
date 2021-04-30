@@ -221,9 +221,18 @@
       .addEventListener('click', expand, false)
     })
 
-    function expand(){
+    function expand(event){
+      let fix = false
+      if(event.srcElement.parentElement.hasAttribute('open')){
+        fix = true;
+      }
+
       detailsList.forEach((details)=>{
       details.removeAttribute('open')})
+
+      if(fix){
+        event.srcElement.parentElement.setAttribute('open', true)
+      }
     }
   </script>
 </body>
