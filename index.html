@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 600px)">
     <link rel="stylesheet" href="./css/dekstop.css" media="screen and (min-width: 1024px)">
+    <script src="./footer-header-components/header.js"></script>
     <script src="./footer-header-components/footer.js"></script>
 
     <!-- usign image for favicon icon -->
@@ -21,71 +22,12 @@
   </head>
 
   <body>
-    <header>
-      <h1>Portfolio home page</h1>
-      <nav>
-        <div class="big__index__container">
-          <ol class="index">
-            <li><a href="./index.html" title="Back to home page">Home</a></li>
-            <li><a href="./certifications/index.html" title="List of the different certificates and diplomas obtained">Certificates</a></li>
-            <li><a href="./contact/index.html" title="Contact data" id="contact">Contact</a></li>
-          </ol>
-        </div>
 
-      <!-- nav for small displays -->
-        <!-- <details class="small__index__container">
-          <summary class="index">Sandwich Menu</summary>
-          <ol class="small__index">
-            <li><a href="./index.html" title="Back to home page">01.Home</a></li>
-            <li><a href="./certifications/index.html" title="List of the different certificates and diplomas obtained">02.Certificates</a></li>
-            <li><a href="#" title="Contact data" id="contact">03.Contact</a></li>
-          </ol>
-        </details> -->
-
-
-
-
-
-
-
-
-        <!-- trying hamburger menu -->
-        <div id="menuToggle">
-          <!--
-          A fake / hidden checkbox is used as click reciever,
-          so you can use the :checked selector on it.
-          -->
-          <input type="checkbox" />
-          
-          <!--
-          Some spans to act as a hamburger.
-          
-          They are acting like a real hamburger,
-          not that McDonalds stuff.
-          -->
-          <span></span>
-          <span></span>
-          <span></span>
-          
-          <!--
-          Too bad the menu has to be inside of the button
-          but hey, it's pure CSS magic.
-          -->
-          <ul id="menu">
-            <li><a href="./index.html" title="Back to home page">Home</a></li>
-            <li><a href="./certifications/index.html" title="List of the different certificates and diplomas obtained">Certificates</a></li>
-            <li><a href="./contact/index.html" title="Contact data" id="contact">Contact</a></li>
-          </ul>
-        </div>
-
-      </nav>
-      <!-- <nav>
-        <label for="ejemplo">
-          <span>Input de ejemplo</span>
-        <input type="search">
-        </label>
-      </nav> -->
-    </header>
+    <my-header
+    link1 = "./index.html"
+    link2 = "./certifications/index.html"
+    link3 = "./contact/index.html"
+    ></my-header>
 
     <main>
       <aside class="paginas">
