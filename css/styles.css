@@ -69,10 +69,13 @@ main {
 .paginas::-webkit-scrollbar {
   background-color: black;/*background color so it doesn't looks weird*/
   width: 10px;
+  border-radius: 10px;
 }
 
 .paginas::-webkit-scrollbar-thumb {
   background-color: var(--listFontColor);
+  box-shadow: inset 0 0 5px #333333;
+  border-radius: 10px;
 }
 
 .paginas h2 {
