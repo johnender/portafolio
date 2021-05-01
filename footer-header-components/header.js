@@ -34,7 +34,7 @@ class headerBar extends HTMLElement {
           <ol class="index">
             <li><a href="${this.link1}" title="Back to home page">Home</a></li>
             <li><a href="${this.link2}" title="List of the different certificates and diplomas obtained">Certificates</a></li>
-            <li><a href="${this.link3}" title="Contact data" id="contact">Contact</a></li>
+            <li><a href="${this.link3}" title="Contact data">Contact</a></li>
           </ol>
         </div>
 
@@ -64,7 +64,7 @@ class headerBar extends HTMLElement {
           <ul id="menu">
             <li><a href="${this.link1}" title="Back to home page">Home</a></li>
             <li><a href="${this.link2}" title="List of the different certificates and diplomas obtained">Certificates</a></li>
-            <li><a href="${this.link3}" title="Contact data" id="contact">Contact</a></li>
+            <li><a href="${this.link3}" title="Contact data">Contact</a></li>
           </ul>
         </div>
 
