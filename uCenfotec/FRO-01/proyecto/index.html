@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    
+    <link rel="shortcut icon" href="./assets/images/halloween(10).svg" type="image/x-icon">
+
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap"/>
+  </head>
+
+  <body>
+    <header>
+      <img src="./assets/images/perfil.jpg" alt="Johnn Hern&aacute;ndez" class="header-img" />
+      <h1 class="header">Johnn Hern&aacute;ndez</h1>
+      <h2 class="subtitle">Front End Developer</h2>
+      <nav>
+        <ul class="navigation">
+          <li class="nav-item"><a href="#about">About me</a></li>
+          <li class="nav-item"><a href="#projects">My projects</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="about">
+        <h2 class="header">About me</h2>
+        <p class="intro">
+          Hi, this is a template portfolio page, made for the curse: Front-End Web Development, <br>
+          module: Web interface development. </p>
+        <ul class="social-media">
+          <li>
+            <!-- target="_blank" hace que se abra de nuevo la pagina-->
+            <!-- <a href="#" target="_blank"  -->
+            <a href="#">
+              <img src="./assets/images/twitter.png" alt="Twitter"/>
+              <p class="social-link-text">Twitter</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/johnender" target="_blank">
+              <img src="./assets/images/github-logo.png" alt="GitHub"/>
+              <p class="social-link-text">GitHub</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/johnn-hernández-delgado-a974bbb3" target="_blank">
+              <img src="./assets/images/linkedin.png" alt="LinkedIn"/>
+              <p class="social-link-text">LinkedIn</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2 class="header">My Projects</h2>
+        <div class="carousel">
+          <button class="arrow arrow-left" aria-label="backward button"></button>
+          <div class="window">
+            <ul class="project-container">
+              <li class="project1-container"><button class="project1 project"><img src="./assets/images/project1.jpg" class="project-img" alt="Homework 0 miniature" data-rel="https://johnender.github.io/portafolio/uCenfotec/FRO-01/tarea0Tributo/index.html"/></button></li>
+              <li class="project2-container"><button class="project2 project"><img src="./assets/images/project2.jpg" class="project-img" alt="Homework 1 miniature" data-rel="https://johnender.github.io/portafolio/uCenfotec/FRO-01/tarea1/Enunciado.html"/></button></li>
+              <li class="project3-container"><button class="project3 project"><img src="./assets/images/project3.jpg" class="project-img" alt="Homework 2 miniature" data-rel="https://johnender.github.io/portafolio/uCenfotec/FRO-01/tarea2/index.html"/></button></li>
+              <li class="project4-container" aria-hidden="true"><button class="project4 project" tabindex="-1"><img src="./assets/images/project4.jpg" class="project-img" alt="Tagas presentation miniature" data-rel="https://johnender.github.io/portafolio/uCenfotec/FRO-01/tagPresentation/index.html"/></button></li>
+              <li class="project5-container" aria-hidden="true"><button class="project5 project" tabindex="-1"><img src="./assets/images/project5.jpg" class="project-img" alt="Another miniature" data-rel="#"/></button></li>
+            </ul>
+          </div>
+          <button class="arrow arrow-right" aria-label="forward button"></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="contact-section" id="contact">
+      <h2 class="header">Contact</h2>
+      <p class="intro">Para enviarme un mensaje puedes usar el formulario que sigue</p>
+      <form class="form-container">
+        <label class="form-label">Nombre</label>
+        <input type="text" aria-label="nombre" id="name"/> 
+
+        <span id="name-error" aria-live="assertive"></span>
+        <br />
+
+        <label class="form-label">Correo</label>
+        <input type="text" aria-label="correo"/>
+        <br />
+
+        <label class="message-input">Mensaje
+          <input type="text" /> 
+        <br /></label>
+        <button class="send-button">Enviar</button>
+      </form>
+    </footer>
+
+    <div class="notification" aria-live="assertive"></div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <h2 class="header" id="modal-header" tabindex="0">Example of my projects</h2>
+        <button class="modal-button-close">Cerrar</button>
+      </div>
+    </div>
+
+    <script src="./assets/index.js" type="text/javascript"></script>
+  </body>
+</html>
