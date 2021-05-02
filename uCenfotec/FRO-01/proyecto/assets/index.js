@@ -120,7 +120,7 @@ function openModal(e) {
     // window.location.href = `${e.srcElement.dataset.rel}`;
   }
 
-  console.log(e.srcElement.dataset.rel)
+  // console.log(e.srcElement.dataset.rel)
 
   const modalContainer = document.querySelector(".modal-container");
   const modal = document.querySelector(".modal");

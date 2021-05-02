@@ -4,29 +4,17 @@ html {
   font-size: 16px;
 }
 
-*,
-*:before,
-*:after {
+*,*:before,*:after {
   box-sizing: inherit;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
+body,h1,h2,h3,h4,h5,h6,p,ol,ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol,
-ul {
+ol,ul {
   list-style: none;
 }
 
@@ -39,12 +27,12 @@ img {
 
 :root {
   --blanco: white;
-  --gris-medio: #333333;
-  --gris-oscuro: #1e1e1e;
+  --gris-medio: #454746;
+  --gris-oscuro: #262726;
   --main-font: "Oswald", sans-serif;
   --secondary-font: "Open Sans", sans-serif;
   --shadow: rgba(0, 0, 0, 0.75);
-  --verde: #7ac943;
+  --verde: #5eac26;
 }
 
 body, header, section {
@@ -55,35 +43,18 @@ body, header, section {
   width: 100%;
 }
 
-.skip-link {
-  height: 0;
-}
-
-.skip-link:focus,
-.skip-link:active {
-  background: var(--verde);
-  border-radius: 5px;
-  color: var(--gris-oscuro);
-  font-family: var(--secondary-font);
-  height: auto;
-  margin: 16px 0 8px;
-  padding: 8px;
-  text-decoration: none;
-  border: 5px solid var(--gris-oscuro);
-  outline: 3px solid var(--verde);
-}
-
 .header {
   color: var(--blanco);
   font-family: var(--main-font);
-  font-size: 55px;
+  font-size: 2.5rem;
   margin-top: 16px;
+  text-align: center;
 }
 
 .subtitle {
   color: var(--verde);
   font-family: var(--secondary-font);
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .header-img {
@@ -105,7 +76,7 @@ nav {
   display: flex;
   justify-content: space-around;
   margin: 24px auto;
-  width: 50%;
+  width: 100%;
 }
 
 .nav-item a {
@@ -140,9 +111,11 @@ nav {
 }
 
 .intro {
-  margin: 24px 196px 0;
+  width: 90vw;
+  margin: 24px auto;
   font-family: var(--secondary-font);
   color: var(--blanco);
+  text-align: center;
 }
 
 .social-media {
@@ -182,7 +155,7 @@ nav {
 
 .window {
   overflow: hidden;
-  width: 815px;
+  width: 274px;
   padding: 8px;
 }
 
@@ -223,9 +196,9 @@ nav {
 }
 
 .arrow {
-  height: 75px;
+  height: 25px;
   transition: all 0.2s ease-in-out;
-  width: 75px;
+  width: 25px;
 }
 
 .arrow:hover {
@@ -248,6 +221,8 @@ nav {
   outline: 3px solid var(--verde);
 }
 
+
+/* aqui voy */
 .contact-section {
   align-items: center;
   background-color: var(--gris-oscuro);
