@@ -247,7 +247,7 @@ nav {
   font-family: var(--secondary-font);
 }
 
-.message-input input {
+#message {
   height: 150px;
   margin-bottom: 16px;
 }

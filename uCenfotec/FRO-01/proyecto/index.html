@@ -80,18 +80,20 @@
       <h2 class="header">Contact</h2>
       <p class="intro">To send me a message you can use the form below</p>
       <form class="form-container">
-        <label class="form-label">Name</label>
-        <input type="text" aria-label="nombre" id="name"/> 
+        <label for="name" class="form-label">Name</label>
+        <input type="text" aria-label="name" id="name"/> 
         <span id="name-error" aria-live="assertive"></span>
         <br />
 
-        <label class="form-label">Email</label>
-        <input type="text" aria-label="correo"/>
+        <label for="email" class="form-label">Email</label>
+        <input type="email" aria-label="email" id="email"/>
+        <span id="email-error" aria-live="assertive"></span>
         <br />
 
-        <label class="message-input">Message
-          <input type="text" /> 
-        <br /></label>
+        <label for="message" class="message-input">Message</label>
+        <input type="text" aria-label="message" id="message"/> 
+        <br />
+
         <button class="send-button">Send</button>
       </form>
     </footer>

@@ -73,9 +73,12 @@ function clickLeft() {
 function validateForm(e) {
   e.preventDefault();
   const nameField = document.getElementById("name");
+  const emailField = document.getElementById("email")
   if (nameField.value === ""){
-    document.getElementById("name-error").innerHTML = "! Para enviar el formulario, se necesita un nombre";
-  } else {
+    document.getElementById("name-error").innerHTML = "! To send the form it's needed a name";
+  } else if(!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailField.value))){ //checking email address
+    document.getElementById("email-error").innerHTML = "! To send the form it's needed a valid email";
+  }else {
     showNotification();
   }
 }
@@ -83,9 +86,10 @@ function validateForm(e) {
 /** Esta funcion se llama cuando la persona hace click en el boton de enviar del formulario de contacto */
 function showNotification() {
   document.getElementById("name-error").innerHTML = "";
+  document.getElementById("email-error").innerHTML = "";
   document.querySelector('.form-container').reset();
   document.querySelector(".notification").style.display = "flex";
-  document.querySelector(".notification").innerHTML = "El formulario fue enviado sin errores";
+  document.querySelector(".notification").innerHTML = "The form was send correctly";
   setTimeout(function() {
     document.querySelector(".notification").style.display = "none";
   }, 3000);
