@@ -26,25 +26,25 @@ img {
 /*--- end of reset ----*/
 
 :root {
-  --blanco: white;
-  --gris-medio: #454746;
-  --gris-oscuro: #262726;
+  --white: white;
+  --soft-gray: #343435;
+  --hard-gray: #262726;
   --main-font: "Oswald", sans-serif;
   --secondary-font: "Open Sans", sans-serif;
   --shadow: rgba(0, 0, 0, 0.75);
-  --verde: #5eac26;
+  --green: #149ff0;
 }
 
 body, header, section {
   align-items: center;
-  background-color: var(--gris-medio);
+  background-color: var(--soft-gray);
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .header {
-  color: var(--blanco);
+  color: var(--white);
   font-family: var(--main-font);
   font-size: 2.5rem;
   margin-top: 16px;
@@ -52,18 +52,22 @@ body, header, section {
 }
 
 .subtitle {
-  color: var(--verde);
+  color: var(--green);
   font-family: var(--secondary-font);
   font-size: 1.5rem;
 }
 
 .header-img {
   border-radius: 50%;
-  border: 1px solid var(--gris-oscuro);
+  border: 1px solid var(--hard-gray);
   box-shadow: 8px 16px 32px 0px var(--shadow);
   height: 300px;
   margin-top: 80px;
   width: 300px;
+}
+
+.header-img:hover {
+  box-shadow: 14px 17px 32px 3px var(--shadow);
 }
 
 nav {
@@ -71,7 +75,7 @@ nav {
 }
 
 .navigation {
-  color: var(--blanco);
+  color: var(--white);
   cursor: pointer;
   display: flex;
   justify-content: space-around;
@@ -81,7 +85,7 @@ nav {
 
 .nav-item a {
   text-decoration: none;
-  color: var(--blanco);
+  color: var(--white);
 }
 
 .nav-item {
@@ -96,25 +100,25 @@ nav {
 
 .nav-item:hover,
 .nav-item:hover a {
-  background-color: var(--verde);
-  color: var(--gris-oscuro);
+  background-color: var(--green);
+  color: var(--hard-gray);
   cursor: pointer;
 }
 
 .nav-item:focus-within {
- background-color: var(--verde); 
+ background-color: var(--green); 
 }
 
 .nav-item a:focus {
   outline: none;
-  color: var(--gris-oscuro);
+  color: var(--hard-gray);
 }
 
 .intro {
   width: 90vw;
   margin: 24px auto;
   font-family: var(--secondary-font);
-  color: var(--blanco);
+  color: var(--white);
   text-align: center;
 }
 
@@ -128,7 +132,7 @@ nav {
 .social-media li a {
   align-items: center;
   display: flex;
-  color: var(--blanco);
+  color: var(--white);
   font-family: var(--secondary-font);
   text-decoration: none;
 }
@@ -138,7 +142,7 @@ nav {
 }
 
 .social-media li:focus-within {
-  outline: 3px solid var(--verde);
+  outline: 3px solid var(--green);
   padding: 8px;
 }
 
@@ -176,7 +180,7 @@ nav {
 }
 
 .project-container button:focus-within {
-  outline: 3px solid var(--verde);
+  outline: 3px solid var(--green);
 }
 
 .project-img {
@@ -207,25 +211,25 @@ nav {
 
 .arrow-left {
   background: center / contain no-repeat url(./images/play-button-left.png);
-  background-color: var(--verde);
+  background-color: var(--green);
   border-radius: 50%;
 }
 
 .arrow-right {
   background: center / contain no-repeat url(./images/play-button-right.png);
-  background-color: var(--verde);
+  background-color: var(--green);
   border-radius: 50%;
 }
 
 .arrow:focus {
-  outline: 3px solid var(--verde);
+  outline: 3px solid var(--green);
 }
 
 
 /* aqui voy */
 .contact-section {
   align-items: center;
-  background-color: var(--gris-oscuro);
+  background-color: var(--hard-gray);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -234,12 +238,12 @@ nav {
 .form-container {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 90%;
 }
 
 .form-label,
 .message-input {
-  color: var(--verde);
+  color: var(--green);
   font-family: var(--secondary-font);
 }
 
@@ -253,50 +257,58 @@ input {
 }
 
 input:focus {
-  outline: 3px solid var(--verde);
+  outline: 3px solid var(--green);
   padding: 8px;
 }
 
 .send-button,
-.modal-button {
+.modal-button-close,
+.modal-button-go {
   align-items: center;
-  background-color: var(--verde);
+  background-color: var(--green);
   border-radius: 5px;
-  color: var(--gris-oscuro);
+  color: var(--hard-gray);
   font-family: var(--secondary-font);
   display: flex;
   height: 50px;
   justify-content: center;
-  margin-bottom: 48px;
+  margin-bottom: 15px;
   width: 150px;
   margin-left: auto;
   font-size: 16px;
   cursor: pointer;
 }
 
+.modal-button-go{
+  background-color: var(--soft-gray);
+  color: var(--white);
+
+}
+
 .send-button:focus,
-.modal-button:focus {
-  border: 5px solid var(--gris-oscuro);
-  outline: 3px solid var(--verde);
+.modal-button-close:focus,
+.modal-button-go:focus {
+  border: 5px solid var(--hard-gray);
+  outline: 3px solid var(--green);
 }
 
 #name-error {
-  color: var(--blanco);
+  color: var(--white);
   font-family: var(--secondary-font);
 }
 
 .notification {
   align-items: center;
-  background-color: var(--verde);
+  background-color: var(--green);
   border-radius: 5px;
   box-shadow: 8px 16px 32px 0px var(--shadow);
-  color: var(--gris-oscuro);
+  color: var(--hard-gray);
   display: none;
   font-family: var(--secondary-font);
   height: 50px;
   justify-content: center;
   position: fixed;
-  right: 24px;
+  right: 14px;
   top: 24px;
   width: 300px;
 }
@@ -312,12 +324,12 @@ input:focus {
 }
 
 #modal-header {
-  outline: 3px solid var(--verde);
+  outline: 3px solid var(--green);
 }
 
 .modal {
   align-items: center;
-  background-color: var(--gris-oscuro);
+  background-color: var(--hard-gray);
   border-radius: 5px;
   border: 2px solid #000;
   display: flex;
@@ -326,7 +338,7 @@ input:focus {
   justify-content: center;
   position: fixed;
   top: 5%;
-  width: 700px;
+  width: 300px;
   padding: 56px;
 }
 

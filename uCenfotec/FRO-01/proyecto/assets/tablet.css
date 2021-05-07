@@ -3,8 +3,8 @@
 }
 
 .header-img {
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
 }
 
 .navigation {
@@ -19,7 +19,29 @@
   width: 548px;
 }
 
-.arrow {
-  height: 75px;
-  width: 75px;
+
+.notification{
+  right: 14px;
+}
+
+.form-container{
+  width: 60%;
+}
+
+.modal{
+  width: 500px;
+  padding: 9px;
+}
+
+.modal-project-image {
+  border-radius: 5px;
+  border: 2px solid #000;
+  height: 400px;
+  margin: 16px;
+  width: 450px;
+}
+
+.send-button,
+.modal-button-close{
+  margin-bottom: 48px;
 }
