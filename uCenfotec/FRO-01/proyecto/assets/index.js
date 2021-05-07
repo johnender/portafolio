@@ -17,26 +17,32 @@ function clickRight() {
     getComputedStyle(document.querySelector(".project-container")).left,
     10
   );
-  if (currentLeft < -270) { //si el valor de izquierda es menor a -270, para de mover el contenido
-    return;
+
+  const windowSize = screen.width;
+
+  if(windowSize < 600){
+    console.log("mobile")
+    if (currentLeft < -810) { //si el valor de izquierda es menor a -270, para de mover el contenido
+      return;
+    }
+    let newValue = currentLeft - 270; //270 toma en cuenta el tamaño de la imagen mas sus margenes
+    document.querySelector(".project-container").style.left = `${newValue}px`;
   }
-  let newValue = currentLeft - 270; //270 toma en cuenta el tamaño de la imagen mas sus margines
-  document.querySelector(".project-container").style.left = `${newValue}px`;
-  switch (newValue) {
-    case -270:
-      document.querySelector('.project1').setAttribute("tabindex", "-1");
-      document.querySelector('.project1-container').setAttribute("aria-hidden", true);
-      document.querySelector('.project4').removeAttribute("tabindex");
-      document.querySelector('.project4-container').removeAttribute("aria-hidden")
-      break;
-    case -540:
-      document.querySelector('.project2').setAttribute("tabindex", "-1");
-      document.querySelector('.project2-container').setAttribute("aria-hidden", "true");
-      document.querySelector('.project5').removeAttribute("tabindex");
-      document.querySelector('.project5-container').removeAttribute("aria-hidden");
-      break;
-    default:
-      break;
+  else if (windowSize < 1024){
+    console.log("tablet")
+    if (currentLeft < -540) { //si el valor de izquierda es menor a -270, para de mover el contenido
+      return;
+    }
+    let newValue = currentLeft - 270; //270 toma en cuenta el tamaño de la imagen mas sus margenes
+    document.querySelector(".project-container").style.left = `${newValue}px`;
+  }
+  else{
+    console.log("desktop")
+    if (currentLeft < -270) { //si el valor de izquierda es menor a -270, para de mover el contenido
+      return;
+    }
+    let newValue = currentLeft - 270; //270 toma en cuenta el tamaño de la imagen mas sus margenes
+    document.querySelector(".project-container").style.left = `${newValue}px`;
   }
 }
 
@@ -51,22 +57,6 @@ function clickLeft() {
   }
   let newValue = currentLeft + 270;
   document.querySelector(".project-container").style.left = `${newValue}px`;
-  switch (newValue) {
-    case -270:
-      document.querySelector('.project5').setAttribute("tabindex", "-1");
-      document.querySelector('.project5-container').setAttribute("aria-hidden", "true");
-      document.querySelector('.project2').removeAttribute("tabindex");
-      document.querySelector('.project2-container').removeAttribute("aria-hidden");
-      break;
-    case 0:
-      document.querySelector('.project4').setAttribute("tabindex", "-1");
-      document.querySelector('.project4-container').setAttribute("aria-hidden", "true");
-      document.querySelector('.project1').removeAttribute("tabindex");
-      document.querySelector('.project1-container').removeAttribute("aria-hidden");
-      break;
-    default:
-      break;
-  }
 }
 
 /** Validar el formulario antes de mostrar la notificacion */
