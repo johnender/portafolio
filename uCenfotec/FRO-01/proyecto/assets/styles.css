@@ -32,7 +32,7 @@ img {
   --main-font: "Oswald", sans-serif;
   --secondary-font: "Open Sans", sans-serif;
   --shadow: rgba(0, 0, 0, 0.75);
-  --green: #149ff0;
+  --blue: #149ff0;
 }
 
 body, header, section {
@@ -52,7 +52,7 @@ body, header, section {
 }
 
 .subtitle {
-  color: var(--green);
+  color: var(--blue);
   font-family: var(--secondary-font);
   font-size: 1.5rem;
 }
@@ -100,13 +100,13 @@ nav {
 
 .nav-item:hover,
 .nav-item:hover a {
-  background-color: var(--green);
+  background-color: var(--blue);
   color: var(--hard-gray);
   cursor: pointer;
 }
 
 .nav-item:focus-within {
- background-color: var(--green); 
+ background-color: var(--blue); 
 }
 
 .nav-item a:focus {
@@ -142,7 +142,7 @@ nav {
 }
 
 .social-media li:focus-within {
-  outline: 3px solid var(--green);
+  outline: 3px solid var(--blue);
   padding: 8px;
 }
 
@@ -180,7 +180,7 @@ nav {
 }
 
 .project-container button:focus-within {
-  outline: 3px solid var(--green);
+  outline: 3px solid var(--blue);
 }
 
 .project-img {
@@ -211,18 +211,18 @@ nav {
 
 .arrow-left {
   background: center / contain no-repeat url(./images/play-button-left.png);
-  background-color: var(--green);
+  background-color: var(--blue);
   border-radius: 50%;
 }
 
 .arrow-right {
   background: center / contain no-repeat url(./images/play-button-right.png);
-  background-color: var(--green);
+  background-color: var(--blue);
   border-radius: 50%;
 }
 
 .arrow:focus {
-  outline: 3px solid var(--green);
+  outline: 3px solid var(--blue);
 }
 
 
@@ -243,7 +243,7 @@ nav {
 
 .form-label,
 .message-input {
-  color: var(--green);
+  color: var(--blue);
   font-family: var(--secondary-font);
 }
 
@@ -257,7 +257,7 @@ input {
 }
 
 input:focus {
-  outline: 3px solid var(--green);
+  outline: 3px solid var(--blue);
   padding: 8px;
 }
 
@@ -265,7 +265,7 @@ input:focus {
 .modal-button-close,
 .modal-button-go {
   align-items: center;
-  background-color: var(--green);
+  background-color: var(--blue);
   border-radius: 5px;
   color: var(--hard-gray);
   font-family: var(--secondary-font);
@@ -289,7 +289,7 @@ input:focus {
 .modal-button-close:focus,
 .modal-button-go:focus {
   border: 5px solid var(--hard-gray);
-  outline: 3px solid var(--green);
+  outline: 3px solid var(--blue);
 }
 
 #name-error {
@@ -299,7 +299,7 @@ input:focus {
 
 .notification {
   align-items: center;
-  background-color: var(--green);
+  background-color: var(--blue);
   border-radius: 5px;
   box-shadow: 8px 16px 32px 0px var(--shadow);
   color: var(--hard-gray);
@@ -324,7 +324,7 @@ input:focus {
 }
 
 #modal-header {
-  outline: 3px solid var(--green);
+  outline: 3px solid var(--blue);
 }
 
 .modal {
