@@ -137,6 +137,11 @@ nav {
   text-decoration: none;
 }
 
+.social-media li a img {
+  width: 32px;
+  height: 32px;
+}
+
 .social-media li a:focus{
   outline: none;
 }
