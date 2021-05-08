@@ -43,6 +43,9 @@ body, header, section {
   width: 100%;
 }
 
+
+/* Header styles start */
+
 .header {
   color: var(--white);
   font-family: var(--main-font);
@@ -114,6 +117,10 @@ nav {
   color: var(--hard-gray);
 }
 
+/* Header styles end */
+
+
+/* Main styles start */
 .intro {
   width: 90vw;
   margin: 24px auto;
@@ -229,9 +236,11 @@ nav {
 .arrow:focus {
   outline: 3px solid var(--blue);
 }
+/* Main styles end */
 
 
-/* aqui voy */
+
+/* Footer style starts */
 .contact-section {
   align-items: center;
   background-color: var(--hard-gray);
@@ -265,6 +274,9 @@ input:focus {
   outline: 3px solid var(--blue);
   padding: 8px;
 }
+/* Footer style ends */
+
+
 
 .send-button,
 .modal-button-close,

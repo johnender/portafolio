@@ -1,9 +1,11 @@
+/**
+ * Start creating event listeners for the arrows, buttons, carrousel options and modal close options
+ */
 window.onload = () => {
   document.querySelector(".arrow-right").addEventListener("click", clickRight);
   document.querySelector(".arrow-left").addEventListener("click", clickLeft);
-  document
-    .querySelector(".send-button")
-    .addEventListener("click", e => validateForm(e));
+  document.querySelector(".send-button").addEventListener("click", e => validateForm(e));
+
   document.querySelectorAll(".project").forEach(element => {
     element.addEventListener("click", e => openModal(e));
   });
@@ -11,55 +13,58 @@ window.onload = () => {
   document.body.addEventListener("keyup", e => listenForEsc(e));
 };
 
-/** Esta funcion se llama cuando la persona hace click en la fecha derecha del carousel para navegar a la derecha */
+
+/** This function moves the carrousel to the right */
 function clickRight() {
   const currentLeft = parseInt(
     getComputedStyle(document.querySelector(".project-container")).left,
     10
   );
 
+  /* First need to know the kind of screen and how much porjects are displayed in the carrousel */
   const windowSize = screen.width;
 
   if(windowSize < 600){
     console.log("mobile")
-    if (currentLeft < -810) { //si el valor de izquierda es menor a -270, para de mover el contenido
+    if (currentLeft < -810) { //if left value is lower than -810, dont move
       return;
     }
-    let newValue = currentLeft - 270; //270 toma en cuenta el tamaño de la imagen mas sus margenes
+    let newValue = currentLeft - 270; //270 adding the size of the image and its margins
     document.querySelector(".project-container").style.left = `${newValue}px`;
   }
   else if (windowSize < 1024){
     console.log("tablet")
-    if (currentLeft < -540) { //si el valor de izquierda es menor a -270, para de mover el contenido
+    if (currentLeft < -540) { //if left value is lower than -540, dont move
       return;
     }
-    let newValue = currentLeft - 270; //270 toma en cuenta el tamaño de la imagen mas sus margenes
+    let newValue = currentLeft - 270; //270 adding the size of the image and its margins
     document.querySelector(".project-container").style.left = `${newValue}px`;
   }
   else{
     console.log("desktop")
-    if (currentLeft < -270) { //si el valor de izquierda es menor a -270, para de mover el contenido
+    if (currentLeft < -270) { //if left value is lower than -270, dont move
       return;
     }
-    let newValue = currentLeft - 270; //270 toma en cuenta el tamaño de la imagen mas sus margenes
+    let newValue = currentLeft - 270; //270 adding the size of the image and its margins
     document.querySelector(".project-container").style.left = `${newValue}px`;
   }
 }
 
-/** Esta funcion se llama cuando la persona hace click en la fecha izquierda del carousel para navegar a la izquierda */
+
+/** This function moves the carrousel to the left */
 function clickLeft() {
   const currentLeft = parseInt(
     getComputedStyle(document.querySelector(".project-container")).left,
     10
   );
-  if (currentLeft === 0) { //si el valor de izquiera es 0, retornar para no seguir movierno el contenido
+  if (currentLeft === 0) { //if left value is 0, dont move
     return;
   }
   let newValue = currentLeft + 270;
   document.querySelector(".project-container").style.left = `${newValue}px`;
 }
 
-/** Validar el formulario antes de mostrar la notificacion */
+/** Check the form before showing any notification and show error reports if there are any error */
 function validateForm(e) {
   e.preventDefault();
   const nameField = document.getElementById("name");
@@ -73,7 +78,7 @@ function validateForm(e) {
   }
 }
 
-/** Esta funcion se llama cuando la persona hace click en el boton de enviar del formulario de contacto */
+/** Function to show the notification if there no errors */
 function showNotification() {
   document.getElementById("name-error").innerHTML = "";
   document.getElementById("email-error").innerHTML = "";
@@ -85,20 +90,20 @@ function showNotification() {
   }, 3000);
 }
 
-/**Escucha por la clave esc para cerrar el modal */
+/**Close modal function */
 function listenForEsc(e) {
   if (e.keyCode === 27){
     closeModal(e)
   }
 }
 
-/** Esta funcion se llama cuando la persona hace click en cualquier porjecto del carousel */
+/** Functions to show the selected project from the carrousel */
 function openModal(e) {
 
   // console.log(e.srcElement.alt)
   // console.log(e.srcElement.currentSrc)
 
-  //creando la imagen respectiva
+  //creating the image
   const img = document.createElement("img");
   img.src = `${e.srcElement.currentSrc}`
   img.alt = `${e.srcElement.alt}`
@@ -120,26 +125,26 @@ function openModal(e) {
   const modal = document.querySelector(".modal");
   const closeButton = document.querySelector(".modal-button-close");
 
-  //Agregando la imagen
+  //Adding the image to the DOM
   modal.insertBefore(img, closeButton)
 
-  //Agregando el boton
+  //Adding the button to the DOM
   modal.insertBefore(goButton, closeButton)
 
   modalContainer.style.display = "flex";
   document.getElementById('modal-header').focus();
 }
 
-/** Esta funcion se llama para cerrar el modal */
+/** Function to close the modal */
 function closeModal(e) {
-  // si el click occurio dentro del las imagenes del carousel o dentro del modal, no se cierra el modal
+  // if the clisk is within the modal or the carrousel, dont close
   if (
     e.target.className.includes("project") ||
     e.target.className === "modal" || e.target.className === "modal-button-go"
   ) {
     return;
   } else {
-    //busca si existe imagen que deba eliminarse dentro del modal
+    //search if there are any image on the modal to erase (cleans the modal)
     const img = document.querySelector(".modal-project-image")
     if (img){
       img.remove();
