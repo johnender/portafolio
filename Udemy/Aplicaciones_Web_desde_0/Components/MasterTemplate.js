@@ -2,6 +2,7 @@
 //this file could be diveided into more files
 import { WCssClass } from "../WDevCore/WModules/WStylesRender.js";
 import { ComponentsManager } from "../WDevCore/WModules/WComponentsTools.js";
+import { WFormsJS } from "../View/forms.js"
 const CompM = new ComponentsManager();
 
 //because there is only a little bit of css, this file can have it all, otherwise we should divide the components and each one should have its own styles
@@ -119,7 +120,17 @@ class Navigator{
             //if we don't change the name/id it breaks the memory
             CompM.NavigateFunction("page3", new Page2(Articlesb), "MainApp"); 
             alert("Just another instance of Page2")
-        }}}
+        }}},
+        {type: "a", props:{innerText: "Form", href: "#", onclick: async()=>{
+            const ModelObject = {
+                id: 1,
+                description: "",
+                Name: "",
+                "Last Name": "",
+                Address: ""
+            }
+            CompM.NavigateFunction("WFormsJS", new WFormsJS(ModelObject), "MainApp");            
+        }}},
     ];
 }
 
