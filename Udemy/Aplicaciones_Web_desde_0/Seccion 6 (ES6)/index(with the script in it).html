@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Adding the data in a dinamic way-->
+    <script>
+        let h1 = document.createElement("h1");
+        h1.innerText = "Hello world";
+        window.onload = () =>{
+            //creating a little array
+            const cards = [
+                {title: "Card 1", contain: "Contain", detail: "Card1 detail"},
+                {title: "Card 2", contain: "Contain", detail: "Card2 detail"},
+                {title: "Card 3", contain: "Contain", detail: "Card3 detail"}
+            ];
+
+            //creating a fragment to add each card
+            const Frag = document.createDocumentFragment();
+
+            //giving html format to each card an adding it to the fragment
+            for (let index = 0; index < cards.length; index++){
+                const element = cards[index];
+                const Card = document.createElement("div");
+                Card.className = "card";
+                const labelTitle = document.createElement("label");
+                labelTitle.classname = "title";
+                labelTitle.innerText = element.title;
+                const secContain = document.createElement("section");
+                secContain.innerText = element.contain;
+                const secDetail = document.createElement("section");
+                secDetail.innerText = element.detail;
+                Card.append(labelTitle, secContain, secDetail);
+                Frag.append(Card);
+            }
+            MyApp.append(Frag)
+            //MyApp.append(h1);
+        }
+    </script>
+</head>
+<body id="MyApp">
+    <h1>Hi world!</h1>
+</body>
+</html>
