@@ -129,7 +129,24 @@ class Navigator{
                 "Last Name": "",
                 Address: ""
             }
-            CompM.NavigateFunction("WFormsJS", new WFormsJS(ModelObject), "MainApp");            
+
+            //a little function to send data to an API through POST
+            const Save = async (Object)=>{
+                const url = 'htpps://example.com/API';
+                const Data = await fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(Object),
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+                });
+                const JData = await Data.json();
+                console.log(JData);
+            }
+            CompM.NavigateFunction("WFormsJS", new WFormsJS(ModelObject), "MainApp"); 
+            
+            //adding the Save method to contact the API
+            //CompM.NavigateFunction("WFormsJS", new WFormsJS(ModelObject, Save), "MainApp");            
         }}},
     ];
 }
