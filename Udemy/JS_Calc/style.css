@@ -1,0 +1,71 @@
+:root {
+    --primaryColor: linear-gradient(90deg, rgb(8, 58, 58) 25%, rgb(27, 83, 55) 50%, rgb(53, 78, 57) 75%);
+    --secondaryColor: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
+    --listFontColor: rgb(169, 221, 185);
+    --textFontSize: 3.0rem;
+    --littleTextFontSize: 1.5rem;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* important responsive feature (padding and border) */
+    margin: 0;
+    padding: 0;
+}  
+
+html, body {
+    font-size: 62.5%;/*makes the root sizes of 10px*/
+    margin: auto;
+    background: var(--primaryColor);
+    position: relative;
+    min-height: 100vh;
+}
+
+#main{
+    background-color: black;
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 0;
+}
+form{
+    display: grid;
+    justify-content: center;
+    height: 500px;
+    padding: 1rem;
+    grid-template-columns: repeat(4, minmax(4rem, 1fr));
+    grid-template-rows: repeat(6, minmax(4rem, 1fr));
+    align-content: center;
+    align-items: center;
+}
+
+#screen{
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    height: calc(500px / 6);
+    font-size: var(--textFontSize);
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: right;
+}
+
+#screen:hover{
+    transform: scale(1);
+    background-color: transparent;
+    color: rgb(207, 203, 240);
+}
+
+input{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-size: var(--textFontSize);
+}
+input:hover{
+    transform: scale(1.20);
+    background-color: transparent;
+    color: white;
+    border-color: blue;
+}

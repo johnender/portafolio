@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+	<script src="../../footer-header-components/header.js"></script>
+	<script src="../../footer-header-components/footer.js"></script>
+</head>
+<body>
+    <my-header
+        text = "JS Calculator"
+        link1 = "../../index.html"
+        link2 = "../../certifications/index.html"
+        link3 = "../../contact/index.html"
+    ></my-header>
+
+    <div id="main">
+        <form name="f">
+            <input id="screen" type="text" name="display" placeholder="0">
+            <input type="button" value="AC" onclick="f.display.value=''">
+            <input type="button" value="%" onclick="percent()">
+            <input type="button" value="/" onclick="divide()">
+            <input type="button" value="del" onclick="del()">
+            <input type="button" value="7" onclick="f.display.value+=7">
+            <input type="button" value="8" onclick="f.display.value+=8">
+            <input type="button" value="9" onclick="f.display.value+=9">
+            <input type="button" value="x" onclick="multiply()">
+            <input type="button" value="4" onclick="f.display.value+=4">
+            <input type="button" value="5" onclick="f.display.value+=5">
+            <input type="button" value="6" onclick="f.display.value+=6">
+            <input type="button" value="-" onclick="subtract()">
+            <input type="button" value="1" onclick="f.display.value+=1">
+            <input type="button" value="2" onclick="f.display.value+=2">
+            <input type="button" value="3" onclick="f.display.value+=3">
+            <input type="button" value="+" onclick="add()">
+            <input type="button" value="+/-" onclick="shift()">
+            <input type="button" value="0" onclick="f.display.value+=0">
+            <input type="button" value="." onclick="f.display.value+='.'">
+            <input type="button" value="=" onclick="f.display.value=eval(f.display.value)">
+        </form>
+    </div>
+</body>
+<my-footer
+    link1="https://www.facebook.com/"
+    img1="../../images/facebook_logos.png"
+    img1Alt="Logo de Facebook"
+    img1Title = "Facebook Profile Link"
+
+    link2 = "https://www.linkedin.com/in/johnn-hern%C3%A1ndez-delgado-a974bbb3/"
+    img2 = "../../images/linkedin-png-logo-5.png"
+    img2Alt = "Logo de LinkedIn"
+    img2Title = "LinkedIn profile link"
+></my-footer>
+</html>
