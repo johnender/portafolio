@@ -90,7 +90,6 @@ function percent(){
             if (b == '/' | b == '*' | b == '-' | b == "+" | b == "."){ //if there is a sign already, remove it
                 f.display.value = currentValue.substring(0, size-1);
                 f.display.value = f.display.value / 100;
-                console.log("what")
             }else{
                 f.display.value = currentValue / 100;
             }
@@ -114,4 +113,45 @@ function percent(){
     }
     
 
+}
+
+function dot(){
+    var currentValue=0, b=0, size=0;
+    currentValue = f.display.value;
+    size = currentValue.length;
+    b = currentValue.charAt(size - 1);
+    let mightFail = 0;
+    let failure = 0;
+    let i = 0;
+    while(i < size && failure==0){
+        if(i == size-1){
+            if (b == '/' | b == '*' | b == '-' | b == "+" | b == "."){ //if there is a sign already, remove it
+                if(mightFail ==0){
+                    f.display.value = currentValue.substring(0, size-1);
+                    f.display.value +='.';
+                }
+                else{
+                    failure = 1;
+                }
+            }else{
+                if(mightFail ==0){
+                    f.display.value +='.';
+                }
+                else{
+                    failure = 1;
+                }
+            }
+            i++;
+        }
+        else{
+            if (currentValue.charAt(i) == '.'){
+                mightFail = 1;
+            }else if (currentValue.charAt(i) == '/' | currentValue.charAt(i) == '*' | currentValue.charAt(i) == '-' | currentValue.charAt(i) == "+" | currentValue.charAt(i) == "."){ //if there is a sign already, it's safe
+                if(mightFail == 1){
+                    mightFail = 0;
+                }
+            }
+            i++;
+        }
+    }
 }
