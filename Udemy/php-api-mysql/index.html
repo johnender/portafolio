@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+      
+        <h1>Trying the API</h1>
+  
+        <ul class="container">
+          <li><button id="button-all" title="Get all data">Get all the data</button></li>
+          <li><button id="button-insert" title="Insert random data">Insert random</button></li>
+        </ul>
+      </header>
+
+    
+
+    
+    <ul id="categories"></ul>
+
+    <script>
+        async function getData() {
+            const url = `http://localhost/php-api-mysql/controller/category.php?op=GetAll`;
+            try{
+            const response = await fetch(url)
+            const data = await response.json()
+            return data
+            }catch (error){
+            console.log(error.message)
+            }
+        }
+
+        async function insertData() {
+            try{
+                await fetch("http://localhost/php-api-mysql/controller/category.php?op=Insert", {
+                method: "POST",
+                body: JSON.stringify({
+                    cat_name: "new",
+                    cat_obs: "new random",
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+                
+                });
+            }catch (error){
+                console.log(error.message)
+            }
+        }
+
+
+        function renderData(data) {
+            const categoriesList = document.getElementById('categories');
+
+            //para limpiar la pagina
+            categoriesList.innerHTML = ''; 
+
+            //para agregar los elementos del array uno a uno
+            data.forEach(category => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <h5>${category.cat_id}</h5>
+                <p>${category.cat_name}<p>
+                <p>Released on <em>${category.cat_obs}</em></p>
+                `;
+                categoriesList.appendChild(listItem);
+            });
+        };
+
+
+        function cleanScreen() {
+            const categoriesList = document.getElementById('categories');
+
+            //para limpiar la pagina
+            categoriesList.innerHTML = ''; 
+        };
+
+
+        //en click, search the categories and show them
+        document.getElementById('button-all').onclick = async function() {
+            const data= await getData();
+            renderData(data);
+        }
+
+        document.getElementById('button-insert').onclick = async function() {
+            const data= await insertData();
+            cleanScreen();
+        }
+    </script>
+
+    <style>
+        li{
+            list-style: none;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+    </style>
+</body>
+</html>
