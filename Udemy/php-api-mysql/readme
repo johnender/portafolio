@@ -1,2 +1,2 @@
-the mvc files must be on a php server (the three folders) and the index.html can be used to test the get data and the insert of data (it needs to be open on a js server, like the VS code one)
+the files must be on a php server (the three folders) and the index.html can be used to test the get data and the insert of data (it needs to be open on a js server, like the VS code one)
 
