@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trying canvas</title>
+
+    <script src="../../footer-header-components/header.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <my-header
+    text = "Trying Canvas Tag"
+    link1 = "../../index.html"
+    link2 = "../../certifications/index.html"
+    link3 = "../../contact/index.html"
+    ></my-header>
+
+    <main>
+        <aside id="control-panel">
+            <p>Click and drag to make more links/dots!</p>
+            <label>Trails: </label>
+            <input type="checkbox" id="trail" name="trail" checked />
+            <br/>
+            <label>Trails intesity: </label>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <br/>
+            <button id="clear" title="remove only the dots">Clear</button>
+            <button id="reset" title="remove the dots and the trails">Reset</button>
+            <br/>
+            <a href="https://webdesign.tutsplus.com/articles/21-ridiculously-impressive-html5-canvas-experiments--net-14210" theget="_blank">Original Idea</a>
+        </aside>
+
+        <canvas id="canvasfield"></canvas>
+    </main>>
+
+    <!--Executing it at the end, so it can know and modify the DOM-->
+    <script src="./code.js"></script>
+</body>
+</html>
