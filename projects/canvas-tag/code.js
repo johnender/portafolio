@@ -2,6 +2,7 @@ window.requestAnimFrame=function(){
     return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(a){window.setTimeout(a,1E3/60)}
 }();
 
+//no idea what this does, investigate it a little more
 document.onselectstart = function() {
   return false;
 };
@@ -12,6 +13,7 @@ var c = document.getElementById('canvasfield');
 //debbuging
 console.log(c);
 
+//ctx or getContext('2d') is basically the area to draw
 var ctx = c.getContext('2d');
 var dpr = window.devicePixelRatio;
 var cw = window.innerWidth;
