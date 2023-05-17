@@ -23,7 +23,7 @@ c.width = cw * dpr;
 c.height = ch * dpr;
 ctx.scale(dpr, dpr);
 
-//function to calc a random value
+//function to calc a random value, not in use
 var rand = function(rMi, rMa){return ~~((Math.random()*(rMa-rMi+1))+rMi);}
 
 ctx.lineCap = 'round';
@@ -36,6 +36,7 @@ var trail = trailCB.checked;
 var clearer = document.getElementById('clear');
 var reseter = document.getElementById('reset');
 var slider = document.getElementById('myRange');
+var sizer = document.getElementById('mySize');
 console.log(slider);
 
 
@@ -95,7 +96,7 @@ function createOrb(mx,my){
 			this.x = this.centerX + Math.sin(this.angle*-1) * this.radius;
 			this.y = this.centerY + Math.cos(this.angle*-1) * this.radius;
 			this.angle += this.speed;
-		
+			this.size = sizerValue;
 		}
 	});
 }
@@ -134,12 +135,20 @@ function reset(){
 
 //new slider to change trails intensity (initially on 50)
 var slideValue = slider.value;
+var intensity = (100-slideValue)/1000;
 function changeSlider(){
     slideValue = slider.value;
+	intensity = (100-slideValue)/1000;
     console.log(slider.value)
 }
 
-//addint the listeners to thje mouse movement and button options
+//Function to calc the new size
+var sizerValue = sizer.value;
+function changeSizer(){
+    sizerValue = sizer.value;
+}
+
+//adding the listeners to thje mouse movement and button options
 c.addEventListener('mousedown', orbGo, false);
 c.addEventListener('mousedown', turnOnMove, false);
 c.addEventListener('mouseup', turnOffMove, false);
@@ -147,6 +156,7 @@ trailCB.addEventListener('change', toggleTrails, false);
 clearer.addEventListener('click', clear, false);
 reseter.addEventListener('click', reset, false);
 slider.addEventListener('change', changeSlider, false);
+sizer.addEventListener('change', changeSizer, false);
 
 //starts creatins 100 orbs
 var count = 100;
@@ -155,13 +165,12 @@ while(count--){
 }
 
 //main loop for the app
-var intensity;
 var loop = function(){
     //recursive call to the function who returns the corresponding animation
     window.requestAnimFrame(loop);
 	if(trail){
         //calculating the new intensity (inverse proportional to the value of the slider, the result is between 0 an 0.1)
-        intensity = (100-slideValue)/1000;
+        
 		ctx.fillStyle = `rgba(0,0,0,${intensity})`;
 		ctx.fillRect(0,0,cw,ch);
 	} else {
