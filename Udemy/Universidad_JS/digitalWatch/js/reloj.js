@@ -14,6 +14,7 @@ const mostrarReloj = ()=>{
     document.getElementById('fecha').innerHTML = fechaTexto;
 
     //anhade y quita la clase
+    //classList devuelve todas las clases para este elemento y el toggle es como un interruptor
     document.getElementById('contenedor').classList.toggle('animar');
 }
 
