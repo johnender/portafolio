@@ -80,8 +80,6 @@ class headerBar extends HTMLElement {
     return `
       <style>
       :root {
-        --primaryColor: linear-gradient(90deg, rgba(11,6,98,1) 25%, rgba(6,44,94,1) 50%, rgba(15,137,162,1) 75%);
-        --secondaryColor: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
         --listFontColor: rgb(169, 221, 185);
         --textFontSize: 2.0rem;
         --littleTextFontSize: 1.5rem;
@@ -96,7 +94,7 @@ class headerBar extends HTMLElement {
 
       header {
         border: 5px ridge rgb(70, 68, 107);
-        background: var(--secondaryColor);
+        background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
         position: sticky;
         top: 0; /* Position the navbar at the top of the page */
         width: 100%; /* Full width */

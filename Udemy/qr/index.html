@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR generator</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    
+    <script src="../../footer-header-components/header.js"></script>
+    <script src="../../footer-header-components/footer.js"></script>
+
+
+    <script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+    <my-header
+      text = "Portfolio home page"
+      link1 = "../../index.html"
+      link2 = "../../certifications/index.html"
+      link3 = "../../contact/index.html"
+    ></my-header>
+
+    <main>
+        <h1>Qr code generator</h1>
+        <img id="resultQR" src="">
+        <label for="size">Select size for the QR code (in pixels, max 545):</label>
+        <input type="number" value="" id="size" placeholder="250" maxlength="720">
+        <br/>
+        <label for="text">Insert the text or link for the QR code (max 4000 characters):</label>
+        <textarea rows="10" cols="30" value="" id="text" placeholder="https://example.com"></textarea>
+        <!-- <input type="text" value="" id="text" placeholder="https://example.com" required maxlength="400"> -->
+        <br/>
+        <button type="submit" onclick="generateQR()">Generate</button>
+
+    </main>
+
+    <my-footer
+    link1="https://www.facebook.com/"
+    img1="../../images/facebook_logos.png"
+    img1Alt="Logo de Facebook"
+    img1Title = "Facebook Profile Link"
+    
+    link2 = "https://www.linkedin.com/in/johnn-hern%C3%A1ndez-delgado-a974bbb3/"
+    img2 = "../../images/linkedin-png-logo-5.png"
+    img2Alt = "Logo de LinkedIn"
+    img2Title = "LinkedIn profile link"
+    ></my-footer>
+
+</body>
+</html>
