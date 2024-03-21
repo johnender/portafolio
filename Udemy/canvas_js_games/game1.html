@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas{
+            background-color: black;
+        }
+
+        /* body{
+            display: block;
+        } */
+
+        div{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            width: 600px;
+        }
+
+        .button{
+            visibility: hidden;
+        }
+    </style>
+
+
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <canvas id="canvas1" width="600" height="400"></canvas>
+    
+    <div>
+        <button class="button" id="ButtonFigures" onclick="Figures()">Figures</button>
+        <button class="button" id="ButtonLines" onclick="Lines()">Lines</button>
+        <button class="button" id="ButtonStrokes" onclick="Strokes()">Strokes</button>
+        <button class="button" id="ButtonArcs" onclick="Arcs()">Arcs</button>
+        <button class="button" id="ButtonBezierSquare" onclick="BezierSquare()">BezierSquare</button>
+        <button class="button" id="ButtonBezierCubic" onclick="BezierCubic()">BezierCubic</button>
+        <button class="button" id="ButtonZicZac" onclick="ZicZac()">ZicZac</button>
+        <button class="button" id="ButtonSpiral" onclick="Spiral()">Spiral</button>
+        <button class="button" id="ButtonStar" onclick="Star()">Star</button>
+        <button class="button" id="ButtonGear" onclick="Gear()">Gear</button>
+        <button class="button" id="ButtonRectangle" onclick="DrawRectagle()">Rectangle</button>
+        <button class="button" id="ButtonGradient" onclick="Gradient()">Gradient</button>
+        <button class="button" id="ButtonSpaceShips" onclick="SpaceShips()">Space Ships</button>
+    </div>
+    <div id="clearDiv">
+        <button onclick="Clear()">Clear</button>
+    </div>
+    
+</body>
+</html>
