@@ -1,6 +1,9 @@
 window.onload = function () {
+    
+    //declaring the canvas vairable as global in a implicite way
     canvas = document.getElementById("canvas1");
-    //declaring the StarButton vairable as global
+    title = document.getElementById("title");
+    //declaring the StarButton vairables as global in a explicite way
     window.startFigures = document.getElementById("ButtonFigures");
     window.startLines = document.getElementById("ButtonLines");
     window.startStrokes = document.getElementById("ButtonStrokes");
@@ -15,12 +18,15 @@ window.onload = function () {
     window.startGradient = document.getElementById("ButtonGradient");
     window.startSpaceShips = document.getElementById("ButtonSpaceShips");
     
+    //creating the global variables for the space ships game
+    window.x = 100;
+    window.y = 100;
     //validating the canvas exists and is supported by the browser
     if(canvas && canvas.getContext){
         //validating the context support 2 dimensions
         ctx = canvas.getContext("2d");
         if(ctx){
-            Gradient();
+            SpaceShips();
 
         }else{
             alert("Your browser don't support canvas")
@@ -462,21 +468,48 @@ function Gradient(){
 
 }
 
-function SpaceShips(){
+const SpaceShips = () =>{
     Hide();
-    canvas.width = 1000, canvas.height = 800;
+    canvas.width = 960, canvas.height = 800, canvas.style.border = "solid yellow 3px";
     document.getElementById("clearDiv").style.width = "1000px";
-    console.log("in");
+    title.innerHTML = "Space ships";
+
+    requestAnimationFrame(SpaceShips); //this function helps to reproduce the game on any browser
+    //requestAnimationFrame(SpaceShips); 
+    verify();
+    draw();
+
 }
+
+const verify = () =>{
+    window.x +=2;
+    if(x>canvas.width) x=0;
+}
+
+const draw = () =>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "red";
+    ctx.beginPath();
+    ctx.arc(x, y, 5, 0, 2*Math.PI);
+    ctx.fill();
+}
+
+//this function helps to reproduce the game on any browser (makes it recursive)
+window.requestAnimationFrame = (function (){
+    return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            function (callback){window.setTimeout(callback,17);}
+    
+})();
 
 
 function Clear (){
     const context = canvas.getContext('2d');
-    canvas.width = 600, canvas.height = 400;
+    canvas.width = 600, canvas.height = 400, canvas.style.border = "";
     context.clearRect(0, 0, canvas.width, canvas.height);
-
-
     document.getElementById("clearDiv").style.width = "600px";
+    title.innerHTML = "Trying canvas";
 
     startFigures.style.visibility = "visible";
     startLines.style.visibility = "visible";
