@@ -17,7 +17,6 @@ window.onload = function () {
     window.startRectangle = document.getElementById("ButtonRectangle");
     window.startGradient = document.getElementById("ButtonGradient");
     window.startSpaceShips = document.getElementById("ButtonSpaceShips");
-    
     //creating the global variables for the space ships game
     window.x = 100;
     window.y = 100;
@@ -468,17 +467,18 @@ function Gradient(){
 
 }
 
+var myReq;
+
 const SpaceShips = () =>{
     Hide();
     canvas.width = 960, canvas.height = 800, canvas.style.border = "solid yellow 3px";
     document.getElementById("clearDiv").style.width = "1000px";
     title.innerHTML = "Space ships";
 
-    requestAnimationFrame(SpaceShips); //this function helps to reproduce the game on any browser
+    myReq = requestAnimationFrame(SpaceShips); //this function helps to reproduce the game on any browser
     //requestAnimationFrame(SpaceShips); 
     verify();
     draw();
-
 }
 
 const verify = () =>{
@@ -503,8 +503,15 @@ window.requestAnimationFrame = (function (){
     
 })();
 
+const cancelAnimationFrame =
+  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
 function Clear (){
+    console.log("tried");
+    if (myReq){
+        cancelAnimationFrame(myReq);
+        myReq = null;
+    }
     const context = canvas.getContext('2d');
     canvas.width = 600, canvas.height = 400, canvas.style.border = "";
     context.clearRect(0, 0, canvas.width, canvas.height);
