@@ -1,9 +1,10 @@
 window.onload = function () {
     
-    //declaring the canvas vairable as global in a implicite way
+    //declaring the canvas variable as global in a implicite way
     canvas = document.getElementById("canvas1");
     title = document.getElementById("title");
-    //declaring the StarButton vairables as global in a explicite way
+
+    //declaring the StarButton variables as global in a explicite way
     window.startFigures = document.getElementById("ButtonFigures");
     window.startLines = document.getElementById("ButtonLines");
     window.startStrokes = document.getElementById("ButtonStrokes");
@@ -17,9 +18,7 @@ window.onload = function () {
     window.startRectangle = document.getElementById("ButtonRectangle");
     window.startGradient = document.getElementById("ButtonGradient");
     window.startSpaceShips = document.getElementById("ButtonSpaceShips");
-    //creating the global variables for the space ships game
-    window.x = 100;
-    window.y = 100;
+    
     //validating the canvas exists and is supported by the browser
     if(canvas && canvas.getContext){
         //validating the context support 2 dimensions
@@ -259,7 +258,7 @@ function ZicZac(){
 
     //Bezier (cubiccurve)
     ctx.beginPath();
-    var inicioX=85, inicioY=70, desplazamiento= 30, lineas=15, lenght=100;
+    var inicioX=85, inicioY=70, desplazamiento= 30, lineas=15, length=100;
 
     ctx.moveTo(inicioX, inicioY); //starting point
     //x first control point, y first control point, x second control point, y second control point, x ending point, y ending point
@@ -268,7 +267,7 @@ function ZicZac(){
         var y = inicioY;
 
         if (i%2==0){
-            y = inicioY+lenght;
+            y = inicioY+length;
         }
 
         ctx.lineTo(x, y);
@@ -467,32 +466,273 @@ function Gradient(){
 
 }
 
-var myReq;
+
+/*****************************************************************************
+ Starting all the variables/const and functions for the Space ships game
+  ****************************************************************************/
+
+var myReq; //Animation request number
+
+game = {
+    //canvas: null,
+    //ctx: null,
+    image: null,
+    heroImage: true,
+    enemyImage: null,
+    pulsedKey:null,
+    key: [],
+    bulletColor: "red",
+    bullets_array: new Array(),
+    enymies_array: new Array(),
+    disparo: false
+}
+
+/***********
+ Constants
+  **********/
+const KEY_ENTER = "Enter";
+const KEY_LEFT = "ArrowLeft";
+const KEY_UP = "ArrowUp";
+const KEY_RIGHT = "ArrowRight";
+const KEY_DOWN = "ArrowDown";
+const KEY_SPACE = " ";
+
+/***********
+ Objects
+  **********/
+function Bullet(x, y, w){
+    this.x = x,
+    this.y = y;
+    this.w = w;
+    this.draw = function(){
+        //darwing the bullet
+        ctx.save();
+        ctx.fillStyle = game.bulletColor;
+
+        //using circular bullets
+        ctx.beginPath();
+        ctx.arc(this.x + 4, this.y, this.w, 0, 2*Math.PI)
+        ctx.fill();
+        ctx.stroke();
+
+
+        //using rectangular bullets
+        //ctx.fillRect(this.x, this.y, this.w, this.w);
+        this.y = this.y -4;
+        ctx.restore();
+    };
+}
+
+function Player(x) {
+    this.x = x;
+    this.y = 650;
+    this.draw = function (x){
+        this.x = x;
+        ctx.drawImage(game.image, this.x, this.y, 30, 15);
+    };
+}
+
+function Enemy(x, y){
+    this.x = x,
+    this.y = y;
+    this.w = 35;
+    this.times = 0;
+    this.dx = 5;
+    this.cicles = 0;
+    this.num = (canvas.width - 460)/5;
+    this.figure = true;
+    this.alive = true;
+    this.level = 1;
+    this.draw = function (){
+        //delay
+        if (this.cicles > 20/this.level){
+            //little jumps
+            if(this.times > this.num){
+                this.dx *= -1;
+                this.times = 0;
+                //this.num = 28;
+                this.y += 20;
+                this.dx = (this.dx>0)? this.dx++ : this.dx--;
+                if (this.level>=5){
+                    this.level*=2;
+                }else{
+                    this.level++;
+                }
+            }else{
+                this.x += this.dx;
+            }
+            this.times++;
+            this.cicles=0;
+            this.figure = !this.figure;
+        }else{
+            this.cicles++;
+        }
+        
+        if (this.figure){
+            //the firsts parameters (numbers) are a reference to the location of the enemy on the sprite
+            ctx.drawImage(game.enemyImage, 0, 0, 40, 30, this.x, this.y, 35, 40);
+        }else{
+            //the firsts parameters (numbers) are a reference to the location of the enemy on the sprite
+            ctx.drawImage(game.enemyImage, 50, 0, 35, 30, this.x, this.y, 35, 40);
+        }
+    };
+}
+
+/***********
+ Functions
+  **********/
+const heroImage = () =>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.width = 960, canvas.height = 700, canvas.style.border = "solid yellow 3px";
+    document.getElementById("clearDiv").style.width = "1000px";
+    let image = new Image();
+    image.src = "./images/spaceShips/cara.webp";
+    image.onload = () => {
+        ctx.drawImage(image, 0, 0);
+    }
+}
+
+const select = (e) => {
+    if (title.innerHTML == "Space ships"){
+        if (game.heroImage){
+            start();
+        }
+    }
+    
+}
+
+const start = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    game.heroImage = false;
+    game.player = new Player (0);
+    game.x = canvas.width/2;
+    game.player.draw(game.x);
+    animate();
+}
+
+
+var x = 100, y = 100;
 
 const SpaceShips = () =>{
     Hide();
-    canvas.width = 960, canvas.height = 800, canvas.style.border = "solid yellow 3px";
-    document.getElementById("clearDiv").style.width = "1000px";
     title.innerHTML = "Space ships";
+    //canvas.width = 960, canvas.height = 800, canvas.style.border = "solid yellow 3px";
+    //document.getElementById("clearDiv").style.width = "1000px";
+    //title.innerHTML = "Space ships";
 
-    myReq = requestAnimationFrame(SpaceShips); //this function helps to reproduce the game on any browser
+    //crearing enemys
+    game.enymies_array = new Array(); //restarting the array, so, there is not cache memory
+    game.enemyImage = new Image();
+    game.enemyImage.src = "./images/spaceShips/invader.fw.png";
+    game.enemyImage.onload = function(){
+        for(var i = 0; i <  5; i++){
+            for (var j = 0; j < 10; j++){
+                //adding each enemy, axis x and y
+                game.enymies_array.push(new Enemy(20+40*j, 30+45*i));
+            }
+        }
+    }
+
+    //adding the image of the player
+    game.image = new Image();
+    game.image.src = "./images/spaceShips/torre.fw.png";
+    heroImage();
+    //adding a listener to the whole canvas
+    canvas.addEventListener("click", select, false);
+    
+    
+}
+
+const animate = () =>{
+    //declaring it as global, so, we can stop it
+    myReq = requestAnimationFrame(animate); //this function helps to reproduce the game on any browser
     //requestAnimationFrame(SpaceShips); 
     verify();
     draw();
+    collision();
+}
+
+const collision= () => {
+    let enemy, bullet;
+    for(var i = 0; i < game.enymies_array.length; i++){
+        for(var j =0; j < game.bullets_array.length; j++){
+            enemy = game.enymies_array[i];
+            bullet = game.bullets_array[j];
+            if (enemy != null && bullet != null){
+                if ((bullet.x > enemy.x) && 
+                (bullet.x < enemy.x+enemy.w) && 
+                (bullet.y > enemy.y) &&
+                (bullet.y < enemy.y+enemy.w)){
+                    enemy.alive = false;
+                    game.enymies_array[i] = null;
+                    game.bullets_array[j] = null;
+                    game.shoot = false;
+                }
+            }
+        }
+    }
 }
 
 const verify = () =>{
-    window.x +=2;
-    if(x>canvas.width) x=0;
+    if(game.key[KEY_RIGHT]) {game.x+=10;}
+    if(game.key[KEY_LEFT]) {game.x-=10;}
+    if(game.key[KEY_SPACE]) {
+        game.bullets_array.push(new Bullet(game.player.x + 12, game.player.y - 3, 5));
+        game.key[KEY_SPACE] = false;
+    }  //shooting
+    //else if(game.key[KEY_RIGHT]) {game.x+=10;}
+
+
+    //verifying the canon doesn't dissapear
+    if(game.x>canvas.width) {game.x = 0;}
+    else if(game.x<0) game.x = canvas.width;
 }
 
 const draw = () =>{
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    game.player.draw(game.x);
+
+    //moving the bullets
+    for (var i = 0; i < game.bullets_array.length; i++){
+        if (game.bullets_array[i]!=null){
+            game.bullets_array[i].draw();
+            if (game.bullets_array[i].y<0) game.bullets_array[i] = null;
+        }
+    }
+
+
+
+    //enemys
+    for (var i = 0; i < game.enymies_array.length; i++){
+        if(game.enymies_array[i]!=null){ //only draw the existing enemys
+            game.enymies_array[i].draw();
+        }
+        /* if (game.enymies_array[i]!=null){
+            game.enymies_array[i].draw();
+            if (game.enymies_array[i].y<0) game.enymies_array[i] = null;
+        } */
+    }
+
+    /* Example of the little ball
     ctx.fillStyle = "red";
     ctx.beginPath();
     ctx.arc(x, y, 5, 0, 2*Math.PI);
-    ctx.fill();
-}
+    ctx.fill();*/
+} 
+
+/***********
+ LISTENER
+  **********/
+
+//asking the whole document to "listen"
+document.addEventListener("keydown", function(e){
+    game.pulsedKey = e.key;
+    game.key[e.key] = true;
+})
+
+document.addEventListener("keyup", function(e){
+    game.key[e.key] = false;
+})
 
 //this function helps to reproduce the game on any browser (makes it recursive)
 window.requestAnimationFrame = (function (){
@@ -507,10 +747,12 @@ const cancelAnimationFrame =
   window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
 function Clear (){
-    console.log("tried");
     if (myReq){
         cancelAnimationFrame(myReq);
         myReq = null;
+    }
+    if (!game.heroImage){
+        game.heroImage = true;
     }
     const context = canvas.getContext('2d');
     canvas.width = 600, canvas.height = 400, canvas.style.border = "";
