@@ -482,9 +482,11 @@ game = {
     pulsedKey:null,
     key: [],
     bulletColor: "red",
+    enemyBulletColor: "yellow",
     bullets_array: new Array(),
-    enymies_array: new Array(),
-    disparo: false
+    enemies_array: new Array(),
+    enemyBullets_array: new Array(),
+    shoot: false
 }
 
 /***********
@@ -515,20 +517,38 @@ function Bullet(x, y, w){
         ctx.fill();
         ctx.stroke();
 
-
         //using rectangular bullets
         //ctx.fillRect(this.x, this.y, this.w, this.w);
         this.y = this.y -4;
         ctx.restore();
     };
+    this.shoot = function(){ //bullets shot by the enemies
+        //darwing the bullet
+        ctx.save();
+        ctx.fillStyle = game.enemyBulletColor;
+
+        //using circular bullets
+        /* ctx.beginPath();
+        ctx.arc(this.x + 4, this.y, this.w, 0, 2*Math.PI)
+        ctx.fill();
+        ctx.stroke(); */
+
+        //using rectangular bullets
+        ctx.fillRect(this.x, this.y, this.w, this.w);
+        this.y = this.y +6;
+        ctx.restore();
+    };
+
 }
 
 function Player(x) {
     this.x = x;
     this.y = 650;
+    this.w = 30;
+    this.h = 15;
     this.draw = function (x){
         this.x = x;
-        ctx.drawImage(game.image, this.x, this.y, 30, 15);
+        ctx.drawImage(game.image, this.x, this.y, this.w, this.h);
     };
 }
 
@@ -620,15 +640,15 @@ const SpaceShips = () =>{
     //document.getElementById("clearDiv").style.width = "1000px";
     //title.innerHTML = "Space ships";
 
-    //crearing enemys
-    game.enymies_array = new Array(); //restarting the array, so, there is not cache memory
+    //crearing enemies
+    game.enemies_array = new Array(); //restarting the array, so, there is not cache memory
     game.enemyImage = new Image();
     game.enemyImage.src = "./images/spaceShips/invader.fw.png";
     game.enemyImage.onload = function(){
         for(var i = 0; i <  5; i++){
             for (var j = 0; j < 10; j++){
                 //adding each enemy, axis x and y
-                game.enymies_array.push(new Enemy(20+40*j, 30+45*i));
+                game.enemies_array.push(new Enemy(20+40*j, 30+45*i));
             }
         }
     }
@@ -654,9 +674,9 @@ const animate = () =>{
 
 const collision= () => {
     let enemy, bullet;
-    for(var i = 0; i < game.enymies_array.length; i++){
+    for(var i = 0; i < game.enemies_array.length; i++){
         for(var j =0; j < game.bullets_array.length; j++){
-            enemy = game.enymies_array[i];
+            enemy = game.enemies_array[i];
             bullet = game.bullets_array[j];
             if (enemy != null && bullet != null){
                 if ((bullet.x > enemy.x) && 
@@ -664,28 +684,74 @@ const collision= () => {
                 (bullet.y > enemy.y) &&
                 (bullet.y < enemy.y+enemy.w)){
                     enemy.alive = false;
-                    game.enymies_array[i] = null;
+                    game.enemies_array[i] = null;
                     game.bullets_array[j] = null;
                     game.shoot = false;
                 }
             }
         }
     }
+
+    //collision of enemy bullets with the player
+    for(var j = 0; j < game.enemyBullets_array.length; j++){
+        bullet = game.enemyBullets_array[j];
+
+        if(bullet != null){
+            if((bullet.x > game.player.x)&&
+                (bullet.x < game.player.x+game.player.w) &&
+                (bullet.y > game.player.y)&&
+                (bullet.y < game.player.y + game.player.h)){
+                    gameOver();
+                }
+        }
+    }
+}
+
+const gameOver = () => {
+    alert("Game Over!");
+    Clear();
 }
 
 const verify = () =>{
     if(game.key[KEY_RIGHT]) {game.x+=10;}
     if(game.key[KEY_LEFT]) {game.x-=10;}
-    if(game.key[KEY_SPACE]) {
+    /* if(game.key[KEY_SPACE]) {
         game.bullets_array.push(new Bullet(game.player.x + 12, game.player.y - 3, 5));
         game.key[KEY_SPACE] = false;
-    }  //shooting
+    } */  
     //else if(game.key[KEY_RIGHT]) {game.x+=10;}
 
 
     //verifying the canon doesn't dissapear
     if(game.x>canvas.width) {game.x = 0;}
     else if(game.x<0) game.x = canvas.width;
+
+    //shooting
+    if(game.key[KEY_SPACE]) {
+        if(game.shoot == false){ //controlling the fire rate
+            game.bullets_array.push(new Bullet(game.player.x + 12, game.player.y - 3, 5));
+            game.key[KEY_SPACE] = false;
+            game.shoot=true;
+        }
+    }
+
+    //Enemy shooting
+    if(Math.random()>0.96){
+        enemiesShooting();
+    }
+}
+
+const enemiesShooting = () =>{
+    var last = new Array();
+    for(var i=game.enemies_array.length-1;i>0;i--){
+        if(game.enemies_array[i] != null){
+            last.push(i);
+        }
+        if(last.length ==10) break;
+    }
+    d = last[Math.floor(Math.random()*10)];
+    //creating the bullets for the enemies, with the enemy position and the size of the bullet
+    game.enemyBullets_array.push(new Bullet(game.enemies_array[d].x+game.enemies_array[d].w/2, game.enemies_array[d].y, 5));
 }
 
 const draw = () =>{
@@ -696,20 +762,34 @@ const draw = () =>{
     for (var i = 0; i < game.bullets_array.length; i++){
         if (game.bullets_array[i]!=null){
             game.bullets_array[i].draw();
-            if (game.bullets_array[i].y<0) game.bullets_array[i] = null;
+            if (game.bullets_array[i].y<0){
+                game.shoot = false;
+                game.bullets_array[i] = null;
+            } 
         }
     }
 
 
-
-    //enemys
-    for (var i = 0; i < game.enymies_array.length; i++){
-        if(game.enymies_array[i]!=null){ //only draw the existing enemys
-            game.enymies_array[i].draw();
+    /************************************
+     * Moving enemy bullets
+     */
+    for(var i=0; i<game.enemyBullets_array.length; i++){
+        if(game.enemyBullets_array[i] != null){
+            game.enemyBullets_array[i].shoot();
+            if(game.enemyBullets_array[i].y>canvas.height){
+                game.enemyBullets_array[i] = null;
+            }
         }
-        /* if (game.enymies_array[i]!=null){
-            game.enymies_array[i].draw();
-            if (game.enymies_array[i].y<0) game.enymies_array[i] = null;
+    }
+
+    //enemies
+    for (var i = 0; i < game.enemies_array.length; i++){
+        if(game.enemies_array[i]!=null){ //only draw the existing enemies
+            game.enemies_array[i].draw();
+        }
+        /* if (game.enemies_array[i]!=null){
+            game.enemies_array[i].draw();
+            if (game.enemies_array[i].y<0) game.enemies_array[i] = null;
         } */
     }
 
