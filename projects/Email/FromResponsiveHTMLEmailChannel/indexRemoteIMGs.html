@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- On email we still use the XHTML 1.0 version, because it is the most compatible one -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- as always we have the metatag "charset=utf-8" for number and characters -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- compatability tag for microsoft explorer and Edge -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- initial device width tag -->
+<title>Modern HTML Email Template</title>
+<!-- The title is not required for email only pages -->
+<style type="text/css">
+	body {
+		margin: 0;
+		background-color: #cccccc; /* it's a gray color */
+	}
+	table {
+		border-spacing: 0; /* make sure there are not spaces at the sides */
+	}
+	td {
+		padding: 0;
+	}
+	img {
+		border: 0;
+	}
+	.wrapper {
+		width: 100%;
+		table-layout: fixed; /* fix the table inside the wrapper */
+		background-color: #cccccc;
+		padding-bottom: 50px;
+	}
+	.main {
+		background-color: #fffffff5;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 600px; /* recommended max width for email */
+		font-family: sans-serif;
+		color: #171a1b;
+	}
+	.two-columns {
+		text-align: center;
+		font-size: 0; /* the space counst as font */
+	}
+	.two-columns .column {
+		width: 100%;
+		max-width: 300px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+	}
+	.three-columns {
+		font-size: 0; /* removes any space the parent want to add to the content */
+		padding: 15px 0;
+	}
+	.three-columns .column {
+		width: 100%;
+		max-width: 200px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+	}
+	.three-columns .column .content {
+		font-size: 15px;
+		line-height: 20px;
+		padding: 0 5px;
+	}
+	.three-columns .padding {
+		padding: 15px;
+	}
+	.two-columns.last{
+		padding: 15px 0;
+	}
+	.two-columns .padding{
+		padding: 20px;
+	}
+	.two-columns .content {
+		font-size: 15px;
+		line-height: 20px;
+		text-align: left;
+	}
+	.two-columns.last .column {
+		vertical-align: middle;
+	}
+	.button {
+		background-color: #ffffff;
+		color: #171a1b;
+		text-decoration: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		font-weight: bold;
+	}
+	.button-dark{
+		background-color: #171a1b;
+		color: #ffffff;
+		text-decoration: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		font-weight: bold;
+	}
+
+
+
+	
+	.banner-container {
+  		text-align: center;
+		color: white;
+	}
+	.banner-container .banner-title {
+		padding: 15px 0 220px;
+		font-size: 1.5rem;
+	}
+	.banner-container .banner-button {
+		margin-top: 100px;
+		border: 1px solid #ffffff;
+		padding: 5px;
+		background-color: #171a1b;
+		color: aliceblue;
+		border-radius: 5%;
+		font-size: 1rem;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.banner-container .banner-button:hover {
+		opacity: 0.8;
+		border-color: red;
+		cursor: pointer;
+	}
+
+/* Using icons from icons8 https://icons8.com/icon/set/social-media/group-filled */
+</style>
+</head>
+<body>
+	<!-- the center tag is not valid on HTML5, but it is still usuful for emails -->
+	<center class="wrapper">
+
+		<table class="main">
+			<!-- TOP BORDER -->
+			<tr>
+				<td height="8" style="background-color: #171a1b;"></td>
+			</tr>
+
+			<!-- LOGO SECTION -->
+			<tr>
+				<td style="padding: 14px 0 4px;">
+					<table width="100%">
+						<tr>
+							<td class="two-columns">
+								<table class="column">
+									<tr>
+										<td style="padding: 0 120px 10px;"> <!-- centering the logo -->
+											<p width="150px" style="font-size: 25px; font-weight: bolder; padding: 10px 0; margin: 0;">Logo</p>
+										</td>
+									</tr>
+								</table>
+								<table class="column">
+									<tr>
+										<td style="padding: 10px 72px;"> <!-- centering the logos, it's easier to calculate it on the "smaller view" -->
+											<a href="#"><img src="https://img.icons8.com/?size=512&id=8818&format=png" alt="Facebook logo" width="30px"></a>
+											<a href="#"><img src="https://img.icons8.com/?size=512&id=RhYNENh5cxlS&format=png" alt="Instagram logo" width="30px"></a>
+											<a href="#"><img src="https://img.icons8.com/?size=512&id=8808&format=png" alt="Linkedin logo" width="30px"></a>
+											<a href="#"><img src="https://img.icons8.com/?size=512&id=A4DsujzAX4rw&format=png" alt="Twitter Logo" width="30px"></a>
+											<a href="#"><img src="https://img.icons8.com/?size=512&id=aL0F8ToUoPjC&format=png" alt="Youtube logo" width="30px"></a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+					</table>
+				</td>
+			</tr>
+
+			<!-- BANNER IMAGE -->
+			<tr>
+				<td class="banner-container" style="display: inline-block; background-image:url('https://cdn.pixabay.com/photo/2023/08/02/09/55/deer-8164879_1280.jpg'); background-repeat: no-repeat; background-size: cover;" width="100%" height="300px">
+					<!-- <img src="https://cdn.pixabay.com/photo/2023/08/02/09/55/deer-8164879_1280.jpg" alt="" width="100%"> -->
+					<div class="banner-title"> Beautiful responsive email </div>
+					<a href="https://johnender.github.io/portafolio/" class="banner-button" target="_blank">Portfolio</a>
+				</td>
+			</tr>
+
+			<!-- THREE COLUMN SECTION -->
+			<tr>
+				<td>
+					<table width="100%"> <!-- the witdh 100% needs to be on the table, not on the rows or data -->
+						<tr>
+							<td class="three-columns">
+								<table class="column">
+									<tr>
+										<td class="padding">
+											<table class="content">
+												<tr>
+													<td>
+														<a href="#"><img src="https://img.icons8.com/?size=512&id=uciMBrSDuvTo&format=png" alt="" width="130" style="max-width: 130px;"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<p style="font-weight: bold; font-size: 17px;">Ecommerce</p>
+														<p>Beautiful responsive email small paragraph.</p>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<table class="column">
+									<tr>
+										<td class="padding">
+											<table class="content">
+												<tr>
+													<td>
+														<a href="#"><img src="https://img.icons8.com/?size=512&id=21698&format=png" alt="" width="130" style="max-width: 130px;"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<p style="font-weight: bold; font-size: 17px;">Web Design</p>
+														<p>Beautiful responsive email small paragraph.</p>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<table class="column">
+									<tr>
+										<td class="padding">
+											<table class="content">
+												<tr>
+													<td>
+														<a href="#"><img src="https://img.icons8.com/?size=512&id=4822&format=png" alt="" width="130" style="max-width: 130px;"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<p style="font-weight: bold; font-size: 17px;">HTML Email</p>
+														<p>Beautiful responsive email small paragraph.</p>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<!-- TWO COLUMN SECTION -->
+			<tr>
+				<td style="background-color: #26292b;color: #ffffff;">
+					<table width="100%">
+						<tr>
+							<td class="two-columns last">
+								<table class="column">
+									<tr>
+										<td class="padding">
+											<table class="content">
+												<tr>
+													<td>
+														<a href=""><img src="https://cdn.pixabay.com/photo/2019/07/14/16/29/pen-4337524_1280.jpg" alt="" width="260" style="max-width: 260px;"></a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<table class="column">
+									<tr>
+										<td class="padding">
+											<table class="content">
+												<tr>
+													<td>
+														<p style="font-weight: bold; font-size: 18px;">Create custom designs</p>
+														<p style="padding-bottom: 16px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ducimus quibusdam ea debitis dolorum reiciendis qui corrupti magnam unde quisquam, voluptates quas aliquid atque magni iusto eum rem voluptatem.</p>
+														<a href="#" class="button">Read More</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<!-- TITLE, TEXT & BUTTON -->
+			<tr>
+				<td style="padding: 15px 0 50px;">
+					<table width="100%">
+						<tr>
+							<td style="text-align: center; padding: 15px;">
+								<p style="font-size: 20px; font-weight: bold;">Beautiful Responsive HTML Email</p>
+								<p style="line-height: 23px; font-size: 15px; padding: 5px 0 15px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis quasi qui minima distinctio cupiditate, officia sequi. Aliquam ullam, repudiandae labore sapiente consequuntur magnam unde fugiat qui odio eaque dolore veritatis?</p>
+								<a href="#" class="button-dark">Learn More</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<!-- FOOTER SECTION -->
+			<tr>
+				<td style="background-color: #26292b;">
+					<table width="100%">
+						<tr>
+							<td style="text-align: center; padding: 45px 20px; color: #ffffff;">
+								<p width="150px" style="font-size: 25px; font-weight: bolder; padding: 10px 0; margin: 0;">Logo</p>
+								<p style="padding: 10px 0; margin: 0 auto;">Beautiful HTML Email</p>
+								<p style="padding: 10px 0; margin: 0 auto;">Some address</p>
+								<a href="#"><img src="https://img.icons8.com/?size=512&id=8818&format=png" alt="Facebook logo" width="30px" style="filter: invert(100%);"></a>
+								<a href="#"><img src="https://img.icons8.com/?size=512&id=RhYNENh5cxlS&format=png" alt="Instagram logo" width="30px" style="filter: invert(100%);"></a>
+								<a href="#"><img src="https://img.icons8.com/?size=512&id=8808&format=png" alt="Linkedin logo" width="30px" style="filter: invert(100%);"></a>
+								<a href="#"><img src="https://img.icons8.com/?size=512&id=A4DsujzAX4rw&format=png" alt="Twitter Logo" width="30px" style="filter: invert(100%);"></a>
+								<a href="#"><img src="https://img.icons8.com/?size=512&id=aL0F8ToUoPjC&format=png" alt="Youtube logo" width="30px" style="filter: invert(100%);"></a>
+								<p style="padding: 10px 0 0;">END!</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+		</table>
+	</center>
+</body>
+</html>
