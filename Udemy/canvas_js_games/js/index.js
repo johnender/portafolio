@@ -486,7 +486,14 @@ game = {
     bullets_array: new Array(),
     enemies_array: new Array(),
     enemyBullets_array: new Array(),
-    shoot: false
+    shoot: false,
+    points: 0,
+    gameEnd: false,
+    boing: null,
+    playerShooting: null,
+    intro: null,
+    ending: null,
+    sound: true
 }
 
 /***********
@@ -628,6 +635,9 @@ const start = () => {
     game.x = canvas.width/2;
     game.player.draw(game.x);
     animate();
+    if (sound == true){
+        game.intro.play();
+    }
 }
 
 
@@ -636,12 +646,26 @@ var x = 100, y = 100;
 const SpaceShips = () =>{
     Hide();
     title.innerHTML = "Space ships";
+    game.points = 0;
+    game.gameEnd = false;
     //canvas.width = 960, canvas.height = 800, canvas.style.border = "solid yellow 3px";
     //document.getElementById("clearDiv").style.width = "1000px";
     //title.innerHTML = "Space ships";
 
+    /* 
+    Calling the game.sounds 
+    */
+    game.boing = document.getElementById("boing");
+    game.playerShooting = document.getElementById("shooting");
+    game.intro = document.getElementById("intro");
+    game.ending = document.getElementById("ending");
+
     //crearing enemies
     game.enemies_array = new Array(); //restarting the array, so, there is not cache memory
+    game.bullets_array = new Array();
+    game.enemyBullets_array = new Array();
+    game.shoot = false;
+
     game.enemyImage = new Image();
     game.enemyImage.src = "./images/spaceShips/invader.fw.png";
     game.enemyImage.onload = function(){
@@ -664,12 +688,16 @@ const SpaceShips = () =>{
 }
 
 const animate = () =>{
-    //declaring it as global, so, we can stop it
-    myReq = requestAnimationFrame(animate); //this function helps to reproduce the game on any browser
-    //requestAnimationFrame(SpaceShips); 
-    verify();
-    draw();
-    collision();
+    if(game.gameEnd == false){
+        //declaring it as global, so, we can stop it
+        myReq = requestAnimationFrame(animate); //this function helps to reproduce the game on any browser
+        //requestAnimationFrame(SpaceShips); 
+        verify();
+        draw();
+        collision();
+    }else{
+
+    }
 }
 
 const collision= () => {
@@ -687,6 +715,11 @@ const collision= () => {
                     game.enemies_array[i] = null;
                     game.bullets_array[j] = null;
                     game.shoot = false;
+                    game.points += 10;
+                    //calling the game.sound
+                    if(game.sound == true){
+                        game.boing.play();
+                    }
                 }
             }
         }
@@ -705,11 +738,53 @@ const collision= () => {
                 }
         }
     }
+
+    //enemy reach the bottom of the screen
+    for(var j = 0; j < game.enemies_array.length; j++){
+        enemy = game.enemies_array[j];
+
+        if(enemy != null){
+            if((enemy.y+enemy.w > game.player.y)){
+                    gameOver();
+                    break;
+                }
+        }
+    }
 }
 
 const gameOver = () => {
-    alert("Game Over!");
-    Clear();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    game.bullets_array = [];
+    game.enemies_array = [];
+    game.enemyBullets_array = [];
+    game.gameEnd = true;
+    if(game.sound == true){
+        game.ending.play();
+    }
+    message("Game Over!", 100, 60);
+    message("Your score is: " +game.points, 220);
+    if(game.points>100 && game.points<=200){
+        message("You almost got it", 340);
+    }else if(game.points > 200){
+        message("Well done!", 340);
+    }else{
+        message("I'm sorry you're so bad!", 340);
+    }
+    //alert("Game Over!");
+    //Clear();
+}
+
+//drawing the Game over message
+const message =(text, y, size=40) => {
+    let middle = (canvas.width/2);
+    ctx.save;
+    ctx.fillStyle = "green";
+    ctx.strokeStyle = "blue";
+    ctx.textBaseLine = "top";
+    ctx.font = "bold " + size + "px Courier";
+    ctx.textAlign = "center";
+    ctx.fillText(text, middle, y);
+    ctx.restore();
 }
 
 const verify = () =>{
@@ -732,6 +807,9 @@ const verify = () =>{
             game.bullets_array.push(new Bullet(game.player.x + 12, game.player.y - 3, 5));
             game.key[KEY_SPACE] = false;
             game.shoot=true;
+            if(game.sound == true){
+                game.playerShooting.play();
+            }
         }
     }
 
@@ -756,6 +834,7 @@ const enemiesShooting = () =>{
 
 const draw = () =>{
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    score();
     game.player.draw(game.x);
 
     //moving the bullets
@@ -800,6 +879,13 @@ const draw = () =>{
     ctx.fill();*/
 } 
 
+const score = () => {
+    ctx.save;
+    ctx.fillStyle = "white";
+    ctx.font = "bold 20px Courier";
+    ctx.fillText("Score: " + game.points, 10, 20);
+}
+
 /***********
  LISTENER
   **********/
@@ -823,8 +909,15 @@ window.requestAnimationFrame = (function (){
     
 })();
 
-const cancelAnimationFrame =
-  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+
+
+/*****************************************************************************
+ Starting all the variables/const and functions for the tanks game
+  ****************************************************************************/
+
+
 
 function Clear (){
     if (myReq){
