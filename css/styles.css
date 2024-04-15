@@ -156,6 +156,21 @@ text {
   color: white;
 }
 
+.lista2 summary{
+  font-size: var(--textFontSize);
+  padding: 15px 0;
+}
+
+.lista2 summary:hover {
+  color: purple;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+ul{
+  padding-bottom: 20px;
+}
+
 .image {
   background-repeat: no-repeat;
   max-width: 75%;

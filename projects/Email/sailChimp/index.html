@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- On email we still use the XHTML 1.0 version, because it is the most compatible one -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- as always we have the metatag "charset=utf-8" for number and characters -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- compatability tag for microsoft explorer and Edge -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- initial device width tag -->
+    <title>SailChimp HTML Email Title</title>
+    <!-- The title is not required for email only pages -->
+    
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap'); /* adding a custom font */
+        body {
+            margin: 0;
+            background-color: #171717;
+        }
+        table {
+            border-spacing: 0; /* to be sure the email clients don't add space to the tables */
+        }
+        td {
+            padding: 0;
+        }
+        img {
+            border: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            table-layout: fixed; /* reinforce that nothing inside the wrapper can "spawn" outsie */
+            background-color: #e5dec7;
+            padding-bottom: 60px;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffffe3;
+            font-family: sans-serif;
+            color: #4a4a4a;
+            box-shadow: 0 0 25px rgb(0, 0, 0, 0.15);
+            text-align: center; /* it makes all the text and images to get align to the center */
+        }
+
+        .two-columns {
+            font-size: 0;/* always add it to the <a> tags, because the email like to add spaces there */
+            text-align: center;/* it makes the images align to the center when the screen is smaller to 300px */
+        }
+
+        .two-columns .column{
+            width: 100%;
+            max-width: 300px;
+            /* the next two lines make align one after the other and on top of the wrapper */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .social-media {
+            padding: 12px 0 12px 62px;
+        }
+
+        .social {
+            width: 38px;
+        }
+
+        h3 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 28px;
+        }
+
+        h4 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 22px;            
+        }
+
+        .button {
+            background-color: #4a4a4a;
+            color: #ffffffe3;
+            text-decoration: none;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .three-columns {
+            font-size: 0;/* always add it to the <a> tags, because the email like to add spaces there */
+            padding: 35px 0 20px;
+        }
+
+        .three-columns .column{
+            width: 100%;
+            max-width: 200px;
+            /* the next two lines make align one after the other and on top of the wrapper */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .three-columns .padding{
+            padding: 0 25px;
+        }
+
+        .three-columns .content{
+            font-size: 15px; /* we need to add it back here, since we removed it on the three columns section */
+            line-height: 20px;
+        }
+
+        .two-columns.last{
+            padding: 20px 0;
+        }
+
+        .two-columns.last .padding {
+            padding: 20px;
+        }
+
+        .last .content{
+            text-align: left;
+            font-size: 15px; /* we need to add it back here, since we removed it on the three columns section */
+            line-height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+	<center class="wrapper">
+
+		<table class="main" width="100%">
+
+            <!-- BORDER -->
+            <tr>
+                <td height="8" style="background-color: #000;"></td>
+            </tr>
+                        
+            <!-- LOGO & SOCIAL MEDIA SECTION -->
+            <tr>
+                <td style="padding: 14px 0 4px;">
+                    <table width="100%">
+                        <tr>
+                            <td class="two-columns">
+                                <table class="column">
+                                    <tr>
+                                        <td style="padding: 0 22px 10px;">
+                                            <a href="#"><img src="https://i.ibb.co/yFyvfGF/logo.png" alt="SailChimp" title="Logo" width="250"></a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="social-media">
+                                            <a href="#"><img src="https://i.ibb.co/gJVssD4/facebook.png" class="social" alt="facebook"></a>
+                                            <a href="#"><img src="https://i.ibb.co/bB3zfGx/twitter.png" class="social" alt="twitter"></a>
+                                            <a href="#"><img src="https://i.ibb.co/fp3f04p/youtube.png" class="social" alt="youtube"></a>
+                                            <a href="#"><img src="https://i.ibb.co/1206PV5/linkedin.png" class="social" alt="linkedin"></a>
+                                            <a href="#"><img src="https://i.ibb.co/B47RWwX/instagram.png" class="social" alt="instagram"></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>   
+
+            <!-- BANNER IMAGE -->
+             <tr>
+                <td>
+                    <a href="#"><img src="https://i.ibb.co/yycYhsb/banner.jpg" alt="banner" width="600" style="max-width: 100%;"></a>
+                </td>
+             </tr>
+
+            <!-- TITLE, TEXT & BUTTON -->
+            <tr>
+                <td style="padding: 20px 10px 40px;">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <h3>Another HTML Email <span style="color: #c89800;">Template</span></h3>
+                                <p style="line-height: 20px; font-size: 15px; padding: 0 0 20px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum error iste voluptas cum enim, nulla dolor illum autem perspiciatis vitae corporis labore nobis ab veniam vel rem consequatur esse ullam.</p>
+                                <a href="#" class="button">Main Button</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- BORDER -->
+            <tr>
+                <td height="2" style="background-color: #000;"></td>
+            </tr>           
+
+            <!-- THREE COLUMN SECTION -->
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td class="three-columns">
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/wMBFspf/design.png" alt="design" width="150px"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 5px 0 10 px;">
+                                                        <h4>Email Design</h4>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium velit deserunt ullam delectus fuga laudantium, molestias itaque! Dolorum aperiam optio alias dolorem maxime perferendis explicabo ipsa et ipsam, velit saepe?</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/gSMHY2r/marketing.png" alt="marketing" width="150px"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 5px 0 10 px;">
+                                                        <h4>Email Marketing</h4>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium velit deserunt ullam delectus fuga laudantium, molestias itaque! Dolorum aperiam optio alias dolorem maxime perferendis explicabo ipsa et ipsam, velit saepe?</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/84K2crS/development.png" alt="development" width="150px"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 5px 0 10 px;">
+                                                        <h4>Email Dev</h4>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium velit deserunt ullam delectus fuga laudantium, molestias itaque! Dolorum aperiam optio alias dolorem maxime perferendis explicabo ipsa et ipsam, velit saepe?</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- BORDER -->
+            <tr>
+                <td height="2" style="background-color: #000;"></td>
+            </tr>    
+
+            <!-- TWO COLUMN SECTION -->
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td class="two-columns last">
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/gwCJrCV/palette.png" alt="palette" width="215px" style="padding-top: 30px;"></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <h4>Create Custom Designs</h4>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur similique itaque quidem animi facilis, necessitatibus possimus dolor culpa.</p>
+                                                        <p style="padding-bottom: 15px;">Assumenda harum similique nesciunt recusandae ratione consectetur? In numquam obcaecati vel aspernatur!</p>
+                                                        <a href="#" class="button">The last Button</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <!-- FOOTER SECTION -->
+            <tr>
+                <td style="background-color: #2b2e33; color: white;">
+                    <table width="100%">
+                        <tr>
+                            <td style="padding: 45px 20px 15px;">
+                                <a href="#"><img src="https://i.ibb.co/TgYVbLQ/logo1.png" alt="logo1" width="260px"></a>
+                                <p style="padding: 5px;">SailChimp HTML Email Template</p>
+                                <p style="padding: 3px;">123 Street Roas, City, State 55555</p>
+                                <a href="#"><img src="https://i.ibb.co/gJVssD4/facebook.png" class="social" alt="facebook"></a>
+                                <a href="#"><img src="https://i.ibb.co/bB3zfGx/twitter.png" class="social" alt="twitter"></a>
+                                <a href="#"><img src="https://i.ibb.co/fp3f04p/youtube.png" class="social" alt="youtube"></a>
+                                <a href="#"><img src="https://i.ibb.co/1206PV5/linkedin.png" class="social" alt="linkedin"></a>
+                                <a href="#"><img src="https://i.ibb.co/B47RWwX/instagram.png" class="social" alt="instagram"></a>
+                                <p style="padding: 10px;">Footer</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>  
+
+            <tr>
+                <td height="10px" style="background-color: #000;"></td>
+            </tr>
+
+
+        </table> <!-- End Main Class -->
+
+	</center> <!-- End Wrapper -->
+
+
+
+
+    <!-- Testing the imgs (uploaded to imgbb.com) -->
+   <!-- 
+    <a href="#"><img src="https://i.ibb.co/yycYhsb/banner.jpg" alt="banner" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/wMBFspf/design.png" alt="design" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/84K2crS/development.png" alt="development" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/gJVssD4/facebook.png" alt="facebook" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/B47RWwX/instagram.png" alt="instagram" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/1206PV5/linkedin.png" alt="linkedin" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/yFyvfGF/logo.png" alt="logo" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/TgYVbLQ/logo1.png" alt="logo1" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/gSMHY2r/marketing.png" alt="marketing" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/gwCJrCV/palette.png" alt="palette" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/bB3zfGx/twitter.png" alt="twitter" width="30px"></a>
+    <a href="#"><img src="https://i.ibb.co/fp3f04p/youtube.png" alt="youtube" width="30px"></a> -->
+</body>
+</html>
