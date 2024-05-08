@@ -81,7 +81,7 @@ textarea:hover {
 button {
 	font-family: cursive;
 	font-size: 2rem;
-	margin-bottom: 10rem;
+	margin-bottom: 1rem;
 	background-color: darkcyan;
 	border-radius: 50% 20% / 10% 40%;
 	width: 10rem;
@@ -98,6 +98,11 @@ button:hover {
 img {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+}
+
+#button2{
+	background-color: cyan;
+	border-radius: 20% 50% / 40% 10%;
 }
 
 @media only screen and (min-width: 500px) {
