@@ -38,5 +38,5 @@ encode = () =>{
     document.getElementById("text").value = result;
 }
 
-
+//example url
 //www.disneysprings.com/guest-services#guest-shipping-station

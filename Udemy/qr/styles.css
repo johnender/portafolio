@@ -103,6 +103,7 @@ img {
 #button2{
 	background-color: cyan;
 	border-radius: 20% 50% / 40% 10%;
+	margin-bottom: 5rem;
 }
 
 @media only screen and (min-width: 500px) {
