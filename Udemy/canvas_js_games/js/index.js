@@ -18,6 +18,7 @@ window.onload = function () {
     window.startRectangle = document.getElementById("ButtonRectangle");
     window.startGradient = document.getElementById("ButtonGradient");
     window.startSpaceShips = document.getElementById("ButtonSpaceShips");
+    window.startTanks = document.getElementById("ButtonTanks");
     
     //validating the canvas exists and is supported by the browser
     if(canvas && canvas.getContext){
@@ -471,7 +472,7 @@ function Gradient(){
  Starting all the variables/const and functions for the Space ships game
   ****************************************************************************/
 
-var myReq; //Animation request number
+var myReq; //Animation request number, used for both games
 
 game = {
     //canvas: null,
@@ -622,6 +623,7 @@ const heroImage = () =>{
 const select = (e) => {
     if (title.innerHTML == "Space ships"){
         if (game.heroImage){
+            console.log("5");
             start();
         }
     }
@@ -635,13 +637,19 @@ const start = () => {
     game.x = canvas.width/2;
     game.player.draw(game.x);
     animate();
-    if (sound == true){
+    if (game.sound == true){
         game.intro.play();
     }
 }
 
 
 var x = 100, y = 100;
+
+
+
+/**
+ * Start code for the space invaders game
+ */
 
 const SpaceShips = () =>{
     Hide();
@@ -886,8 +894,247 @@ const score = () => {
     ctx.fillText("Score: " + game.points, 10, 20);
 }
 
+/**
+ * Finish code for the space invaders game
+ */
+
+
+
+
+
+
+
+
+/*****************************************************************************
+ Starting all the variables/const and functions for the Tanks game
+  ****************************************************************************/
+
+tanksGame = {
+    //canvas: null,
+    //ctx: null,
+    heroImage: true,
+    x:0,
+    y:0,
+    image: null,
+    radians: null,
+    pulsedKey:null,
+    key_array: new Array(),
+    bullets_array: new Array(),
+    enemies_array: new Array(),
+    enemyColors: ["red", "blue", "black", "white", "yellow", "pink", "purple"],
+    bulletColor: "red",
+    xCenter: 0,
+    yCenter: 0,
+    w:0,
+    h:0,
+    points: 0,
+    lifes: 3,
+    tank: null,
+    gameEnd: false
+ }
+
+ sounds = {
+    boing: null,
+    shooting: null,
+    intro: null,
+    ending: null,
+    boom: null,
+    sound: true
+ }
+ 
+ /***********
+  Constants
+   **********/
+//we'll use the same ones from the previous game
+ 
+ /***********
+  Objects
+   **********/
+function Projectile(x, y, radians){
+    this.x = x;
+    this.y = y;
+    this.w = 5;
+    this.speed = 8;
+    this.radians = radians;
+    this.draw = function (){
+
+    };
+}
+
+function Tank(x, y, radio){
+    this.x = x;
+    this.y = y;
+    this.radio = radio;
+    this.scale = 1;
+    this.speen = 0;
+    this.w = 0;
+    this.h = 0;
+    this.draw = function (){
+        tanksGame.image.src="./images/tanks/tanque.png";
+        tanksGame.image.onload = function () {
+            this.w = tanksGame.image.width;
+            this.h = tanksGame.image.height;
+            let ww = this.w/2;
+            let hh = this.h/2;
+            
+            ctx.drawImage(tanksGame.image, tanksGame.xCenter-ww, tanksGame.yCenter-hh);
+        }
+    };
+}
+
+function Foe(x, y){
+    this.n = 0;
+    this.x = x;
+    this.y = y;
+    this.startX = x;
+    this.startY = y;
+    this.status = 1;
+    this.r = 10;
+    this.w = r * 2;
+    this.alive = true;
+    this.speed = .3 + Math.random();
+    this.color = tanksGame.enemyColors[Math.floor(Math.random()*game.enemyColors.length)];
+    this.draw = function (){
+
+    };
+}
+
+/*************
+ * Functions
+ * ************* */
+
+const heroImageTanks = () =>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.width = 700, canvas.height = 500, canvas.style.border = "solid yellow 3px";
+    document.getElementById("clearDiv").style.width = "700px";
+
+    /**
+     * Adding the initial values to the TanksGame object
+     */
+    tanksGame.w = canvas.width;
+    tanksGame.h = canvas.height;
+    tanksGame.xCenter = tanksGame.w/2;
+    tanksGame.yCenter = tanksGame.h/2;
+
+
+
+    let image = new Image();
+    image.src = "./images/tanks/caratula.jpg";
+    image.onload = () => {
+        ctx.drawImage(image, 0, 0);
+    }
+}
+
+const selectTanks = (e) => {
+    if (title.innerHTML == "Tanks"){
+        if (tanksGame.heroImage){
+            startT();
+        }
+    }
+    
+}
+
+const startT = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    tanksGame.heroImage = false;
+
+    animateTank();
+    /* tanksGame.player = new Player (0);
+    tanksGame.x = canvas.width/2;
+    tanksGame.player.draw(game.x);
+    //animate();*/
+    if (sounds.sound == true){
+        sounds.intro.play();
+    } 
+}
+
+const animateTank = () =>{
+    if(tanksGame.gameEnd == false){
+        //declaring it as global, so, we can stop it
+        myReq = requestAnimationFrame(animateTank); //this function helps to reproduce the game on any browser
+        verifyTank();
+        drawTank();
+    }else{
+
+    }
+}
+
+const verifyTank = () =>{
+
+}
+
+const drawTank = () =>{
+    console.log("here")
+    tanksGame.tank.draw();
+
+}
+
+/***********************************************************************************
+ * Starts the code for the tanks game
+ */
+const Tanks = () =>{
+    Hide();
+    title.innerHTML = "Tanks";
+    tanksGame.points = 0;
+    tanksGame.gameEnd = false;
+
+    /* 
+    Calling the game.sounds 
+    */
+    sounds.boing = document.getElementById("boing");
+    sounds.shooting = document.getElementById("shooting");
+    sounds.intro = document.getElementById("intro");
+    sounds.ending = document.getElementById("ending");
+    sounds.boom = document.getElementById("boom");
+
+    
+    //adding the image of the player
+    tanksGame.image = new Image();
+    //tanksGame.image.src = "./images/tanks/tanque.png";
+    tanksGame.tank = new Tank(tanksGame.xCenter, tanksGame.yCenter);
+
+/*
+    //restarting the arrays, so, there is not cache memory
+    tanksGame.key_array = new Array(); 
+    tanksGame.bullets_array = new Array();
+    tanksGame.enemies_array = new Array();
+    tanksGame.shoot = false;
+
+    tanksGame.enemyImage = new Image();
+    tanksGame.enemyImage.src = "./images/spaceShips/invader.fw.png";
+    tanksGame.enemyImage.onload = function(){
+        for(var i = 0; i <  5; i++){
+            for (var j = 0; j < 10; j++){
+                //adding each enemy, axis x and y
+                tanksGame.enemies_array.push(new Enemy(20+40*j, 30+45*i));
+            }
+        }
+    }*/
+
+    
+    heroImageTanks();
+    //adding a listener to the whole canvas
+    canvas.addEventListener("click", selectTanks, false);
+    
+}
+
+/**
+ * Finish the code for the tanks game
+ */
+
+
+
+
+
+
+
+
+
+
+
+
 /***********
- LISTENER
+ LISTENERS
   **********/
 
 //asking the whole document to "listen"
@@ -899,6 +1146,19 @@ document.addEventListener("keydown", function(e){
 document.addEventListener("keyup", function(e){
     game.key[e.key] = false;
 })
+
+//listening to the movement of the mouse
+document.addEventListener("mousemove", function(e){
+    var {x,y} = ajust(e.clientX, e.clientY)
+});
+
+
+
+
+
+/**************************************************************************************************************
+ * Most important function for the animation
+ ***********************************************************************************************************/
 
 //this function helps to reproduce the game on any browser (makes it recursive)
 window.requestAnimationFrame = (function (){
@@ -913,13 +1173,8 @@ const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnim
 
 
 
-/*****************************************************************************
- Starting all the variables/const and functions for the tanks game
-  ****************************************************************************/
-
-
-
 function Clear (){
+    console.log("clear");
     if (myReq){
         cancelAnimationFrame(myReq);
         myReq = null;
@@ -946,6 +1201,10 @@ function Clear (){
     startRectangle.style.visibility = "visible";
     startGradient.style.visibility = "visible";
     startSpaceShips.style.visibility = "visible";
+    startTanks.style.visibility = "visible";
+
+    canvas.removeEventListener("click", select);
+    canvas.removeEventListener("click", selectTanks);
 }
 
 function Hide(){
@@ -962,4 +1221,5 @@ function Hide(){
     startRectangle.style.visibility = "hidden";
     startGradient.style.visibility = "hidden";
     startSpaceShips.style.visibility = "hidden";
+    startTanks.style.visibility = "hidden";
 }

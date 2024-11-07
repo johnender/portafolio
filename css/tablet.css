@@ -3,8 +3,8 @@ main {
     justify-content: space-evenly; /*para ordenar, reparte el espacio libre*/
 }
 .paginas{
-    min-width: 10%;
-    max-width: 25%;
+    min-width: 20%;
+    max-width: 30%;
     min-height: 85vh;
     max-height: 85vh;
 }
