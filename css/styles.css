@@ -58,7 +58,7 @@ main {
   */
   background-image: url("../images/sunny-sky.jpg");
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 
