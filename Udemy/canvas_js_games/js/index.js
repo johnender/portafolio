@@ -616,7 +616,7 @@ const heroImage = () =>{
     let image = new Image();
     image.src = "./images/spaceShips/cara.webp";
     image.onload = () => {
-        ctx.drawImage(image, 0, 0);
+        ctx.drawImage(image, (canvas.width/2 - image.width/2), (canvas.height/2 - image.height/2));
     }
 }
 

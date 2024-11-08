@@ -6,10 +6,15 @@
     <title>Document</title>
 
     <style>
-        html{
+        body {
+            margin: 0;
+        }
+        
+        main{
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
         h1{
@@ -40,53 +45,64 @@
 
 
     <script src="./js/index.js"></script>
+    <script src="../../footer-header-components/header.js"></script>
 </head>
 <body>
-    <h1 id="title">Trying canvas</h1>
-    <canvas id="canvas1" width="600" height="400"></canvas>
-    
-    <div>
-        <button class="button" id="ButtonFigures" onclick="Figures()">Figures</button>
-        <button class="button" id="ButtonLines" onclick="Lines()">Lines</button>
-        <button class="button" id="ButtonStrokes" onclick="Strokes()">Strokes</button>
-        <button class="button" id="ButtonArcs" onclick="Arcs()">Arcs</button>
-        <button class="button" id="ButtonBezierSquare" onclick="BezierSquare()">BezierSquare</button>
-        <button class="button" id="ButtonBezierCubic" onclick="BezierCubic()">BezierCubic</button>
-        <button class="button" id="ButtonZicZac" onclick="ZicZac()">ZicZac</button>
-        <button class="button" id="ButtonSpiral" onclick="Spiral()">Spiral</button>
-        <button class="button" id="ButtonStar" onclick="Star()">Star</button>
-        <button class="button" id="ButtonGear" onclick="Gear()">Gear</button>
-        <button class="button" id="ButtonRectangle" onclick="DrawRectagle()">Rectangle</button>
-        <button class="button" id="ButtonGradient" onclick="Gradient()">Gradient</button>
-        <button class="button" id="ButtonSpaceShips" onclick="SpaceShips()">Space Ships</button>
-        <button class="button" id="ButtonTanks" onclick="Tanks()">Tanks</button>
-    </div>
-    <div id="clearDiv">
-        <button id="ButtonClear" onclick="Clear()">Clear</button>
-    </div>
+    <my-header
+        text = "Trying canvas"
+        link1 = "../../../index.html"
+        link2 = "../../../certifications/index.html"
+        link3 = "../../../contact/index.html"
+    ></my-header>
 
-    <!-- Importing the sound that will be use on the Space ships game -->
-    <audio id="boing">
-        <source src="./sounds/boing.mp3">
-        <source src="./sounds/boing.ogg">
-    </audio>
-    <audio id="shooting">
-        <source src="./sounds/disparo.mp3">
-        <source src="./sounds/disparo.ogg">
-    </audio>
-    <audio id="intro">
-        <source src="./sounds/intro.mp3">
-        <source src="./sounds/intro.ogg">
-    </audio>
-    <audio id="ending">
-        <source src="./sounds/gameOver.mp3">
-        <source src="./sounds/gameOver.ogg">
-    </audio>
 
-    <audio id="boom">
-        <source src="./sounds/boom.mp3">
-        <source src="./sounds/boom.ogg">
-    </audio>
+    <main>
+        <h1 id="title">Trying canvas</h1>
+        <canvas id="canvas1" width="600" height="400"></canvas>
+        
+        <div>
+            <button class="button" id="ButtonFigures" onclick="Figures()">Figures</button>
+            <button class="button" id="ButtonLines" onclick="Lines()">Lines</button>
+            <button class="button" id="ButtonStrokes" onclick="Strokes()">Strokes</button>
+            <button class="button" id="ButtonArcs" onclick="Arcs()">Arcs</button>
+            <button class="button" id="ButtonBezierSquare" onclick="BezierSquare()">BezierSquare</button>
+            <button class="button" id="ButtonBezierCubic" onclick="BezierCubic()">BezierCubic</button>
+            <button class="button" id="ButtonZicZac" onclick="ZicZac()">ZicZac</button>
+            <button class="button" id="ButtonSpiral" onclick="Spiral()">Spiral</button>
+            <button class="button" id="ButtonStar" onclick="Star()">Star</button>
+            <button class="button" id="ButtonGear" onclick="Gear()">Gear</button>
+            <button class="button" id="ButtonRectangle" onclick="DrawRectagle()">Rectangle</button>
+            <button class="button" id="ButtonGradient" onclick="Gradient()">Gradient</button>
+            <button class="button" id="ButtonSpaceShips" onclick="SpaceShips()">Space Ships</button>
+            <button class="button" id="ButtonTanks" onclick="Tanks()">Tanks</button>
+        </div>
+        <div id="clearDiv">
+            <button id="ButtonClear" onclick="Clear()">Clear</button>
+        </div>
+
+        <!-- Importing the sound that will be use on the Space ships game -->
+        <audio id="boing">
+            <source src="./sounds/boing.mp3">
+            <source src="./sounds/boing.ogg">
+        </audio>
+        <audio id="shooting">
+            <source src="./sounds/disparo.mp3">
+            <source src="./sounds/disparo.ogg">
+        </audio>
+        <audio id="intro">
+            <source src="./sounds/intro.mp3">
+            <source src="./sounds/intro.ogg">
+        </audio>
+        <audio id="ending">
+            <source src="./sounds/gameOver.mp3">
+            <source src="./sounds/gameOver.ogg">
+        </audio>
+
+        <audio id="boom">
+            <source src="./sounds/boom.mp3">
+            <source src="./sounds/boom.ogg">
+        </audio>
     
+    </main>
 </body>
 </html>
