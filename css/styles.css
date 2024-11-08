@@ -52,7 +52,15 @@ main {
   /*position: absolute; no se necesita gracias al display flex en main */
   padding-bottom: 40px; 
   max-width: 80%;
+
+  /*********************************************************************************************************
+  Using Text masking CSS
+  */
+  background-image: url("../images/sunny-sky.jpg");
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
+
 
 .paginas{
   display: inline-block;
@@ -105,6 +113,7 @@ h2 a:hover {
   color: purple;
   font-size: 3rem;
   text-decoration: underline;
+  transition: all 1s ease-in-out;
 }
 
 text > h3 {
@@ -182,13 +191,20 @@ ul{
 #sennin {
   position: static;
   background-repeat: no-repeat;
-  max-width: 100%;
+  max-width: 320px;
   max-height: 100%;
 }
 
+.games{
+  display: flex;
+  flex-direction: row;
+  align-items: center; /*donde van los items en relacion con el contenedor (vertical)*/
+  flex-wrap: wrap; /*para que se acomode el contenerdor si cambia el tamanho*/
+  justify-content: center; /*para ordenar, reparte el espacio libre*/
+}
+
 .pikachu {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px;
   text-align: center;
   font-size: var(--littleTextFontSize);
   
@@ -202,8 +218,8 @@ ul{
 }
 
 #sennin:hover{
-  transform: scale(1.15);
-
+  transform: scale(1.15) rotate(7deg);
+  transition: all 1s;
 }
 
 form {
