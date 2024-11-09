@@ -53,11 +53,12 @@ main {
   padding-bottom: 40px; 
   max-width: 80%;
 
-  /*********************************************************************************************************
+  /******************************************************************************************************************
   Using Text masking CSS
   */
   background-image: url("../images/sunny-sky.jpg");
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+  
   background-clip: text;
 }
 
@@ -125,7 +126,10 @@ text {
   text-align: center;
   width: 50%;
   padding: 15px;
-  color: #ecdfdf;
+
+  /*Using rgb to make the text transparent
+  *****************************************************************************************************************/
+  color: rgba(0, 0, 0, 0)
 }
 
 .lista {
