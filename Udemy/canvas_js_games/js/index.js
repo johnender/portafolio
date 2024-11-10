@@ -916,7 +916,7 @@ tanksGame = {
     x:0,
     y:0,
     image: null,
-    radians: null,
+    radians: 0,
     pulsedKey:null,
     key_array: new Array(),
     bullets_array: new Array(),
@@ -1022,6 +1022,7 @@ const heroImageTanks = () =>{
     image.src = "./images/tanks/caratula.jpg";
     image.onload = () => {
         ctx.drawImage(image, 0, 0);
+        tanksGame.heroImage = true;
     }
 }
 
@@ -1066,6 +1067,8 @@ const verifyTank = () =>{
 const drawTank = () =>{
     console.log("here")
     tanksGame.tank.draw();
+
+    messageTank(String(tanksGame.radians), 0, 450);
 
 }
 
@@ -1115,8 +1118,37 @@ const Tanks = () =>{
     heroImageTanks();
     //adding a listener to the whole canvas
     canvas.addEventListener("click", selectTanks, false);
-    
 }
+
+const ajust = (xx, yy) =>{
+    const pos = canvas.getBoundingClientRect();
+    const x = xx - pos.left;
+    const y = yy - pos.top;
+    return{x, y};
+}
+
+
+//fucntion to show the coordenates of the mouse
+const messageTank = (string,x,y) =>{
+    let middle = (canvas.width - x)/2;
+    ctx.save();
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "white";
+    ctx.textBaseLine = "top";
+    ctx.font = "bold 20 px Courier";
+    
+    ctx.textAlign = "center";
+    //different events will generate each time we move the mouse, so, we need to clear the canvas, otherwise tey will stack
+    ctx.clearRect(x, y-20, canvas.width, canvas.height);
+
+    ctx.fillText(string, x+middle, y);
+}
+
+
+
+
+
+
 
 /**
  * Finish the code for the tanks game
@@ -1134,7 +1166,7 @@ const Tanks = () =>{
 
 
 /***********
- LISTENERS
+ LISTENERS for both games
   **********/
 
 //asking the whole document to "listen"
@@ -1150,6 +1182,11 @@ document.addEventListener("keyup", function(e){
 //listening to the movement of the mouse
 document.addEventListener("mousemove", function(e){
     var {x,y} = ajust(e.clientX, e.clientY)
+
+    //only used on the tanks game
+    var dx = x - tanksGame.xCenter;
+    var dy = y - tanksGame.yCenter;
+    tanksGame.radians = Math.atan2(dy,dx);
 });
 
 
