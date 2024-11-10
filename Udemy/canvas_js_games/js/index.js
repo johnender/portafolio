@@ -1060,10 +1060,6 @@ const startT = () => {
 
     setTimeout(throwEnemy(), 2000);
     animateTank();
-    /* tanksGame.player = new Player (0);
-    tanksGame.x = canvas.width/2;
-    tanksGame.player.draw(game.x);
-    //animate();*/
 }
 
 
@@ -1110,10 +1106,27 @@ const animateTank = () =>{
     }else{
         tanksGame.nanoseconds--;
     }
-    
+    tanskColisions();
 
 }
 
+const tanskColisions = () => {
+    tanksGame.enemies_array.map((enemy,i)=>{
+        tanksGame.bullets_array.map((bullet, j)=>{
+            if (enemy != null && bullet != null){
+                if((bullet.x>enemy.x)&&
+                (bullet.x<enemy.x + enemy.w)&&
+                (bullet.y>enemy.y)&&
+                (bullet.y<enemy.y + enemy.w)){
+                    tanksGame.enemies_array[i] = null;
+                    tanksGame.bullets_array[j] = null;
+                    tanksGame.numPoints += 10;
+                    sounds.boing.play();
+                }
+            }
+        })
+    })
+}
 const verifyTank = () =>{
     if(tanksGame.key_array[KEY_SPACE]){
     
