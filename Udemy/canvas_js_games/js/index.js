@@ -957,7 +957,11 @@ function Projectile(x, y, radians){
     this.speed = 8;
     this.radians = radians;
     this.draw = function (){
-
+        ctx.save();
+        ctx.fillStyle = tanksGame.bulletColor;
+        this.x += Math.cos(this.radians) * this.speed;
+        this.y += Math.sin(this.radians) * this.speed;
+        ctx.fillRect(this.x, this.y, this.w, this.w);
     };
 }
 
@@ -1038,15 +1042,15 @@ const selectTanks = (e) => {
 const startT = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     tanksGame.heroImage = false;
+    if (sounds.sound == true){
+        sounds.intro.play();
+    } 
 
     animateTank();
     /* tanksGame.player = new Player (0);
     tanksGame.x = canvas.width/2;
     tanksGame.player.draw(game.x);
     //animate();*/
-    if (sounds.sound == true){
-        sounds.intro.play();
-    } 
 }
 
 const animateTank = () =>{
@@ -1061,15 +1065,51 @@ const animateTank = () =>{
 }
 
 const verifyTank = () =>{
-
+    if(tanksGame.key_array[KEY_SPACE]){
+    
+        tanksGame.bullets_array.push(
+            new Projectile(
+                tanksGame.xCenter+Math.cos(tanksGame.radians)*35,
+                tanksGame.yCenter+Math.sin(tanksGame.radians)*35,
+                tanksGame.radians
+            )
+        );
+        tanksGame.key_array[KEY_SPACE] = false;
+        sounds.shooting.play();
+    }
 }
 
 const drawTank = () =>{
-    console.log("here")
     tanksGame.tank.draw();
 
-    messageTank(String(tanksGame.radians), 0, 450);
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 
+    messageTank(String(tanksGame.radians), 0, 450);
+    ctx.save();
+
+    ctx.translate(tanksGame.xCenter, tanksGame.yCenter);
+    ctx.scale(tanksGame.scale, tanksGame.scale);
+    ctx.rotate(tanksGame.radians)
+
+    ctx.drawImage(tanksGame.image, -(tanksGame.image.width / 2), -(tanksGame.image.height / 2))
+    ctx.restore();
+
+    for(let i = 0; i < tanksGame.bullets_array.length; i++){
+        if (tanksGame.bullets_array[i] != null){
+            tanksGame.bullets_array[i].draw();
+
+
+            /*****************************************
+             * Removing the bullet from the memory if they're not on the canvas anymore
+             */
+            if(tanksGame.bullets_array[i].x < 0 
+                || tanksGame.bullets_array[i].x > tanksGame.w 
+                || tanksGame.bullets_array[i].y < 0 
+                || tanksGame.bullets_array[i].y > tanksGame.h){
+                tanksGame.bullets_array[i] = null;
+            }
+        }
+    }
 }
 
 /***********************************************************************************
@@ -1142,6 +1182,7 @@ const messageTank = (string,x,y) =>{
     ctx.clearRect(x, y-20, canvas.width, canvas.height);
 
     ctx.fillText(string, x+middle, y);
+    ctx.restore();
 }
 
 
@@ -1173,6 +1214,9 @@ const messageTank = (string,x,y) =>{
 document.addEventListener("keydown", function(e){
     game.pulsedKey = e.key;
     game.key[e.key] = true;
+
+    tanksGame.pulsedKey = e.key;
+    tanksGame.key_array[e.key] = true;
 })
 
 document.addEventListener("keyup", function(e){
