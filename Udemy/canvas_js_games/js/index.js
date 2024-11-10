@@ -921,7 +921,7 @@ tanksGame = {
     key_array: new Array(),
     bullets_array: new Array(),
     enemies_array: new Array(),
-    enemyColors: ["red", "blue", "black", "white", "yellow", "pink", "purple"],
+    enemyColors: ["red", "blue", "white", "yellow", "pink", "purple"],
     bulletColor: "red",
     xCenter: 0,
     yCenter: 0,
@@ -930,7 +930,9 @@ tanksGame = {
     points: 0,
     lifes: 3,
     tank: null,
-    gameEnd: false
+    gameEnd: false, 
+    picoseconds: 100,
+    nanoseconds: 200
  }
 
  sounds = {
@@ -994,12 +996,22 @@ function Foe(x, y){
     this.startY = y;
     this.status = 1;
     this.r = 10;
-    this.w = r * 2;
+    this.w = this.r * 2;
     this.alive = true;
     this.speed = .3 + Math.random();
-    this.color = tanksGame.enemyColors[Math.floor(Math.random()*game.enemyColors.length)];
+    this.color = tanksGame.enemyColors[Math.floor(Math.random()*tanksGame.enemyColors.length)];
     this.draw = function (){
-
+        if(this.n < 100 && this.alive){
+            ctx.save();
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI)
+            ctx.fill();
+            this.n += this.speed;
+            this.x = tanksGame.xCenter * this.n /100 + this.startX * (100 - this.n) / 100;
+            this.y = tanksGame.yCenter * this.n /100 + this.startY * (100 - this.n) / 100;
+            ctx.restore();
+        }
     };
 }
 
@@ -1046,11 +1058,35 @@ const startT = () => {
         sounds.intro.play();
     } 
 
+    setTimeout(throwEnemy(), 2000);
     animateTank();
     /* tanksGame.player = new Player (0);
     tanksGame.x = canvas.width/2;
     tanksGame.player.draw(game.x);
     //animate();*/
+}
+
+
+const throwEnemy = ()=>{
+    let side = Math.floor(Math.random()*4) +1;
+    let x,y;
+
+    console.log("trowing")
+    if(side == 1){
+        x = 10;
+        y = Math.floor(Math.random()*tanksGame.h);
+    }else if(side == 2){
+        x = Math.floor(Math.random()*tanksGame.w);
+        y = -10;
+    }else if(side == 3){
+        x = tanksGame.w + Math.floor(Math.random()*tanksGame.w);
+        y = Math.floor(Math.random()*tanksGame.h);
+    }else if(side == 4){
+        x = Math.floor(Math.random()*tanksGame.w);
+        y = tanksGame.h + Math.random()*10;
+    }
+    tanksGame.enemies_array.push(new Foe(x, y));
+
 }
 
 const animateTank = () =>{
@@ -1062,6 +1098,20 @@ const animateTank = () =>{
     }else{
 
     }
+
+    /* controlling when to trow the enemies, without recursion and incresing the speed
+      */
+    if(tanksGame.nanoseconds <= 0){
+        throwEnemy();
+        tanksGame.nanoseconds = tanksGame.picoseconds;
+        if (tanksGame.picoseconds >= 10){
+            tanksGame.picoseconds--;
+        }
+    }else{
+        tanksGame.nanoseconds--;
+    }
+    
+
 }
 
 const verifyTank = () =>{
@@ -1098,7 +1148,6 @@ const drawTank = () =>{
         if (tanksGame.bullets_array[i] != null){
             tanksGame.bullets_array[i].draw();
 
-
             /*****************************************
              * Removing the bullet from the memory if they're not on the canvas anymore
              */
@@ -1110,6 +1159,12 @@ const drawTank = () =>{
             }
         }
     }
+
+    tanksGame.enemies_array.map((enemy,i) => {
+        if(enemy != null){
+            enemy.draw();
+        }
+    });
 }
 
 /***********************************************************************************
