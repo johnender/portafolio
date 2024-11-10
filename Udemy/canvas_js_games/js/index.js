@@ -932,7 +932,8 @@ tanksGame = {
     tank: null,
     gameEnd: false, 
     picoseconds: 100,
-    nanoseconds: 200
+    nanoseconds: 200,
+    bullets: 1000
  }
 
  sounds = {
@@ -1058,6 +1059,8 @@ const startT = () => {
         sounds.intro.play();
     } 
 
+    tanksGame.points = 0;
+    tanksGame.lifes = 3;
     setTimeout(throwEnemy(), 2000);
     animateTank();
 }
@@ -1120,15 +1123,45 @@ const tanskColisions = () => {
                 (bullet.y<enemy.y + enemy.w)){
                     tanksGame.enemies_array[i] = null;
                     tanksGame.bullets_array[j] = null;
-                    tanksGame.numPoints += 10;
+                    tanksGame.points += 10;
                     sounds.boing.play();
                 }
             }
         })
+
+        if (enemy != null && enemy.n >95){
+            tanksGame.enemies_array[i] = null;
+            tanksGame.lifes--;
+            sounds.boom.play();
+            if(tanksGame.lifes <= 0){
+                thanksGameOver();
+            }
+        }
     })
 }
+
+const thanksGameOver = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    tanksGame.bullets_array = [];
+    tanksGame.enemies_array = [];
+    tanksGame.gameEnd = true;
+    if(tanksGame.sound == true){
+        sounds.ending.play();
+    }
+    messageTank("Game Over!", canvas.width/2, 100, "center", "bold 60px Courier");
+    messageTank("Your score is: " + tanksGame.points, canvas.width/2, 150, "center", "bold 40px Courier");
+    if(tanksGame.points>100 && tanksGame.points<=200){
+        messageTank("You almost got it", canvas.width/2, 350, "center", "bold 50px Courier");
+    }else if(tanksGame.points > 200){
+        messageTank("Well done!", canvas.width/2, 350, "center", "bold 50px Courier");
+    }else{
+        messageTank("I'm sorry you're so bad!", canvas.width/2, 350, "center", "bold 50px Courier");
+    }
+
+}
+
 const verifyTank = () =>{
-    if(tanksGame.key_array[KEY_SPACE]){
+    if(tanksGame.key_array[KEY_SPACE] && tanksGame.bullets > 0){
     
         tanksGame.bullets_array.push(
             new Projectile(
@@ -1139,6 +1172,9 @@ const verifyTank = () =>{
         );
         tanksGame.key_array[KEY_SPACE] = false;
         sounds.shooting.play();
+
+        //controlling the number of bullets
+        tanksGame.bullets--;
     }
 }
 
@@ -1147,7 +1183,11 @@ const drawTank = () =>{
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    messageTank(String(tanksGame.radians), 0, 450);
+    //sending the points message
+    let score = `SCORE: ${tanksGame.points} LIFES: ${tanksGame.lifes} BULLETS: ${tanksGame.bullets}`;
+    messageTank(score, 10, 20);
+    //messageCounter();
+    messageTank(String(tanksGame.radians), (canvas.width/2), 450, "center");
     ctx.save();
 
     ctx.translate(tanksGame.xCenter, tanksGame.yCenter);
@@ -1237,24 +1277,35 @@ const ajust = (xx, yy) =>{
 
 
 //fucntion to show the coordenates of the mouse
-const messageTank = (string,x,y) =>{
-    let middle = (canvas.width - x)/2;
+const messageTank = (string,x = canvas.width/2 ,y = canvas.height/2, align = "left", font = "bold 20 px Courier", color = "white") =>{
+    ctx.save();
+    ctx.fillStyle = color;
+    ctx.strokeStyle = color;
+    ctx.textBaseLine = "top";
+    ctx.font = font;
+    
+    ctx.textAlign = align;
+    //different events will generate each time we move the mouse, so, we need to clear the canvas, otherwise tey will stack
+    ctx.clearRect(x, y-20, canvas.width, canvas.height);
+
+    ctx.fillText(string, x, y);
+    ctx.restore();
+}
+
+const messageCounter = () =>{
     ctx.save();
     ctx.fillStyle = "white";
     ctx.strokeStyle = "white";
     ctx.textBaseLine = "top";
     ctx.font = "bold 20 px Courier";
-    
-    ctx.textAlign = "center";
-    //different events will generate each time we move the mouse, so, we need to clear the canvas, otherwise tey will stack
-    ctx.clearRect(x, y-20, canvas.width, canvas.height);
+    ctx.textAlign = "left";
+    ctx.clearRect(0, 0, canvas.width, 40);
 
-    ctx.fillText(string, x+middle, y);
+    ctx.fillText(
+        `SCORE: ${tanksGame.points} LIFES: ${tanksGame.lifes} BULLETS: ${tanksGame.bullets}`, 10, 20
+    );
     ctx.restore();
 }
-
-
-
 
 
 
