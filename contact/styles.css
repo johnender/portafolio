@@ -54,18 +54,21 @@ body::-webkit-scrollbar{
     background-color: yellow;
     left: 100px;
     top: 60px;
+    border-radius: 25%;
   }
 
   50% {
     background-color: green;
     left: 100px;
     top: 110px;
+    border-radius: 50%;
   }
 
   75% {
     background-color: blue;
     left: 50px;
     top: 110px;
+    border-radius: 25%;
   }
 
   100% {
