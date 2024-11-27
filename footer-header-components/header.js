@@ -234,6 +234,7 @@ class headerBar extends HTMLElement {
         width: 150px;
         margin: 8px 0 0 -100px; /* position of the menu container */
         padding: 15px;
+        display: none;
         
         background: #ededed6b;
         list-style-type: none;
@@ -259,6 +260,7 @@ class headerBar extends HTMLElement {
       #menuToggle input:checked ~ ul
       {
         transform: none;
+        display: block;
       }
 
       h1 {
