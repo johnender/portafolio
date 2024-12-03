@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./css/dekstop.css" media="screen and (min-width: 1024px)">
     <script src="./footer-header-components/header.js"></script>
     <script src="./footer-header-components/footer.js"></script>
+    <script src="./index.js"></script>
 
     <!-- usign image for favicon icon -->
     <link rel="shortcut icon" href="./images/halloween(10).svg" type="image/x-icon">
@@ -36,7 +37,6 @@
   </head>
 
   <body>
-
     <my-header
       text = "Portfolio home page"
       link1 = "./index.html"
@@ -153,10 +153,8 @@
           <h2 id="highlighted">Highlighted project</h2>
         </text>
 
-        <div class="games">
+        <!-- <div class="games">
           <div onclick="window.location.href='./projects/otherProjects/moviesMemoryGame/index.html';" class="pikachu">
-            <!-- <figure><img class="image" src= "./images/monitor-web.png" alt="Web development monitor image" title="Web development monitor">
-              <figcaption>Web development monitor</figcaption> </figure> -->
           <figure><img class="image" id="sennin" src= "./projects/otherProjects/moviesMemoryGame/assets/img/movie-icon-6.png" alt="Movies memory game thumbnail" title="Movies memory game">
             <figcaption>Memory game</figcaption> </figure>
           </div>
@@ -165,8 +163,36 @@
           <figure><img class="image" id="sennin" src= "./Udemy/canvas_js_games/images/spaceShips/cara.webp" alt="Space invaders image" title="Space invaders image">
             <figcaption>Space invaders</figcaption> </figure>
           </div>
-        </div>
+        </div> -->
 
+        <section id="projects">
+          <div class="carousel">
+            <button class="arrow arrow-left" aria-label="backward button"></button>
+            <div class="window">
+              <ul class="project-container">
+                <li>
+                  <button class="project" onclick="window.location.href='./projects/otherProjects/moviesMemoryGame/index.html';">
+                    <figure><img src="./projects/otherProjects/moviesMemoryGame/assets/img/movie-icon-6.png" class="project-img" alt="Movies memory game thumbnail" data-rel="./projects/otherProjects/moviesMemoryGame/index.html">
+                    <figcaption>Memory game</figcaption> </figure>
+                  </button>
+                </li>
+                <li>
+                  <button class="project" onclick="window.location.href='./Udemy/canvas_js_games/game1.html';">
+                    <figure><img src="./Udemy/canvas_js_games/images/spaceShips/cara.webp" class="project-img" alt="Space invaders miniature" data-rel="./Udemy/canvas_js_games/game1.html">
+                    <figcaption>Space invaders</figcaption> </figure>
+                  </button>
+                </li>
+                <li>
+                  <button class="project" onclick="window.location.href='./Udemy/qr/index.html';">
+                    <figure><img src="./images/qr-image.png" class="project-img" alt="QR code generator miniature" data-rel="./Udemy/qr/index.html">
+                    <figcaption>QR code Generator</figcaption> </figure>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <button class="arrow arrow-right" aria-label="forward button"></button>
+          </div>
+        </section>
         <text>
           <h3>As my learning process, this page is work in progress</h3>
         </text>

@@ -7,3 +7,14 @@ h1 {
     font-size: 4.0rem;
     text-align: left;
 }
+
+.window {
+    width: 815px;
+    padding: 8px;
+}
+
+.arrow {
+    height: 75px;
+    width: 75px;
+    }
+  

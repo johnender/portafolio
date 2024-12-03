@@ -16,3 +16,12 @@ h1 {
     text-align: left;
     font-size: 3.0rem;
 }
+.header-img {
+    height: 350px;
+    width: 350px;
+}
+
+.window {
+    width: 548px;
+}
+  
