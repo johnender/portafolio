@@ -18,7 +18,7 @@ function clickRight() {
   const windowSize = screen.width;
 
   if(windowSize < 600){
-    console.log("mobile")
+    //console.log("mobile")
     if (currentLeft < -810) { //if left value is lower than -810, dont move
       return;
     }
@@ -26,7 +26,7 @@ function clickRight() {
     document.querySelector(".project-container").style.left = `${newValue}px`;
   }
   else if (windowSize < 1024){
-    console.log("tablet")
+    //console.log("tablet")
     if (currentLeft < -540) { //if left value is lower than -540, dont move
       return;
     }
@@ -34,7 +34,7 @@ function clickRight() {
     document.querySelector(".project-container").style.left = `${newValue}px`;
   }
   else{
-    console.log("desktop")
+    //console.log("desktop")
     if (currentLeft < -270) { //if left value is lower than -270, dont move
       return;
     }
