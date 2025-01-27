@@ -1,0 +1,24 @@
+{
+  "0":{
+    "school": "Platzi, web development school:",
+    "titles": {
+      "0": {
+      "name": "00- Curso de Prework Configuraci&oacute;n de Entorno de Desarrollo en macOS",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/00- Curso de Prework Configuración de Entorno de Desarrollo en macOS/diploma-prework-macos.jpg",
+      "alt": "Curso de Prework Configuraci&oacute;n de Entorno de Desarrollo en macOS",
+      "date": "2021/02/12"
+      }
+    }
+  },
+  "1": {
+    "school": "Platzi, graphic design school:",
+    "titles": {
+      "0": {
+      "name": "1- Curso de Introducci&oacute;n al Diseño",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Diseño Gráfico/1- Curso de Introducción al Diseño/diploma-fundamentos-diseno.jpg",
+      "alt": "Curso de Introducci&oacute;n al Diseño",
+      "date": "2021/03/11"
+      }
+    }
+  }
+}

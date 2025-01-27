@@ -1,0 +1,56 @@
+{
+  "0": {
+    "name": "Auditor interno ISO 27001",
+    "src": "./certificatesJPG/Academica/218-iso-27001-JOHNN ENDERSON HERNÁNDEZ DELGADO.jpg",
+    "alt": "Auditor interno",
+    "date": "2022/09/09"
+  },
+  "1": {
+    "name": "M&aacute;ster en Ciberseguridad",
+    "src": "./certificatesJPG/Academica/Titulo_Johnn_Enderson_Hernandez_Delgado-1.jpg",
+    "alt": "Master en Ciberseguridad",
+    "date": "2022/09/09"
+  },
+  "2": {
+    "name": "Experto en informaci&oacute;n y sistemas de seguridad",
+    "src": "./certificatesJPG/Academica/Certificado_ep_Johnn_Enderson_Hernandez_Delgado-1.jpg",
+    "alt": "Experto en informacion y sistemas de seguridad",
+    "date": "2022/09/09"
+  },
+  "3": {
+    "name": "Programa Profesional en Front End Web Development",
+    "src": "./certificatesJPG/Academica/Johnn_Hernandez_Front_End_O.jpg",
+    "alt": "Programa Profesional en Front End Web Development",
+    "date": "2021/08/25"
+  },
+  "4": {
+    "name": "Bachillerato en computaci&oacute;n con &eacute;nfasis en ingenier&iacute;a de tecnolog&iacute;as de la informaci&oacute;n",
+    "src": "./certificatesJPG/Academica/BachillerCompu_o.jpg",
+    "alt": "Bachillerato en computaci&oacute;n con &eacute;nfasis en ingenier&iacute;a de tecnolog&iacute;as de la informaci&oacute;n",
+    "date": "2021/04/29"
+  },
+  "5": {
+    "name": "Bachillerato direcci&oacute;n de empresas",
+    "src": "./certificatesJPG/Academica/bachillerdirecciónempresas_o.jpg",
+    "alt": "Bachillerato direcci&oacute;n de empresas",
+    "date": "2019/04/23"
+  },
+  "6": {
+    "name": "Negotiating More Than Meaning: An Online English Course for Business and Accounting Students",
+    "src": "./certificatesJPG/Complementaria/Otros/johnn-enderson-hernández-delgadoenglish.jpg",
+    "alt": "Negotiating More Than Meaning: An Online English Course for Business and Accounting Students",
+    "date": "2020/11/27"
+  },
+  "7": {
+    "name": "Bachillerato educaci&oacute;n media",
+    "src": "./certificatesJPG/Academica/educaciónmedia_o.jpg",
+    "alt": "Bachillerato educaci&oacute;n media",
+    "date": "2013/12/12"
+  },
+  "8": {
+    "name": "FullStack Labs Certified - React",
+    "src": "./certificatesJPG/Complementaria/Johnn Hernandez Certificate.jpg",
+    "alt": "FullStack Labs React certificate",
+    "date": "2024/11/16"
+  }
+}
