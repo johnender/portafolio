@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.2045b739.css",
+    "main.js": "./static/js/main.0500ea54.js",
+    "static/js/453.61ebfb2f.chunk.js": "./static/js/453.61ebfb2f.chunk.js",
+    "static/media/castle-9291010_1280.jpg": "./static/media/castle-9291010_1280.e1891ab48bb43d3eccdd.jpg",
+    "index.html": "./index.html",
+    "main.2045b739.css.map": "./static/css/main.2045b739.css.map",
+    "main.0500ea54.js.map": "./static/js/main.0500ea54.js.map",
+    "453.61ebfb2f.chunk.js.map": "./static/js/453.61ebfb2f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2045b739.css",
+    "static/js/main.0500ea54.js"
+  ]
+}
