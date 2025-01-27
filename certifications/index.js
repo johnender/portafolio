@@ -74,6 +74,7 @@ async function startComplementary(container) {
     
     Object.values(list).forEach((object) => {
       const subHeading = document.createElement("h3");
+      subHeading.className = "container--text";
       subHeading.textContent = object.school;
 
       container.appendChild(subHeading);

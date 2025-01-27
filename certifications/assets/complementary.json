@@ -7,6 +7,204 @@
       "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/00- Curso de Prework Configuración de Entorno de Desarrollo en macOS/diploma-prework-macos.jpg",
       "alt": "Curso de Prework Configuraci&oacute;n de Entorno de Desarrollo en macOS",
       "date": "2021/02/12"
+      },
+      "1": {
+      "name": "00- Curso de Prework Configuraci&oacute;n de Entorno de Desarrollo en Windows",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/00- Curso de Prework Configuración de Entorno de Desarrollo en Windows/diploma-prework-windows_page_1.jpg",
+      "alt": "Curso de Prework Configuraci&oacute;n de Entorno de Desarrollo en Windows",
+      "date": "2021/02/10"
+      },
+      "2": {
+      "name": "1- Introducci&oacute;n a la Web Historia y Funcionamiento de Internet",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/1- Curso de Introducción a la Web Historia y Funcionamiento de Internet/diploma-introweb_page_1_optimized.jpg",
+      "alt": "Introducci&oacute;n a la Web Historia y Funcionamiento de Internet",
+      "date": "2021/01/04"
+      },
+      "3": {
+      "name": "2- Curso Profesional de Git y GitHub",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/2- Curso Profesional de Git y GitHub/diploma-git-github.jpg",
+      "alt": "Curso Profesional de Git y GitHub",
+      "date": "2021/01/07"
+      },
+      "4": {
+      "name": "3- Curso Definitivo de HTML y CSS",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/3- Curso Definitivo de HTML y CSS/diploma-html-css.jpg",
+      "alt": "Curso Definitivo de HTML y CSS",
+      "date": "2021/01/09"
+      },
+      "5": {
+      "name": "4- Curso Práctico de HTML y CSS",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/4- Curso Práctico de HTML y CSS/diploma-html-practico.jpg",
+      "alt": "Curso Práctico de HTML y CSS",
+      "date": "2021/01/10"
+      },
+      "6": {
+      "name": "5- Curso de Flujo de Desarrollo Moderno CodeStream",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/5- Curso de Flujo de Desarrollo Moderno CodeStream/diploma-desarrollo-moderno-codestream.jpg",
+      "alt": "Curso de Flujo de Desarrollo Moderno CodeStream",
+      "date": "2021/01/11"
+      },
+      "7": {
+      "name": "6- Curso de Sistemas de Diseño",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/6- Curso de Sistemas de Diseño/diploma-sistemas-diseno.jpg",
+      "alt": "Curso de Sistemas de Diseño",
+      "date": "2021/01/12"
+      },
+      "8": {
+      "name": "7- Curso de CSS Grid Layout",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/7- Curso de CSS Grid Layout/diploma-css-grid-layout.jpg",
+      "alt": "Curso de CSS Grid Layout",
+      "date": "2021/01/12"
+      },
+      "9": {
+      "name": "8- Curso de Responsive Design Maquetaci&oacute;n Mobile First",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/8- Curso de Responsive Design Maquetación Mobile First/diploma-mobile-first.jpg",
+      "alt": "Curso de Responsive Design Maquetación Mobile First",
+      "date": "2021/01/15"
+      },
+      "10": {
+      "name": "9- Curso de Debugging con Chrome DevTools",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/9- Curso de Debugging con Chrome DevTools/diploma-devtools.jpg",
+      "alt": "Curso de Debugging con Chrome DevTools",
+      "date": "2021/01/20"
+      },
+      "11": {
+      "name": "10- Curso de Frontend Developer",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/10- Curso de Frontend Developer/diploma-frontend-developer.jpg",
+      "alt": "Curso de Frontend Developer",
+      "date": "2021/01/23"
+      },
+      "12": {
+      "name": "11- Curso B&aacute;sico de JavaScript",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/11- Curso Básico de JavaScript/diploma-basico-javascript.jpg",
+      "alt": "Curso B&aacute;sico de JavaScript",
+      "date": "2021/01/27"
+      },
+      "13": {
+      "name": "12- Curso de JavaScript Engine (V8) y el Navegador",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/12- Curso de JavaScript Engine (V8) y el Navegador/diploma-javascript-navegador.jpg",
+      "alt": "Curso de JavaScript Engine (V8) y el Navegador",
+      "date": "2021/01/30"
+      },
+      "14": {
+      "name": "13- Curso de ECMAScript 6+",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/13- Curso de ECMAScript 6+/diploma-ecmascript-6.jpg",
+      "alt": "Curso de ECMAScript 6+",
+      "date": "2021/02/04"
+      },
+      "15": {
+      "name": "14- Curso de Closures y Scope en JavaScript",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/14- Curso de Closures y Scope en JavaScript/diploma-scope.jpg",
+      "alt": "Curso de Closures y Scope en JavaScript",
+      "date": "2021/02/05"
+      },
+      "16": {
+      "name": "15- Curso de Asincronismo con JavaScript",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/15- Curso de Asincronismo con JavaScript/diploma-asincronismo-js.jpg",
+      "alt": "Curso de Asincronismo con JavaScript",
+      "date": "2021/02/05"
+      },
+      "17": {
+      "name": "16- Curso de Estructuras de Datos con JavaScript",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/16- Curso de Estructuras de Datos con JavaScript/diploma-estructuras-datos.jpg",
+      "alt": "Curso de Estructuras de Datos con JavaScript",
+      "date": "2021/02/06"
+      },
+      "18": {
+      "name": "17- Curso de Gesti&oacute;n de Dependencias y Paquetes con NPM",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/17- Curso de Gestión de Dependencias y Paquetes con NPM/diploma-npm.jpg",
+      "alt": "Curso de Gesti&oacute;n de Dependencias y Paquetes con NPM",
+      "date": "2021/02/13"
+      },
+      "19": {
+      "name": "18- Curso de Postman",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/18- Curso de Postman/diploma-postman.jpg",
+      "alt": "Curso de Postman",
+      "date": "2021/02/13"
+      },
+      "20": {
+      "name": "19- Curso Profesional de JavaScript",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/19- Curso Profesional de JavaScript/diploma-javascript-profesional.jpg",
+      "alt": "Curso Profesional de JavaScript",
+      "date": "2021/02/14"
+      },
+      "21": {
+      "name": "20- Curso de Single Page Application con JavaScript Vanilla",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/20- Curso de Single Page Application con JavaScript Vanilla/diploma-spa-javascript.jpg",
+      "alt": "Curso de Single Page Application con JavaScript Vanilla",
+      "date": "2021/02/20"
+      },
+      "22": {
+      "name": "21- Taller de Creaci&oacute;n de Router para Single Page App con JavaScript",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/21- Taller de Creación de Router para Single Page App con JavaScript/diploma-singlepage-app.jpg",
+      "alt": "Taller de Creaci&oacute;n de Router para Single Page App con JavaScript",
+      "date": "2021/02/20"
+      },
+      "23": {
+      "name": "22- Curso de Accesibilidad Web",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/22- Curso de Accesibilidad Web/diploma-accesibilidad-web.jpg",
+      "alt": "Curso de Accesibilidad Web",
+      "date": "2021/03/03"
+      },
+      "24": {
+      "name": "23- Curso de CSS Grid Layout",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/23- Curso de CSS Grid Layout/diploma-css-grid-layout.jpg",
+      "alt": "Curso de CSS Grid Layout",
+      "date": "2021/03/03"
+      },
+      "25": {
+      "name": "24- Curso de Diseño Web con CSS Grid y Flexbox",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/24- Curso de Diseño Web con CSS Grid y Flexbox/diploma-flexbox-css-grid.jpg",
+      "alt": "Curso de Diseño Web con CSS Grid y Flexbox",
+      "date": "2021/03/05"
+      },
+      "26": {
+      "name": "25- Curso Pr&aacute;ctico de Maquetaci&oacute;n en CSS",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/25- Curso Práctico de Maquetación en CSS/diploma-practico-css.jpg",
+      "alt": "Curso Pr&aacute;ctico de Maquetaci&oacute;n en CSS",
+      "date": "2021/03/05"
+      },
+      "27": {
+      "name": "26- Curso de Webpack",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/26- Curso de Webpack/diploma-webpack.jpg",
+      "alt": "Curso de Webpack",
+      "date": "2021/03/10"
+      },
+      "28": {
+      "name": "27- Curso de Preprocesadores CSS",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/27- Curso de Preprocesadores CSS/diploma-preprocesadores.jpg",
+      "alt": "Curso de Preprocesadores CSS",
+      "date": "2021/03/14"
+      },
+      "29": {
+      "name": "28- Curso de Sass",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/28- Curso de Sass/diploma-sass.jpg",
+      "alt": "Curso de Sass",
+      "date": "2021/03/16"
+      },
+      "30": {
+      "name": "29- Curso de Angular",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/29- Curso de Angular/diploma-angular.jpg",
+      "alt": "Curso de Angular",
+      "date": "2021/03/17"
+      },
+      "31": {
+      "name": "30- Curso de Manipulaci&oacute;n del DOM",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/30- Curso de Manipulación del DOM/diploma-dom.jpg",
+      "alt": "Curso de Manipulaci&oacute;n del DOM",
+      "date": "2021/04/06"
+      },
+      "32": {
+      "name": "31- Curso B&aacute;sico de Web Components con JavaScript",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/31- Curso Básico de Web Components con JavaScript/diploma-web-components-javascript.jpg",
+      "alt": "Curso B&aacute;sico de Web Components con JavaScript",
+      "date": "2021/04/10"
+      },
+      "33": {
+      "name": "32- Curso de Optimizaci&oacute;n Web",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de desarrollo Web/32- Curso de Optimización Web/diploma-web-performance.jpg",
+      "alt": "Curso de Optimizaci&oacute;n Web",
+      "date": "2021/04/13"
       }
     }
   },
@@ -18,6 +216,288 @@
       "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Diseño Gráfico/1- Curso de Introducción al Diseño/diploma-fundamentos-diseno.jpg",
       "alt": "Curso de Introducci&oacute;n al Diseño",
       "date": "2021/03/11"
+      },
+      "1": {
+      "name": "2- Curso B&aacute;sico de Photoshop",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Diseño Gráfico/2- Curso Básico de Photoshop/diploma-photoshop-basico.jpg",
+      "alt": "Curso B&aacute;sico de Photoshop",
+      "date": "2021/03/13"
+      },
+      "2": {
+      "name": "3- Curso de T&eacute;cnicas para Desarrollar tu Creatividad",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Diseño Gráfico/3- Curso de Técnicas para Desarrollar tu Creatividad/diploma-tecnicas-creatividad.jpg",
+      "alt": "Curso de T&eacute;cnicas para Desarrollar tu Creatividad",
+      "date": "2021/03/16"
+      },
+      "3": {
+      "name": "4- Curso de Uso y Manejo del Color",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Diseño Gráfico/4- Curso de Uso y Manejo del Color/diploma-color.jpg",
+      "alt": "Curso de Uso y Manejo del Color",
+      "date": "2021/03/17"
+      }
+    }
+  },
+  "2": {
+    "school": "Platzi, backend with PHP:",
+    "titles": {
+      "0": {
+      "name": "1- Curso B&aacute;sico de Algoritmos y Pensamiento L&oacute;gico",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Backend con PHP/1- Curso Básico de Algoritmos y Pensamiento Lógico/diploma-pensamiento-logico.jpg",
+      "alt": "Curso B&aacute;sico de Algoritmos y Pensamiento L&oacute;gico",
+      "date": "2021/03/19"
+      },
+      "1": {
+      "name": "2- Curso Gratis de Programaci&oacute;n B&aacute;sica",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Backend con PHP/2- Curso Gratis de Programación Básica/diploma-programacion-basica.jpg",
+      "alt": "Curso Gratis de Programaci&oacute;n B&aacute;sica",
+      "date": "2021/03/24"
+      },
+      "2": {
+      "name": "3- Curso de Introducci&oacute;n a la Terminal y L&iacute;nea de Comandos",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Backend con PHP/3- Curso de Introducción a la Terminal y Línea de Comandos/diploma-terminal.jpg",
+      "alt": "Curso de Introducci&oacute;n a la Terminal y L&iacute;nea de Comandos",
+      "date": "2021/03/24"
+      },
+      "3": {
+      "name": "4- Curso de Introducci&oacute;n a PHP con Composer",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Backend con PHP/4- Curso de Introducción a PHP con Composer/diploma-php.jpg",
+      "alt": "Curso de Introducci&oacute;n a PHP con Composer",
+      "date": "2021/03/19"
+      },
+      "4": {
+      "name": "5- Curso de Manejo de Datos en PHP",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Backend con PHP/5- Curso de Manejo de Datos en PHP/diploma-datos-php.jpg",
+      "alt": "Curso de Manejo de Datos en PHP",
+      "date": "2021/03/25"
+      },
+      "5": {
+      "name": "6- Curso de Programaci&oacute;n Orientada a Objetos POO",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Diseño Gráfico/4- Curso de Uso y Manejo del Color/diploma-color.jpg",
+      "alt": "Curso de Programaci&oacute;n Orientada a Objetos POO",
+      "date": "2021/03/25"
+      },
+      "6": {
+      "name": "7- Curso de Programaci&oacute;n Orientada a Objetos en PHP",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Backend con PHP/7- Curso de Programación Orientada a Objetos en PHP/diploma-php-poo.jpg",
+      "alt": "Curso de Programaci&oacute;n Orientada a Objetos en PHP",
+      "date": "2021/03/26"
+      },
+      "7": {
+      "name": "8- Curso de Buenas Pr&aacute;cticas para Escritura de C&oacute;digo",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Backend con PHP/8- Curso de Buenas Prácticas para Escritura de Código/diploma-mejor-codigo.jpg",
+      "alt": "Curso de Buenas Pr&aacute;cticas para Escritura de C&oacute;digo",
+      "date": "2021/03/27"
+      },
+      "8": {
+      "name": "9- Curso de Fundamentos de Bases de Datos",
+      "src": "./certificatesJPG/Complementaria/Platzi/Escuela de Backend con PHP/9- Curso de Fundamentos de Bases de Datos/diploma-bd.jpg",
+      "alt": "Curso de Fundamentos de Bases de Datos",
+      "date": "2021/03/28"
+      }
+    }
+  },
+  "3": {
+    "school": "Platzi, Development with Wordpress:",
+    "titles": {
+      "0": {
+      "name": "Carrera de desarrollo con wordpress",
+      "src": "./certificatesJPG/Complementaria/Platzi/Desarrollo con Wordpress/diploma-desarrollo-wordpress.jpg",
+      "alt": "Carrera de desarrollo con wordpress",
+      "date": "2021/04/05"
+      },
+      "1": {
+      "name": "1- Curso de Fundamentos de Ecommerce",
+      "src": "./certificatesJPG/Complementaria/Platzi/Desarrollo con Wordpress/1- Curso de Fundamentos de Ecommerce/diploma-fundamentos-ecommerce.jpg",
+      "alt": "Curso de Fundamentos de Ecommerce",
+      "date": "2021/03/24"
+      },
+      "2": {
+      "name": "2- Curso de Creaci&oacute;n de Tiendas en L&iacute;nea con WooCommerce",
+      "src": "./certificatesJPG/Complementaria/Platzi/Desarrollo con Wordpress/2- Curso de Creación de Tiendas en Línea con WooCommerce/diploma-woocommerce.jpg",
+      "alt": "Curso de Creaci&oacute;n de Tiendas en L&iacute;nea con WooCommerce",
+      "date": "2021/03/31"
+      },
+      "3": {
+      "name": "3- Curso Pr&aacute;ctico de WordPress",
+      "src": "./certificatesJPG/Complementaria/Platzi/Desarrollo con Wordpress/3- Curso Práctico de WordPress/diploma-fundamentos-wordpress.jpg",
+      "alt": "Curso Pr&aacute;ctico de WordPress",
+      "date": "2021/04/03"
+      },
+      "4": {
+      "name": "4- Curso Profesional de WordPress",
+      "src": "./certificatesJPG/Complementaria/Platzi/Desarrollo con Wordpress/4- Curso Profesional de WordPress/diploma-wordpress-profesional.jpg",
+      "alt": "Curso Profesional de WordPress",
+      "date": "2021/04/05"
+      }
+    }
+  },
+  "4": {
+    "school": "Platzi, Marketing Digital y Estrategia Online:",
+    "titles": {
+      "0": {
+      "name": "1- Curso de Introducci&oacute;n a SEO Posicionamiento en Buscadores",
+      "src": "./certificatesJPG/Complementaria/Platzi/Marketing Digital y Estrategia Online/1- Curso de Introducción a SEO Posicionamiento en Buscadores/diploma-seo.jpg",
+      "alt": "Curso de Introducci&oacute;n a SEO Posicionamiento en Buscadores",
+      "date": "2021/04/23"
+      },
+      "1": {
+      "name": "2- Curso de Buenas Pr&aacute;cticas de SEO",
+      "src": "./certificatesJPG/Complementaria/Platzi/Marketing Digital y Estrategia Online/2- Curso de Buenas Prácticas de SEO/diploma-seo-recomendaciones.jpg",
+      "alt": "Curso de Buenas Pr&aacute;cticas de SEO",
+      "date": "2021/04/28"
+      },
+      "2": {
+      "name": "3- Curso de SEO T&eacute;cnico",
+      "src": "./certificatesJPG/Complementaria/Platzi/Marketing Digital y Estrategia Online/3- Curso de SEO Técnico/diploma-seo-tecnico.jpg",
+      "alt": "Curso de SEO T&eacute;cnico",
+      "date": "2021/05/07"
+      }
+    }
+  },
+  "5": {
+    "school": "Platzi, Arquitectura FrontEnd:",
+    "titles": {
+      "0": {
+      "name": "1- Curso de Bootstrap",
+      "src": "./certificatesJPG/Complementaria/Platzi/Arquitectura FrontEnd/1- Curso de Bootstrap/diploma-bootstrap.jpg",
+      "alt": "Curso de Bootstrap",
+      "date": "2021/04/23"
+      }
+    }
+  },
+  "6": {
+    "school": "Platzi, Development with Wordpress:",
+    "titles": {
+      "0": {
+      "name": "1- Microsoft Power BI - Curso de Power BI Desktop",
+      "src": "./certificatesJPG/Complementaria/Udemy/Microsoft Power BI - Curso de Power BI Desktop.jpg",
+      "alt": "Microsoft Power BI - Curso de Power BI Desktop",
+      "date": "2021/03/02"
+      },
+      "1": {
+      "name": "2- Data Analytics Essentials with Power BI",
+      "src": "./certificatesJPG/Complementaria/Udemy/data-analytics-essentials-with-power-bi.jpg",
+      "alt": "Data Analytics Essentials with Power BI",
+      "date": "2020/12/30"
+      },
+      "2": {
+      "name": "3- Aplicaciones Web desde 0",
+      "src": "./certificatesJPG/Complementaria/Udemy/aplicaciones_web_desde_0_op.jpg",
+      "alt": "Aplicaciones Web desde 0",
+      "date": "2023/03/09"
+      },
+      "3": {
+      "name": "4- Javascript Build a Calculator using HTML, CSS and Javascript",
+      "src": "./certificatesJPG/Complementaria/Udemy/js-calc-op.jpg",
+      "alt": "Javascript Build a Calculator using HTML, CSS and Javascript",
+      "date": "2023/03/25"
+      },
+      "4": {
+      "name": "5- Learn PHP - For Beginners",
+      "src": "./certificatesJPG/Complementaria/Udemy/learn_php-for_beginners_opt.jpg",
+      "alt": "Learn PHP - For Beginners",
+      "date": "2023/04/02"
+      },
+      "5": {
+      "name": "6- API Rest con PHP y MySQL",
+      "src": "./certificatesJPG/Complementaria/Udemy/api_rest_php_mysql.jpg",
+      "alt": "API Rest con PHP y MySQL",
+      "date": "2023/04/06"
+      },
+      "6": {
+      "name": "7- CSS3 Ultimate Guide",
+      "src": "./certificatesJPG/Complementaria/Udemy/CSS3-Ultimade-Guide-opt.jpg",
+      "alt": "CSS3 Ultimate Guide",
+      "date": "2023/05/14"
+      },
+      "7": {
+      "name": "8- Universidad HTML - Aprende HTML desde Cero hasta Experto",
+      "src": "./certificatesJPG/Complementaria/Udemy/Universidad-HTML-Aprende-HTML-desde-Cero-hasta-Experto-opt.jpg",
+      "alt": "Universidad HTML - Aprende HTML desde Cero hasta Experto",
+      "date": "2023/05/14"
+      },
+      "8": {
+      "name": "9- QR Code Generator Using JS",
+      "src": "./certificatesJPG/Complementaria/Udemy/QR-Code-Generator-Using-JS.jpg",
+      "alt": "QR Code Generator Using JS",
+      "date": "2023/12/02"
+      },
+      "9": {
+      "name": "10- Drupal For Beginners - Master Drupal Quickly",
+      "src": "./certificatesJPG/Complementaria/Udemy/Drupal_For_Beginners-Master_Drupal_Quickly .jpg",
+      "alt": "Drupal For Beginners - Master Drupal Quickly",
+      "date": "2024/12/15"
+      },
+      "10": {
+      "name": "11- Typescript with React classes - quick start - Jest testing",
+      "src": "./certificatesJPG/Complementaria/Udemy/Typrescript_with_React_Jest_Testing_O.jpg",
+      "alt": "Typescript with React classes - quick start - Jest testing",
+      "date": "2025/01/26"
+      }
+    }
+  },
+  "7": {
+    "school": "Hacker Mentor:",
+    "titles": {
+      "0": {
+      "name": "Hacking Wifi 3ra edici&oacute;n",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/Hacking-WiFi-3rd.jpg",
+      "alt": "Hacking Wifi 3ra edici&oacute;n",
+      "date": "1999/01/01"
+      },
+      "1": {
+      "name": "Iniciando en el Mundo de la Ciberseguridad",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/Iniciando-en-el-Mundo-de-la-Ciberseguridad.jpg",
+      "alt": "Iniciando en el Mundo de la Ciberseguridad",
+      "date": "2022/04/17"
+      },
+      "2": {
+      "name": "Fundamentos de Redes para Pentesters",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/Fundamentos-de-Redes-para-Pentesters.jpg",
+      "alt": "Fundamentos de Redes para Pentesters",
+      "date": "2022/04/23"
+      },
+      "3": {
+      "name": "Linux para Pentesters",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/Linux-para-Pentesters.jpg",
+      "alt": "Linux para Pentesters",
+      "date": "2022/04/26"
+      },
+      "4": {
+      "name": "Capture the Flag para Pentesters",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/Capture-the-Flag-para-Pentesters.jpg",
+      "alt": "Capture the Flag para Pentesters",
+      "date": "2022/05/05"
+      },
+      "5": {
+      "name": "Hacking Wi-Fi de Cero a Experto",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/Hacking-Wi-Fi-de-Cero-a-Experto.jpg",
+      "alt": "Hacking Wi-Fi de Cero a Experto",
+      "date": "2022/04/06"
+      },
+      "6": {
+      "name": "Auditor y Pentester de Redes Wi-Fi 3ra Edici&oacute;n (Participaci&oacute;n)",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/Certificado_participacion.jpg",
+      "alt": "Auditor y Pentester de Redes Wi-Fi 3ra Edici&oacute;n (Participaci&oacute;n)",
+      "date": "2022/04/06"
+      },
+      "7": {
+      "name": "Auditor y Pentester de Redes Wi-Fi 3ra Edici&oacute;n (Aprobado)",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/Certificado_aprobado_opt.jpg",
+      "alt": "Auditor y Pentester de Redes Wi-Fi 3ra Edici&oacute;n (Aprobado)",
+      "date": "2022/04/06"
+      },
+      "8": {
+      "name": "Ethical Hacking Red Team",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/red-team.jpg",
+      "alt": "Ethical Hacking Red Team",
+      "date": "2023/03/03"
+      },
+      "9": {
+      "name": "Hacking &aacute;tico Gamificado",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/hacking_etico_gamificado.png",
+      "alt": "Hacking &aacute;tico Gamificado",
+      "date": "2024/03/14"
       }
     }
   }
