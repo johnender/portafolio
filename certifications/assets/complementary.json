@@ -500,5 +500,222 @@
       "date": "2024/03/14"
       }
     }
+  },
+  "8": {
+    "school": "Netec:",
+    "titles": {
+      "0": {
+      "name": "1-Developing Solutions for Microsoft Azure",
+      "src": "./certificatesJPG/Complementaria/Netec/241119 AZ-204T00-A WTC_Johnn Hernandez Delgado17096.jpg",
+      "alt": "Developing Solutions for Microsoft Azure",
+      "date": "2024/11/27"
+      },
+      "1": {
+      "name": "2-Designing and Implementing a Microsoft Azure AI Solution",
+      "src": "./certificatesJPG/Complementaria/Netec/241202 AI-102T00-A WTC_Johnn Hernandez Delgado17480.jpg",
+      "alt": "Designing and Implementing a Microsoft Azure AI Solution",
+      "date": "2020/12/11"
+      },
+      "2": {
+      "name": "3-C&oacute;mo implementar IA: Estrategias, Desaf&iacute;os y Oportunidades",
+      "src": "./certificatesJPG/Complementaria/Netec/Constancia_11789_Johnn Hernandez_page.jpg",
+      "alt": "C&oacute;mo implementar IA: Estrategias, Desaf&iacute;os y Oportunidades",
+      "date": "2024/12/19"
+      },
+      "3": {
+      "name": "4-Copilot for Microsoft 365 Interactive Experience for Executives",
+      "src": "./certificatesJPG/Complementaria/Netec/250114 MS-4008 WTC_Johnn Hernandez Delgado18184.jpg",
+      "alt": "Copilot for Microsoft 365 Interactive Experience for Executives",
+      "date": "2025/01/14"
+      },
+      "4": {
+      "name": "5-Conoce c&oacute;mo crear reportes poderosos usando Analytics de PowerBI",
+      "src": "./certificatesJPG/Complementaria/Netec/Johnn Hernandez-343752138.jpg",
+      "alt": "Conoce c&oacute;mo crear reportes poderosos usando Analytics de PowerBI",
+      "date": "2021/02/18"
+      }
+    }
+  },
+  "9": {
+    "school": "ITcolombia:",
+    "titles": {
+      "0": {
+      "name": "DP-900",
+      "src": "./certificatesJPG/Complementaria/ITcolombia/johnn-enderson-hernandez-delgado---dp-900.jpg",
+      "alt": "DP-900",
+      "date": "2020/10/15"
+      },
+      "1": {
+      "name": "MS-900",
+      "src": "./certificatesJPG/Complementaria/ITcolombia/johnn-enderson-hernandez-delgado---ms-900.jpg",
+      "alt": "MS-900",
+      "date": "2020/12/11"
+      },
+      "2": {
+      "name": "AZ-900",
+      "src": "./certificatesJPG/Complementaria/ITcolombia/AZ-900 certificate.jpg",
+      "alt": "AZ-900",
+      "date": "2021/01/28"
+      },
+      "3": {
+      "name": "PL-900",
+      "src": "./certificatesJPG/Complementaria/ITcolombia/PL-900.jpg",
+      "alt": "PL-900",
+      "date": "2021/02/18"
+      }
+    }
+  },
+  "10": {
+    "school": "Cisco Networking academy:",
+    "titles": {
+      "0": {
+      "name": "Introducci&oacute;n a la seguridad cibern&eacute;tica",
+      "src": "./certificatesJPG/Complementaria/Cisco Networking academy/introduccion-a-la-ciberseguridad-certificate.jpg",
+      "alt": "Introducci&oacute;n a la seguridad cibern&eacute;tica",
+      "date": "1999/01/01"
+      },
+      "1": {
+      "name": "Cybersecurity essentials",
+      "src": "./certificatesJPG/Complementaria/Cisco Networking academy/johnn-endersonhernández-delgad-cybersecurity-es-certificate.jpg",
+      "alt": "Cybersecurity essentials",
+      "date": "1999/01/01"
+      },
+      "2": {
+      "name": "Introduction to packet tracer",
+      "src": "./certificatesJPG/Complementaria/Cisco Networking academy/introduction-to-packet-tracer--certificate.jpg",
+      "alt": "Introduction to packet tracer",
+      "date": "1999/01/01"
+      }
+    }
+  },
+  "11": {
+    "school": "Yunis:",
+    "titles": {
+      "0": {
+      "name": "T&eacute;cnico en contabilidad",
+      "src": "./certificatesJPG/Complementaria/Yunis/tecnicocontabilidad_optimized.jpg",
+      "alt": "T&eacute;cnico en contabilidad",
+      "date": "2013/07/10"
+      },
+      "1": {
+      "name": "Servicio al cliente y comunicaci&oacute;n asertiva",
+      "src": "./certificatesJPG/Complementaria/Yunis/serviciocliente_optimized.jpg",
+      "alt": "Servicio al cliente y comunicaci&oacute;n asertiva",
+      "date": "2013/06/16"
+      },
+      "2": {
+      "name": "An&aacute;nalisis FODA para la empresa",
+      "src": "./certificatesJPG/Complementaria/Yunis/analisisfoda_optimized.jpg",
+      "alt": "An&aacute;nalisis FODA para la empresa",
+      "date": "2012/12/01"
+      }
+    }
+  },
+  "12": {
+    "school": "Seguridad cero:",
+    "titles": {
+      "0": {
+      "name": "Implementando un programa de ciberseguridad con NIST Cybersecurity Framework",
+      "src": "./certificatesJPG/Complementaria/SeguridadCero/nistcybersecurityframeworkcertificate_page_1.jpg",
+      "alt": "Implementando un programa de ciberseguridad con NIST Cybersecurity Framework",
+      "date": "2021/01/10"
+      },
+      "1": {
+      "name": "Fundamentos de Ethical Hacking",
+      "src": "./certificatesJPG/Complementaria/SeguridadCero/ethicalHacking.jpg",
+      "alt": "Fundamentos de Ethical Hacking",
+      "date": "2021/03/10"
+      },
+      "2": {
+      "name": "Camino a la certificaci&oacute;n ISO 27001",
+      "src": "./certificatesJPG/Complementaria/SeguridadCero/iso27001.jpg",
+      "alt": "Camino a la certificaci&oacute;n ISO 27001",
+      "date": "2021/04/10"
+      }
+    }
+  },
+  "13": {
+    "school": "Telecocable:",
+    "titles": {
+      "0": {
+      "name": "Fundamentos t&eacute;cnico redes fibra &oacute;ptica",
+      "src": "./certificatesJPG/Complementaria/Telecocable/certificadofundamentostécnicoredesfibraoptica.jpg",
+      "alt": "Fundamentos t&eacute;cnico redes fibra &oacute;ptica",
+      "date": "2020/11/10"
+      },
+      "1": {
+      "name": "Generalidades de las redes de telecomunicaciones",
+      "src": "./certificatesJPG/Complementaria/Telecocable/certificadogeneralidades-de-las-redes-de-telecomunicaciones.jpg",
+      "alt": "Generalidades de las redes de telecomunicaciones",
+      "date": "2020/11/10"
+      },
+      "2": {
+      "name": "Empalmes por fusi&oacute;n de fibra &oacute;ptica",
+      "src": "./certificatesJPG/Complementaria/Telecocable/certificadoempalmes-por-fusión-de-fibra-óptica.jpg",
+      "alt": "Empalmes por fusi&oacute;n de fibra &oacute;ptica",
+      "date": "2020/12/10"
+      }
+    }
+  },
+  "14": {
+    "school": "Telecocable:",
+    "titles": {
+      "0": {
+      "name": "Scrum Foundation Professional Certificate (SFPC)",
+      "src": "./certificatesJPG/Complementaria/Certiprof/certificatescrum_page.jpg",
+      "alt": "Scrum Foundation Professional Certificate (SFPC)",
+      "date": "2020/11/07"
+      },
+      "1": {
+      "name": "Remote Work and Virtual Collaboration Certificate RWVCPC",
+      "src": "./certificatesJPG/Complementaria/Certiprof/CertificateRemoteWorker.jpg",
+      "alt": "Remote Work and Virtual Collaboration Certificate RWVCPC",
+      "date": "2021/01/30"
+      }
+    }
+  },
+  "15": {
+    "school": "OAS:",
+    "titles": {
+      "0": {
+      "name": "Creando una Trayectoria Profesional en Ciberseguridad",
+      "src": "./certificatesJPG/Complementaria/OEA/certificado-creando-trayectoria-ciberseguridad_page_1_optimized.jpg",
+      "alt": "Creando una Trayectoria Profesional en Ciberseguridad",
+      "date": "2020/08/17"
+      }
+    }
+  },
+  "16": {
+    "school": "H&MI:",
+    "titles": {
+      "0": {
+      "name": "Introducci&oacute;n a la Norma ISO 27001",
+      "src": "./certificatesJPG/Complementaria/H&MI/john-hernandez-iso-27001.jpg",
+      "alt": "Introducci&oacute;n a la Norma ISO 27001",
+      "date": "2020/10/06"
+      }
+    }
+  },
+  "17": {
+    "school": "Wmware:",
+    "titles": {
+      "0": {
+      "name": "Virtualizacion de almacenamiento",
+      "src": "./certificatesJPG/Complementaria/Wmware/wmware---virtualizacion-de-almacenamiento.jpg",
+      "alt": "Virtualizacion de almacenamiento",
+      "date": "2020/05/28"
+      }
+    }
+  },
+  "18": {
+    "school": "Other:",
+    "titles": {
+      "0": {
+      "name": "Formaci&oacute;n en contabilidad",
+      "src": "./certificatesJPG/Complementaria/Otros/aprovechamientocontabilidad.jpg",
+      "alt": "Formaci&oacute;n en contabilidad",
+      "date": "2020/05/28"
+      }
+    }
   }
 }
