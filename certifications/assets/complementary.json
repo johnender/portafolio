@@ -533,6 +533,12 @@
       "src": "./certificatesJPG/Complementaria/Netec/Johnn Hernandez-343752138.jpg",
       "alt": "Conoce c&oacute;mo crear reportes poderosos usando Analytics de PowerBI",
       "date": "2021/02/18"
+      },
+      "5": {
+      "name": "6-ChatBots: Automatiza tareas e incrementa la productividad",
+      "src": "./certificatesJPG/Complementaria/Netec/Johnn Hernandez-344068341_o.jpg",
+      "alt": "ChatBots Automatiza tareas e incrementa la productividad",
+      "date": "2021/02/18"
       }
     }
   },
@@ -658,7 +664,7 @@
     }
   },
   "14": {
-    "school": "Telecocable:",
+    "school": "Certiprof:",
     "titles": {
       "0": {
       "name": "Scrum Foundation Professional Certificate (SFPC)",
