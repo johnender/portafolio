@@ -433,6 +433,12 @@
       "src": "./certificatesJPG/Complementaria/Udemy/Typrescript_with_React_Jest_Testing_O.jpg",
       "alt": "Typescript with React classes - quick start - Jest testing",
       "date": "2025/01/26"
+      },
+      "11": {
+      "name": "12- React.JS Crash Course The Complete Course for Beginners",
+      "src": "./certificatesJPG/Complementaria/Udemy/React.JS_Crash_Course.jpg",
+      "alt": "React.JS Crash Course The Complete Course for Beginners",
+      "date": "2025/02/16"
       }
     }
   },
@@ -539,6 +545,12 @@
       "src": "./certificatesJPG/Complementaria/Netec/Johnn Hernandez-344068341_o.jpg",
       "alt": "ChatBots Automatiza tareas e incrementa la productividad",
       "date": "2025/02/06"
+      },
+      "6": {
+      "name": "7-De gamer a experto Domina las tecnolog&iacute;as de AWS con el juego de roles Cloud Quest",
+      "src": "./certificatesJPG/Complementaria/Netec/Johnn Hernandez-344277207.jpg",
+      "alt": "De gamer a experto Domina las tecnolog&íacute;as de AWS con el juego de roles Cloud Quest",
+      "date": "2025/02/13"
       }
     }
   },
