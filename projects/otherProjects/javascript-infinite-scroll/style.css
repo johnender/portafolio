@@ -124,3 +124,16 @@ h1 {
       height: 32px;
   }
 }
+
+
+
+
+
+
+
+#parallax {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  font-size: 2rem;
+}
