@@ -699,6 +699,17 @@
     }
   },
   "15": {
+    "school": "Microsoft:",
+    "titles": {
+      "0": {
+      "name": "Microsoft Certified: Azure AI Engineer Associate",
+      "src": "./certificatesJPG/Complementaria/Microsoft/certification_o.jpg",
+      "alt": "Microsoft Certified: Azure AI Engineer Associate Badge",
+      "date": "2025/03/02"
+      }
+    }
+  },
+  "16": {
     "school": "OAS:",
     "titles": {
       "0": {
@@ -709,7 +720,7 @@
       }
     }
   },
-  "16": {
+  "17": {
     "school": "H&MI:",
     "titles": {
       "0": {
@@ -720,7 +731,7 @@
       }
     }
   },
-  "17": {
+  "18": {
     "school": "Wmware:",
     "titles": {
       "0": {
@@ -731,7 +742,7 @@
       }
     }
   },
-  "18": {
+  "19": {
     "school": "Other:",
     "titles": {
       "0": {
