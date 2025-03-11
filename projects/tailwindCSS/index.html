@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>TailwindCSS</title>
+  
+</head>
+<body>
+  <div class="container">
+    
+    <div class="h-60 bg-gradient-to-r from-blue-500 to-red-500 bg-fixed">
+      <h1 class="text-3xl font-bold underline mx-3 text-green-500 text-center">
+        Hello world!
+      </h1>
+    </div>
+    <button class="btn-lg">
+      Save changes
+    </button>
+    <button class="btn-red">
+      Save changes
+    </button>
+    <p class="px-5 py-6 bg-green-400 w-9/12 rounded-t-4xl 
+    mx-auto outline-yellow-500 outline-2 shadow-lg shadow-orange-400/50 opacity-75
+    hover:bg-blue-600 transition ease-linear delay-100
+    active:bg-yellow-400
+    focus:outline-red-700 outline-4">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure nesciunt, illum praesentium quod, minus neque non porro atque distinctio aspernatur pariatur reiciendis! Quo enim consequuntur provident quae, quasi molestiae exercitationem!
+    </p>
+    <ul class="flex flex-col space-y-3 list-disc list-inside border-pink-400 border-2 border-dotted">
+      <li class="text-red-500 bg-amber-800 h-20 w-20">Hi</li>
+      <li class="text-yellow-500 bg-amber-800 w-25 mb-15">Hi</li>
+      <li class="text-blue-500 bg-amber-800">Hi</li>
+      <li class="text-blue-700 ">Hi</li>
+    </ul>
+    <div class="flex flex-row-reverse flex-wrap">
+      <p class="grow bg-red-500 rounded-full">saca</p>
+      <p class="basis-32 bg-red-300">saca</p>
+    </div>
+    <div class="flex flex-wrap justify-evenly h-20 divide-x-4 divide-green-600 divide-dotted mt-5 h-40">
+      <p class="min-w-3/6 bg-red-200 ">one</p>
+      <p class="min-w-2/6 bg-red-600 order-3">two</p>
+      <p class="min-w-4/6 bg-blue-600 self-end">three</p>
+    </div>
+    <p class="mt-20 min-w-full bg-blue-600 text-sm font-semibold italic tracking-wider leading-10">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quae reiciendis doloribus sed iure voluptatem. Laborum dolorem omnis autem non et, vel exercitationem iure eligendi voluptate optio eos quam sunt!
+    </p>
+    <p class="capitalize">
+      Lorem ipsum dolor sit <span class="underline decoration-blue-800 decoration-2">amet consectetur, adipisicing elit.</span> Expedita quae reiciendis doloribus sed iure voluptatem. Laborum dolorem omnis autem non et, vel exercitationem iure eligendi voluptate optio eos quam sunt!
+    </p>
+    <p class="w-64 h-26 overflow-hidden bg-fuchsia-200 normal-case">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quae reiciendis doloribus sed iure voluptatem. Laborum dolorem omnis autem non et, vel exercitationem iure eligendi voluptate optio eos quam sunt!
+    </p>
+  </div>
+</body>
+<!-- to use tailwind, visit https://tailwindcss.com/ and instal it on the project -->
+</html>
