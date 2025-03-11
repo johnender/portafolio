@@ -445,6 +445,12 @@
       "src": "./certificatesJPG/Complementaria/Udemy/Mastering-React-React-Crash-Course-with-Mini-Projects.jpg",
       "alt": "Mastering React React Crash Course with Mini Projects",
       "date": "2025/02/20"
+      },
+      "13": {
+      "name": "13-TailwindCSS from A to Z Master TailwindCSS Quickly",
+      "src": "./certificatesJPG/Complementaria/udemy/tailwind-certificate.jpg",
+      "alt": "TailwindCSS from A to Z Master TailwindCSS Quickly",
+      "date": "2025/03/10"
       }
     }
   },
