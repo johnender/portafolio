@@ -451,6 +451,12 @@
       "src": "./certificatesJPG/Complementaria/udemy/tailwind-certificate.jpg",
       "alt": "TailwindCSS from A to Z Master TailwindCSS Quickly",
       "date": "2025/03/10"
+      },
+      "14": {
+      "name": "14-Aprende Redux con React hooks y GraphQL fácilmente",
+      "src": "./certificatesJPG/Complementaria/udemy/redux-graphQL.jpg",
+      "alt": "Aprende Redux con React hooks y GraphQL fácilmente",
+      "date": "2025/03/13"
       }
     }
   },
