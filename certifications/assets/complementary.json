@@ -447,16 +447,22 @@
       "date": "2025/02/20"
       },
       "13": {
-      "name": "13-TailwindCSS from A to Z Master TailwindCSS Quickly",
+      "name": "14-TailwindCSS from A to Z Master TailwindCSS Quickly",
       "src": "./certificatesJPG/Complementaria/udemy/tailwind-certificate.jpg",
       "alt": "TailwindCSS from A to Z Master TailwindCSS Quickly",
       "date": "2025/03/10"
       },
       "14": {
-      "name": "14-Aprende Redux con React hooks y GraphQL fácilmente",
+      "name": "15-Aprende Redux con React hooks y GraphQL fácilmente",
       "src": "./certificatesJPG/Complementaria/udemy/redux-graphQL.jpg",
       "alt": "Aprende Redux con React hooks y GraphQL fácilmente",
       "date": "2025/03/13"
+      },
+      "15": {
+      "name": "16-Building Blog using MERN Stack",
+      "src": "./certificatesJPG/Complementaria/udemy/mern_certificate.jpg",
+      "alt": "Building Blog using MERN Stack",
+      "date": "2025/03/14"
       }
     }
   },
