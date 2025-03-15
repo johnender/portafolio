@@ -473,10 +473,10 @@ main {
 /* Estilo para que funcione el scroll horizontal */
 .plans-container--slider {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
-    height: 316px;
+    height: 326px;
 }
 
 /* Barra que indica el scroll */
@@ -494,8 +494,8 @@ main {
     position: relative;
     /*regla necesaria para el scroll horizontal*/
     scroll-snap-align: center;
-    width: 60%;
-    min-width: 190px;
+    width: 90%;
+    min-width: 250px;
     max-width: 300px;
     height: 250px;
     /* margin: 50px auto 0; */
@@ -642,3 +642,84 @@ footer .left ul{
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+
+
+
+ /* Pagination functionality */
+ .plans-container--slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}
+
+.plans-container--card {
+    /* width: 100vw; 
+    flex: 0 0 100vw;
+    text-align: center;
+    padding: 20px; 
+    scroll-snap-align: center;*/
+}
+
+/* CSS Pagination using :target */
+#page1:target ~ .plans-container--slider {
+    transform: translateX(0%);
+}
+
+#page2:target ~ .plans-container--slider {
+    transform: translateX(-100%);
+}
+
+#page3:target ~ .plans-container--slider {
+    transform: translateX(-200%);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pagination a {
+     width: 10px;
+     padding: 0 20px;
+     text-decoration: none;
+     color: gray;
+     font-size: 24px;
+     transition: color 0.3s;
+}
+
+
+
+/* Change color when a specific section is targeted 
+    Version for non-siblings (the pagination section is outside the same "wrapper" than the cards)
+*/
+/* #plans:has(#page1:target) .pagination a[href="#page1"],
+#plans:has(#page2:target) .pagination a[href="#page2"],
+#plans:has(#page3:target) .pagination a[href="#page3"] {
+    color: black; 
+    font-size: 30px; 
+}  */
+
+
+
+/* Solution  using JS for the tracking */
+.pagination .active-dot {
+    color: black;
+    font-size: 30px;
+    transform: scale(1.2);
+}
+
+
+
+/* Change color when a specific section is targeted 
+    Version for siblings (the pagination section is inside the same "wrapper" than the cards)
+*/
+/* #page1:target ~ .pagination a[href="#page1"],
+#page2:target ~ .pagination a[href="#page2"],
+#page3:target ~ .pagination a[href="#page3"] {
+    color: black; 
+    font-size: 30px; 
+} */

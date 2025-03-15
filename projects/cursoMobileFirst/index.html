@@ -127,7 +127,7 @@
                 <p>Cualquier plan de da acceso completo a nuestra plataforma.</p>
             </div>
             <section class="plans-container--slider">
-                <article class="plans-container--card">
+                <article id="page1"  class="plans-container--card">
                     <div class="plan-info-container">
                         <h3 class="plan-card--title">Pago Mensual</h3>
                         <p class="plan-card--price"><sup>$</sup> 19</p>
@@ -136,7 +136,7 @@
                         <!-- ca es de call to action -->
                     </div>
                 </article>
-                <article class="plans-container--card">
+                <article  id="page2" class="plans-container--card">
                     <p class="recommended">Recomendado</p>
                     <div class="plan-info-container">
                         <h3 class="plan-card--title">Pago Anual</h3>
@@ -146,7 +146,7 @@
                         <!-- ca es de call to action -->
                     </div>
                 </article>
-                <article class="plans-container--card">
+                <article id="page3" class="plans-container--card">
                     <div class="plan-info-container">
                         <h3 class="plan-card--title">Pago Trimestal</h3>
                         <p class="plan-card--price"><sup>$</sup> 49</p>
@@ -155,6 +155,11 @@
                         <!-- ca es de call to action -->
                     </div>
                 </article>
+            </section>
+            <section class="pagination">
+                    <a href="#page1">&#9673</a>
+                    <a href="#page2">&#9673</a>
+                    <a href="#page3">&#9673</a>
             </section>
         </section>
     </main>
@@ -171,5 +176,35 @@
             <img src="./assets/img/logo-footer.svg" alt="Logo de Batatabit 2020">
         </section>
     </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".plans-container--card");
+            const dots = document.querySelectorAll(".pagination a");
+            console.log("start")
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    console.log("observing")
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            let id = entry.target.getAttribute("id");
+
+                            // Remove active class from all dots
+                            dots.forEach((dot) => dot.classList.remove("active-dot"));
+
+                            // Find the corresponding dot and highlight it
+                            document.querySelector(`.pagination a[href="#${id}"]`)?.classList.add("active-dot");
+                        }
+                    });
+                },
+                { threshold: 0.7 } // Trigger when 50% of the card is visible
+            );
+
+            // Observe each card
+            cards.forEach((card) => observer.observe(card));
+        });
+    </script>
 </body>
 </html>
