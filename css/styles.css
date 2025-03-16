@@ -376,3 +376,75 @@ a, a:hover, a:focus, a:active {
   }
 } */
 
+
+/* Adding a better carousel with pagination */
+.projects-container--slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+.projects-container--card {
+  text-align: center;
+  padding: 20px; 
+  scroll-snap-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination a {
+  width: 10px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: gray;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.project figcaption {
+  background-color: #000;
+}
+
+/* CSS Pagination using :target */
+/* #page1:target ~ .projects-container--slider {
+  transform: translateX(0%);
+}
+
+#page2:target ~ .projects-container--slider {
+  transform: translateX(-100%);
+}
+
+#page3:target ~ .projects-container--slider {
+  transform: translateX(-200%);
+}
+
+#page4:target ~ .projects-container--slider {
+  transform: translateX(-300%);
+}
+
+#page5:target ~ .projects-container--slider {
+  transform: translateX(-400%);
+}
+
+/* Solution  using JS for the tracking */
+.pagination a.active {
+  color: black;
+  font-size: 30px;
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* hiding the scroll bar*/
+.projects-container--slider::-webkit-scrollbar{
+  display: none;
+}
+.projects-container--slider{
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}

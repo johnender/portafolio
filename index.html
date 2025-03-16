@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="./css/dekstop.css" media="screen and (min-width: 1024px)">
     <script src="./footer-header-components/header.js"></script>
     <script src="./footer-header-components/footer.js"></script>
-    <script src="./index.js"></script>
 
     <!-- usign image for favicon icon -->
     <link rel="shortcut icon" href="./images/halloween(10).svg" type="image/x-icon">
@@ -160,7 +159,7 @@
         </text>
 
         <text>
-          <h2 id="highlighted">Highlighted project</h2>
+          <h2 id="highlighted">Highlighted projects</h2>
         </text>
 
         <!-- <div class="games">
@@ -175,7 +174,51 @@
           </div>
         </div> -->
 
-        <section id="projects">
+        <section class="main-projects-container">
+          <section class="projects-container--slider">
+            <article id="page1"  class="projects-container--card">
+              <button class="project" onclick="window.location.href='./projects/otherProjects/moviesMemoryGame/index.html';">
+                <figure><img src="./projects/otherProjects/moviesMemoryGame/assets/img/movie-icon-6.png" class="project-img" alt="Movies memory game thumbnail" data-rel="./projects/otherProjects/moviesMemoryGame/index.html">
+                <figcaption>Memory game</figcaption> </figure>
+              </button>
+            </article>
+            <article id="page2"  class="projects-container--card">
+              <button class="project" onclick="window.location.href='./Udemy/canvas_js_games/game1.html';">
+                <figure><img src="./Udemy/canvas_js_games/images/spaceShips/cara.webp" class="project-img" alt="Space invaders miniature">
+                <figcaption>Space invaders</figcaption> </figure>
+              </button>
+            </article>
+            <article id="page3"  class="projects-container--card">
+              <button class="project" onclick="window.location.href='./Udemy/qr/index.html';">
+                <figure><img src="./images/qr-image.png" class="project-img" alt="QR code generator miniature">
+                <figcaption>QR code Generator</figcaption> </figure>
+              </button>
+            </article>
+            <article id="page4"  class="projects-container--card">
+              <button class="project" onclick="window.location.href='./battle-of-pokemon/';">
+                <figure><img src="./images/battle-pokemon.png" class="project-img" alt="Battle of Pokemon miniature">
+                <figcaption>Battle of Pokemon</figcaption> </figure>
+              </button>
+            </article>
+            <article id="page5"  class="projects-container--card">
+              <button class="project" onclick="window.location.href='./reactProject/';">
+                <figure><img src="./images/react_spa.png" class="project-img" alt="Battle of Pokemon miniature">
+                <figcaption>React SPA project</figcaption> </figure>
+              </button>
+            </article>
+          </section>
+          <section class="pagination">
+            <a href="#page1">&#9673</a>
+            <a href="#page2">&#9673</a>
+            <a href="#page3">&#9673</a>
+            <a href="#page4">&#9673</a>
+            <a href="#page5">&#9673</a>
+          </section>
+        </section>
+
+        
+
+        <!-- <section id="projects">
           <div class="carousel">
             <button class="arrow arrow-left" aria-label="backward button"></button>
             <div class="window">
@@ -215,6 +258,8 @@
             <button class="arrow arrow-right" aria-label="forward button"></button>
           </div>
         </section>
+ -->
+
         <text>
           <h3>As my learning process, this page is work in progress</h3>
         </text>
@@ -237,6 +282,9 @@
     img2Title = "LinkedIn profile link"
     ></my-footer>
     
+
+    <!-- Importing the logic for the pagination -->
+    <script src="./index.js"></script>
   </body>
 
 </html>

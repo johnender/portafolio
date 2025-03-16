@@ -1,57 +1,41 @@
-/**
- * Start creating event listeners for the arrows, buttons, carrousel options and modal close options
- */
-window.onload = () => {
-  document.querySelector(".arrow-right").addEventListener("click", clickRight);
-  document.querySelector(".arrow-left").addEventListener("click", clickLeft);
-};
 
+/* code for the pagination (for the card at the center) */
 
-/** This function moves the carrousel to the right */
-function clickRight() {
-  const currentLeft = parseInt(
-    getComputedStyle(document.querySelector(".project-container")).left,
-    10
-  );
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".projects-container--card");
+  const dots = document.querySelectorAll(".pagination a");
 
-  /* First need to know the kind of screen and how much porjects are displayed in the carrousel */
-  const windowSize = screen.width;
+  const observerOptions = {
+      root: document.querySelector(".projects-container--slider"), // The scrolling container
+      rootMargin: "0px",
+      threshold: [0.75, 0.9] // 50% and 90% visibility triggers
+  };
 
-  if(windowSize < 600){
-    //console.log("mobile")
-    if (currentLeft < -810) { //if left value is lower than -810, dont move
-      return;
-    }
-    let newValue = currentLeft - 270; //270 adding the size of the image and its margins
-    document.querySelector(".project-container").style.left = `${newValue}px`;
-  }
-  else if (windowSize < 1024){
-    //console.log("tablet")
-    if (currentLeft < -540) { //if left value is lower than -540, dont move
-      return;
-    }
-    let newValue = currentLeft - 270; //270 adding the size of the image and its margins
-    document.querySelector(".project-container").style.left = `${newValue}px`;
-  }
-  else{
-    //console.log("desktop")
-    if (currentLeft < -270) { //if left value is lower than -270, dont move
-      return;
-    }
-    let newValue = currentLeft - 270; //270 adding the size of the image and its margins
-    document.querySelector(".project-container").style.left = `${newValue}px`;
-  }
-}
+  const observer = new IntersectionObserver((entries) => {
+      let mostVisibleCard = null;
+      let maxIntersection = 0;
 
-/** This function moves the carrousel to the left */
-function clickLeft() {
-  const currentLeft = parseInt(
-    getComputedStyle(document.querySelector(".project-container")).left,
-    10
-  );
-  if (currentLeft === 0) { //if left value is 0, dont move
-    return;
-  }
-  let newValue = currentLeft + 270;
-  document.querySelector(".project-container").style.left = `${newValue}px`;
-}
+      entries.forEach(entry => {
+          if (entry.intersectionRatio > maxIntersection) {
+              maxIntersection = entry.intersectionRatio;
+              mostVisibleCard = entry.target;
+          }
+      });
+      if (mostVisibleCard) {
+          // Get index of the most visible card
+          const index = Array.from(cards).indexOf(mostVisibleCard);
+
+          // Remove "active" class from all dots
+          dots.forEach(dot => dot.classList.remove("active"));
+
+          // Add "active" class to the corresponding dot
+          if (dots[index]) {
+              dots[index].classList.add("active");
+          }
+      }
+  }, observerOptions);
+
+  // Observe all cards
+  cards.forEach(card => observer.observe(card));
+});
+
