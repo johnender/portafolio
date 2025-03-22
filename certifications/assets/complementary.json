@@ -463,6 +463,12 @@
       "src": "./certificatesJPG/Complementaria/udemy/mern_certificate.jpg",
       "alt": "Building Blog using MERN Stack",
       "date": "2025/03/14"
+      },
+      "16": {
+      "name": "16-Next.js With Tailwind CSS-Build a Frontend Ecommerce Project",
+      "src": "./certificatesJPG/Complementaria/udemy/nextjs.jpg",
+      "alt": "Next.js With Tailwind CSS-Build a Frontend Ecommerce Project",
+      "date": "2025/03/22"
       }
     }
   },
