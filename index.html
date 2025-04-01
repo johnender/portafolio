@@ -32,6 +32,15 @@
     <!-- usign image for favicon icon -->
     <link rel="shortcut icon" href="./images/halloween(10).svg" type="image/x-icon">
 
+    <!-- documents for swipper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
     <title>Johnn's Portfolio</title>
   </head>
 
@@ -163,6 +172,74 @@
           <h2 id="highlighted">Highlighted projects</h2>
         </text>
 
+        <!-- -------------------------Swiper start----------------------------------- -->
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <article class="projects-container--card">
+                <button class="project" onclick="window.location.href='./projects/otherProjects/moviesMemoryGame/index.html';">
+                  <figure><img src="./projects/otherProjects/moviesMemoryGame/assets/img/movie-icon-6.png" class="project-img" alt="Movies memory game thumbnail" data-rel="./projects/otherProjects/moviesMemoryGame/index.html">
+                  <figcaption>Memory game</figcaption> </figure>
+                </button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="projects-container--card">
+                <button class="project" onclick="window.location.href='./Udemy/canvas_js_games/game1.html';">
+                  <figure><img src="./Udemy/canvas_js_games/images/spaceShips/cara.webp" class="project-img" alt="Space invaders miniature">
+                  <figcaption>Space invaders</figcaption> </figure>
+                </button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="projects-container--card">
+                <button class="project" onclick="window.location.href='./Udemy/qr/index.html';">
+                  <figure><img src="./images/qr-image.png" class="project-img" alt="QR code generator miniature">
+                  <figcaption>QR code Generator</figcaption> </figure>
+                </button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="projects-container--card">
+                <button class="project" onclick="window.location.href='./battle-of-pokemon/';">
+                  <figure><img src="./images/battle-pokemon.png" class="project-img" alt="Battle of Pokemon miniature">
+                  <figcaption>Battle of Pokemon</figcaption> </figure>
+                </button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="projects-container--card">
+                <button class="project" onclick="window.location.href='./reactProject/';">
+                  <figure><img src="./images/react_spa.png" class="project-img" alt="Battle of Pokemon miniature">
+                  <figcaption>React SPA project</figcaption> </figure>
+                </button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article id="page5"  class="projects-container--card">
+                <button class="project" onclick="window.open('https://shoppingapp-nu.vercel.app/', '_blank');">
+                  <figure><img src="./images/shopping_app.jpg" class="project-img" alt="E-commerce project miniature">
+                  <figcaption>E-commerce</figcaption> </figure>
+                </button>
+              </article>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <!-- -------------------------Swiper Ends----------------------------------- -->
+
+        
         <!-- <div class="games">
           <div onclick="window.location.href='./projects/otherProjects/moviesMemoryGame/index.html';" class="pikachu">
           <figure><img class="image" id="sennin" src= "./projects/otherProjects/moviesMemoryGame/assets/img/movie-icon-6.png" alt="Movies memory game thumbnail" title="Movies memory game">
@@ -175,7 +252,7 @@
           </div>
         </div> -->
 
-        <section class="main-projects-container">
+        <!-- <section class="main-projects-container">
           <section class="projects-container--slider">
             <article id="page1"  class="projects-container--card">
               <button class="project" onclick="window.location.href='./projects/otherProjects/moviesMemoryGame/index.html';">
@@ -215,9 +292,7 @@
             <a href="#page4">&#9673</a>
             <a href="#page5">&#9673</a>
           </section>
-        </section>
-
-        
+        </section> -->
 
         <!-- <section id="projects">
           <div class="carousel">

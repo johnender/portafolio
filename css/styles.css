@@ -4,6 +4,12 @@
   --listFontColor: rgb(169, 221, 185);
   --textFontSize: 2.0rem;
   --littleTextFontSize: 1.5rem;
+
+  /* Swiper JS styles */
+  --swiper-pagination-bottom: 0px;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: #afb9cf;
 }
 
 * {
@@ -283,7 +289,6 @@ figcaption{
   border: 2px solid #000;
   display: inline-block;
   height: 300px;
-  margin: 0 8px;
   transition: all 0.2s ease-in-out;
   width: 250px;
   object-fit: cover;
@@ -322,32 +327,6 @@ figcaption{
 }
 
 
-
-/* 
-footer {
-  text-align: left;
-  background: black;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-}
-
-footer .social {
-  font-size: 2rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: start;
-}
-
-footer .social img {
-  max-width: 40px;
-}
-
-footer .social img:hover{
-  transform: scale(1.5);
-} */
-
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: inherit;
@@ -378,73 +357,44 @@ a, a:hover, a:focus, a:active {
 
 
 /* Adding a better carousel with pagination */
-.projects-container--slider {
+.projects-container--card {
+  text-align: center;
+  scroll-snap-align: center;
+}
+.project figcaption {
+  background-color: #000;
+}
+/* .projects-container--slider {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   width: 100%;
-}
+} */
 
-.projects-container--card {
-  text-align: center;
-  padding: 20px; 
-  scroll-snap-align: center;
-}
 
-.pagination {
+/* .pagination {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-}
+} */
 
-.pagination a {
+/* .pagination a {
   width: 10px;
   padding: 0 20px;
   text-decoration: none;
   color: gray;
   font-size: 24px;
   transition: color 0.3s;
+} */
+
+.swiper-wrapper{
+  padding: 20px 0;
 }
 
-.project figcaption {
-  background-color: #000;
-}
-
-/* CSS Pagination using :target */
-/* #page1:target ~ .projects-container--slider {
-  transform: translateX(0%);
-}
-
-#page2:target ~ .projects-container--slider {
-  transform: translateX(-100%);
-}
-
-#page3:target ~ .projects-container--slider {
-  transform: translateX(-200%);
-}
-
-#page4:target ~ .projects-container--slider {
-  transform: translateX(-300%);
-}
-
-#page5:target ~ .projects-container--slider {
-  transform: translateX(-400%);
-}
-
-/* Solution  using JS for the tracking */
-.pagination a.active {
-  color: black;
-  font-size: 30px;
+.swiper-button-next:hover, 
+.swiper-button-prev:hover {
   transform: scale(1.2);
-  transition: all 0.3s ease-in-out;
-}
-
-/* hiding the scroll bar*/
-.projects-container--slider::-webkit-scrollbar{
-  display: none;
-}
-.projects-container--slider{
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  transition: 0.3s ease;
+  color: #0044ff;
 }
