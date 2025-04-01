@@ -13,8 +13,15 @@ h1 {
     padding: 8px;
 }
 
-.arrow {
+/* .arrow {
     height: 75px;
     width: 75px;
-    }
-  
+} */
+
+main {
+   max-width: 1900px;
+}
+.paginas{
+    min-width: 350px;
+    max-width: 400px;
+}
