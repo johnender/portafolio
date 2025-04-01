@@ -465,10 +465,16 @@
       "date": "2025/03/14"
       },
       "16": {
-      "name": "16-Next.js With Tailwind CSS-Build a Frontend Ecommerce Project",
+      "name": "17-Next.js With Tailwind CSS-Build a Frontend Ecommerce Project",
       "src": "./certificatesJPG/Complementaria/udemy/nextjs.jpg",
       "alt": "Next.js With Tailwind CSS-Build a Frontend Ecommerce Project",
       "date": "2025/03/22"
+      },
+      "17": {
+      "name": "18-Cypress Basics",
+      "src": "./certificatesJPG/Complementaria/udemy/Cypress_Basics.jpg",
+      "alt": "Cypress Basics",
+      "date": "2025/03/30"
       }
     }
   },
