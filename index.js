@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         spaceBetween: 5,
         centeredSlides: true,
-      
+        grabCursor: true,
+        allowTouchMove: true,
         autoplay: {
             delay: 2000,
         },
@@ -38,6 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
+        },
+        lazy: {
+            enabled: true,
+            loadOnTransitionStart: true,
+            loadPrevNext: true,
+            loadPrevNextAmount: 2,
         },
       
         // And if we need scrollbar
