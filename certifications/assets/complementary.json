@@ -475,6 +475,12 @@
       "src": "./certificatesJPG/Complementaria/udemy/Cypress_Basics.jpg",
       "alt": "Cypress Basics",
       "date": "2025/03/30"
+      },
+      "18": {
+      "name": "19-NestJS Zero to Hero - Modern TypeScript Back-end Development",
+      "src": "./certificatesJPG/Complementaria/udemy/NestJS_Zero_to_Hero.jpg",
+      "alt": "NestJS Zero to Hero - Modern TypeScript Back-end Development",
+      "date": "2025/04/04"
       }
     }
   },
