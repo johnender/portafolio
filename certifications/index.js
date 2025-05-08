@@ -1,25 +1,22 @@
-window.onload = () => {
+window.onload = async () => {
   const container = document.getElementById("titlesContainer");
-  startCollege(container);
-  startComplementary(container);
+  await startCollege(container);
+  await startComplementary(container);
 };
 
-const fetchList = async (path) => {
- let answer;
- await fetch(path)
-  .then(response => response.json())
-  .then(data => {
-    // Save the JSON data to a variable
-    answer = data;
-    //console.log(answer); // Output the data to the console
-  })
-  .catch(error => {
-    answer = error;
-    //console.error('Error fetching the JSON file:', error);
-  });
-  return answer;
-}
- 
+const fetchList = (path) => {
+  return fetch(path)
+    .then(response => response.json())
+    .then(data => {
+      // You can log or use the data here if needed
+      console.log('Fetched data:', data);
+      return data; // Return the data to the caller
+    })
+    .catch(error => {
+      console.error('Error fetching the JSON file:', error);
+      throw error; // Optional: rethrow if caller should handle it
+    });
+};
 
 async function startCollege(container) {
   const headerDiv = document.createElement("div");
@@ -41,7 +38,7 @@ async function startCollege(container) {
       const itemFigure = document.createElement("figure");
   
       const itemImg = document.createElement("img");
-      itemImg.class = "image";
+      itemImg.className = "image";
       itemImg.src = object.src;
       itemImg.alt = object.alt;
   
@@ -61,7 +58,7 @@ async function startCollege(container) {
 async function startComplementary(container) {
   const list = await fetchList('./assets/complementary.json');
   if (list) {
-    console.log(list);
+    //console.log(list);
     //adding the section header
     const complementaryHeaderDiv = document.createElement("div");
     complementaryHeaderDiv.className = "container--text";
@@ -86,7 +83,7 @@ async function startComplementary(container) {
         const itemFigure = document.createElement("figure");
     
         const itemImg = document.createElement("img");
-        itemImg.class = "image";
+        itemImg.className = "image";
         itemImg.src = item.src;
         itemImg.alt = item.alt;
     

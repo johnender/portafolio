@@ -546,6 +546,12 @@
       "src": "./certificatesJPG/Complementaria/Hacker_mentor/hacking_etico_gamificado.png",
       "alt": "Hacking &aacute;tico Gamificado",
       "date": "2024/03/14"
+      },
+      "10": {
+      "name": "Curso ISO 27001 Fundamentals",
+      "src": "./certificatesJPG/Complementaria/Hacker_mentor/ISO_27001_Fundamentals.jpg",
+      "alt": "Curso ISO 27001 Fundamentals",
+      "date": "2025/05/05"
       }
     }
   },
@@ -593,6 +599,12 @@
       "src": "./certificatesJPG/Complementaria/Netec/Johnn Hernandez-344277207.jpg",
       "alt": "De gamer a experto Domina las tecnolog&íacute;as de AWS con el juego de roles Cloud Quest",
       "date": "2025/02/13"
+      },
+      "7": {
+      "name": "8-Logra crear aplicaciones con el modo de agente de GitHub Copilot",
+      "src": "./certificatesJPG/Complementaria/Netec/Constancia_12266_Johnn Hernandez_page.jpg",
+      "alt": "Logra crear aplicaciones con el modo de agente de GitHub Copilot",
+      "date": "2025/04/29"
       }
     }
   },
@@ -746,6 +758,28 @@
     }
   },
   "16": {
+    "school": "IngeLearn:",
+    "titles": {
+      "0": {
+      "name": "Industria 4.0 con Python",
+      "src": "./certificatesJPG/Complementaria/IngeLearn/Johnn-Hernandez-Delgado-Industria-4-0.jpg",
+      "alt": "Industria 4.0 con Python",
+      "date": "2025/05/08"
+      }
+    }
+  },
+  "17": {
+    "school": "CampCop:",
+    "titles": {
+      "0": {
+      "name": "Gesti&oacute;n de Datos con Excel",
+      "src": "./certificatesJPG/Complementaria/CampCop/Certificado-Gestion-de-Datos.jpg",
+      "alt": "Gesti&oacute;n de Datos con Excel",
+      "date": "2025/05/06"
+      }
+    }
+  },
+  "18": {
     "school": "OAS:",
     "titles": {
       "0": {
@@ -756,7 +790,7 @@
       }
     }
   },
-  "17": {
+  "19": {
     "school": "H&MI:",
     "titles": {
       "0": {
@@ -767,7 +801,7 @@
       }
     }
   },
-  "18": {
+  "20": {
     "school": "Wmware:",
     "titles": {
       "0": {
@@ -778,7 +812,7 @@
       }
     }
   },
-  "19": {
+  "21": {
     "school": "Other:",
     "titles": {
       "0": {
