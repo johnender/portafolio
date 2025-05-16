@@ -481,6 +481,12 @@
       "src": "./certificatesJPG/Complementaria/udemy/NestJS_Zero_to_Hero.jpg",
       "alt": "NestJS Zero to Hero - Modern TypeScript Back-end Development",
       "date": "2025/04/04"
+      },
+      "19": {
+      "name": "19-CI CD with Azure DevOps - Boards, Pipeline, YAML Deployment",
+      "src": "./certificatesJPG/Complementaria/udemy/CICD-azure-devops.jpg",
+      "alt": "CI CD with Azure DevOps - Boards, Pipeline, YAML Deployment",
+      "date": "2025/05/15"
       }
     }
   },
@@ -556,6 +562,23 @@
     }
   },
   "8": {
+    "school": "Codigo Facilito:",
+    "titles": {
+      "0": {
+      "name": "1-Bootcamp Azure AI Engineer Associate",
+      "src": "./certificatesJPG/Complementaria/CodigoFacilito/certificado.jpg",
+      "alt": "Bootcamp Azure AI Engineer Associate",
+      "date": "2025/02/21"
+      },
+      "1": {
+      "name": "2-Curso Profesional de Git",
+      "src": "./certificatesJPG/Complementaria/CodigoFacilito/Certificado-Curso_profesional_de_Git.jpg",
+      "alt": "Curso Profesional de Git",
+      "date": "2025/04/23"
+      }
+    }
+  },
+  "9": {
     "school": "Netec:",
     "titles": {
       "0": {
@@ -608,7 +631,7 @@
       }
     }
   },
-  "9": {
+  "10": {
     "school": "ITcolombia:",
     "titles": {
       "0": {
@@ -637,7 +660,7 @@
       }
     }
   },
-  "10": {
+  "11": {
     "school": "Cisco Networking academy:",
     "titles": {
       "0": {
@@ -660,7 +683,7 @@
       }
     }
   },
-  "11": {
+  "12": {
     "school": "Yunis:",
     "titles": {
       "0": {
@@ -683,7 +706,7 @@
       }
     }
   },
-  "12": {
+  "13": {
     "school": "Seguridad cero:",
     "titles": {
       "0": {
@@ -706,7 +729,7 @@
       }
     }
   },
-  "13": {
+  "14": {
     "school": "Telecocable:",
     "titles": {
       "0": {
@@ -729,7 +752,7 @@
       }
     }
   },
-  "14": {
+  "15": {
     "school": "Certiprof:",
     "titles": {
       "0": {
@@ -746,7 +769,7 @@
       }
     }
   },
-  "15": {
+  "16": {
     "school": "Microsoft:",
     "titles": {
       "0": {
@@ -757,7 +780,7 @@
       }
     }
   },
-  "16": {
+  "17": {
     "school": "IngeLearn:",
     "titles": {
       "0": {
@@ -768,7 +791,7 @@
       }
     }
   },
-  "17": {
+  "18": {
     "school": "CampCop:",
     "titles": {
       "0": {
@@ -779,7 +802,7 @@
       }
     }
   },
-  "18": {
+  "19": {
     "school": "OAS:",
     "titles": {
       "0": {
@@ -790,7 +813,7 @@
       }
     }
   },
-  "19": {
+  "20": {
     "school": "H&MI:",
     "titles": {
       "0": {
@@ -801,7 +824,7 @@
       }
     }
   },
-  "20": {
+  "21": {
     "school": "Wmware:",
     "titles": {
       "0": {
@@ -812,7 +835,7 @@
       }
     }
   },
-  "21": {
+  "22": {
     "school": "Other:",
     "titles": {
       "0": {
