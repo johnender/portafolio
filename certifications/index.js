@@ -34,6 +34,7 @@ const createCard = (object) =>{
   itemImg.className = "image";
   itemImg.src = object.src;
   itemImg.alt = object.alt;
+  itemImg.title = "Received: " + object.date;
 
   const itemFigcaption = document.createElement("figcaption");
   itemFigcaption.innerHTML = object.name;
