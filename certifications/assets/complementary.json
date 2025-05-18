@@ -803,6 +803,17 @@
     }
   },
   "19": {
+    "school": "Daxus:",
+    "titles": {
+      "0": {
+      "name": "Semana de Python en la Pr&aacute;ctica",
+      "src": "./certificatesJPG/Complementaria/Daxus/certificado_python.jpg",
+      "alt": "Semana de Python en la Pr&aacute;ctica",
+      "date": "2025/05/15"
+      }
+    }
+  },
+  "20": {
     "school": "OAS:",
     "titles": {
       "0": {
@@ -813,7 +824,7 @@
       }
     }
   },
-  "20": {
+  "21": {
     "school": "H&MI:",
     "titles": {
       "0": {
@@ -824,7 +835,7 @@
       }
     }
   },
-  "21": {
+  "22": {
     "school": "Wmware:",
     "titles": {
       "0": {
@@ -835,7 +846,7 @@
       }
     }
   },
-  "22": {
+  "23": {
     "school": "Other:",
     "titles": {
       "0": {

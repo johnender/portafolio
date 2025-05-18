@@ -104,6 +104,7 @@ async function startComplementary(container, orderComplementary) {
     //adding the section header
     const complementaryHeaderDiv = document.createElement("div");
     complementaryHeaderDiv.className = "container--text";
+    complementaryHeaderDiv.style.marginTop = "10rem";
 
     const button = document.createElement("button");
     button.textContent = orderComplementary;
