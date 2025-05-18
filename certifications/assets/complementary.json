@@ -448,43 +448,43 @@
       },
       "13": {
       "name": "14-TailwindCSS from A to Z Master TailwindCSS Quickly",
-      "src": "./certificatesJPG/Complementaria/udemy/tailwind-certificate.jpg",
+      "src": "./certificatesJPG/Complementaria/Udemy/tailwind-certificate.jpg",
       "alt": "TailwindCSS from A to Z Master TailwindCSS Quickly",
       "date": "2025/03/10"
       },
       "14": {
       "name": "15-Aprende Redux con React hooks y GraphQL fácilmente",
-      "src": "./certificatesJPG/Complementaria/udemy/redux-graphQL.jpg",
+      "src": "./certificatesJPG/Complementaria/Udemy/redux-graphQL.jpg",
       "alt": "Aprende Redux con React hooks y GraphQL fácilmente",
       "date": "2025/03/13"
       },
       "15": {
       "name": "16-Building Blog using MERN Stack",
-      "src": "./certificatesJPG/Complementaria/udemy/mern_certificate.jpg",
+      "src": "./certificatesJPG/Complementaria/Udemy/mern_certificate.jpg",
       "alt": "Building Blog using MERN Stack",
       "date": "2025/03/14"
       },
       "16": {
       "name": "17-Next.js With Tailwind CSS-Build a Frontend Ecommerce Project",
-      "src": "./certificatesJPG/Complementaria/udemy/nextjs.jpg",
+      "src": "./certificatesJPG/Complementaria/Udemy/nextjs.jpg",
       "alt": "Next.js With Tailwind CSS-Build a Frontend Ecommerce Project",
       "date": "2025/03/22"
       },
       "17": {
       "name": "18-Cypress Basics",
-      "src": "./certificatesJPG/Complementaria/udemy/Cypress_Basics.jpg",
+      "src": "./certificatesJPG/Complementaria/Udemy/Cypress_Basics.jpg",
       "alt": "Cypress Basics",
       "date": "2025/03/30"
       },
       "18": {
       "name": "19-NestJS Zero to Hero - Modern TypeScript Back-end Development",
-      "src": "./certificatesJPG/Complementaria/udemy/NestJS_Zero_to_Hero.jpg",
+      "src": "./certificatesJPG/Complementaria/Udemy/NestJS_Zero_to_Hero.jpg",
       "alt": "NestJS Zero to Hero - Modern TypeScript Back-end Development",
       "date": "2025/04/04"
       },
       "19": {
       "name": "19-CI CD with Azure DevOps - Boards, Pipeline, YAML Deployment",
-      "src": "./certificatesJPG/Complementaria/udemy/CICD-azure-devops.jpg",
+      "src": "./certificatesJPG/Complementaria/Udemy/CICD-azure-devops.jpg",
       "alt": "CI CD with Azure DevOps - Boards, Pipeline, YAML Deployment",
       "date": "2025/05/15"
       }
