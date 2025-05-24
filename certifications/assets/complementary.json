@@ -487,6 +487,12 @@
       "src": "./certificatesJPG/Complementaria/Udemy/CICD-azure-devops.jpg",
       "alt": "CI CD with Azure DevOps - Boards, Pipeline, YAML Deployment",
       "date": "2025/05/15"
+      },
+      "20": {
+      "name": "20-React Guide - Build a TicTacToe App using React Native!",
+      "src": "./certificatesJPG/Complementaria/Udemy/certificate_react_native.jpg",
+      "alt": "React Guide - Build a TicTacToe App using React Native!",
+      "date": "2025/05/20"
       }
     }
   },
@@ -814,6 +820,17 @@
     }
   },
   "20": {
+    "school": "Big School:",
+    "titles": {
+      "0": {
+      "name": "Introduci&oacute;n a la IA",
+      "src": "./certificatesJPG/Complementaria/BigSchool/Johnn_Hernandez Delgado_certificate.jpg",
+      "alt": "Certificado de Introduci&oacute;n a la IA",
+      "date": "2025/05/15"
+      }
+    }
+  },
+  "21": {
     "school": "OAS:",
     "titles": {
       "0": {
@@ -824,7 +841,7 @@
       }
     }
   },
-  "21": {
+  "22": {
     "school": "H&MI:",
     "titles": {
       "0": {
@@ -835,7 +852,7 @@
       }
     }
   },
-  "22": {
+  "23": {
     "school": "Wmware:",
     "titles": {
       "0": {
@@ -846,7 +863,7 @@
       }
     }
   },
-  "23": {
+  "24": {
     "school": "Other:",
     "titles": {
       "0": {
