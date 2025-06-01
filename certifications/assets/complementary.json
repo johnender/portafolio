@@ -581,6 +581,18 @@
       "src": "./certificatesJPG/Complementaria/CodigoFacilito/Certificado-Curso_profesional_de_Git.jpg",
       "alt": "Curso Profesional de Git",
       "date": "2025/04/23"
+      },
+      "2": {
+      "name": "3-Curso de Visual Studio y Copilot",
+      "src": "./certificatesJPG/Complementaria/CodigoFacilito/Visual_Studio_Code_GitHub_Copilot.jpg",
+      "alt": "Curso de Visual Studio y Copilot",
+      "date": "2025/05/28"
+      },
+      "3": {
+      "name": "4-Curso de GitHub Actions",
+      "src": "./certificatesJPG/Complementaria/CodigoFacilito/Certificado_GitHub_Action.jpg",
+      "alt": "Curso de GitHub Actions",
+      "date": "2025/06/01"
       }
     }
   },
