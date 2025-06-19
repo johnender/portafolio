@@ -593,6 +593,18 @@
       "src": "./certificatesJPG/Complementaria/CodigoFacilito/Certificado_GitHub_Action.jpg",
       "alt": "Curso de GitHub Actions",
       "date": "2025/06/01"
+      },
+      "4": {
+      "name": "5-Bootcamp de GitHub Foundations",
+      "src": "./certificatesJPG/Complementaria/CodigoFacilito/Certificado_Bootcamp_GitHub_Foundations.jpg",
+      "alt": "Bootcamp de GitHub Foundations",
+      "date": "2025/06/01"
+      },
+      "5": {
+      "name": "6-Bootcamp de DevOps",
+      "src": "./certificatesJPG/Complementaria/CodigoFacilito/Certificado_Bootcamp_DevOps.jpg",
+      "alt": "Bootcamp de DevOps",
+      "date": "2025/06/18"
       }
     }
   },
