@@ -617,6 +617,12 @@
       "src": "./certificatesJPG/Complementaria/CodigoFacilito/certificado_devops_premium.jpg",
       "alt": "Bootcamp DevOps Premium",
       "date": "2025/08/12"
+      },
+      "8": {
+      "name": "9-Bootcamp Premium de Python profesional",
+      "src": "./certificatesJPG/Complementaria/CodigoFacilito/certificado_bootcamp_premium_python.jpg",
+      "alt": "Bootcamp Premium de Python profesional",
+      "date": "2025/10/15"
       }
     }
   },
