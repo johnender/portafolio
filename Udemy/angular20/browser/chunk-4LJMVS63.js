@@ -1,0 +1,1 @@
+import{Aa as o,Ra as t,Sa as s,bb as n}from"./chunk-6SLRWAB5.js";var d=class e{static \u0275fac=function(a){return new(a||e)};static \u0275cmp=o({type:e,selectors:[["app-dashboard"]],decls:3,vars:0,consts:[[1,"dashboard-container"]],template:function(a,i){a&1&&(t(0,"div",0)(1,"p"),n(2,"dashboard works!"),s()())},encapsulation:2})};export{d as Dashboard};

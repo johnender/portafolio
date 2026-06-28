@@ -1,36 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Personal portfolio page by Johnn Hernandez">
-    <meta name="owner" content="Johnn Hernandez Delgado">
-    <meta name="robots" content="index,follow">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Personal portfolio page by Johnn Hernandez"
+    />
+    <meta name="owner" content="Johnn Hernandez Delgado" />
+    <meta name="robots" content="index,follow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- <link rel= "canonical" href="https://johnender.github.io/portafolio/"/> -->
 
     <!-- Open Graph meta starts -->
-    <meta property="og:title" content="Johnn's Portfolio">
-    <meta property="og:site_name" content="Johnn's Portfolio">
-    <meta property="og:url" content="https://johnender.github.io/portafolio">
-    <meta property="og:description" content="Personal portfolio page by Johnn Hernandez">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://johnender.github.io/portafolio/projects/accesibilityCourse/assets/images/perfil.jpg">
+    <meta property="og:title" content="Johnn's Portfolio" />
+    <meta property="og:site_name" content="Johnn's Portfolio" />
+    <meta property="og:url" content="https://johnender.github.io/portafolio" />
+    <meta
+      property="og:description"
+      content="Personal portfolio page by Johnn Hernandez"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://johnender.github.io/portafolio/projects/accesibilityCourse/assets/images/perfil.jpg"
+    />
     <!-- Open Graph meta ends -->
 
     <!-- responsive design patterns, mobile firts, then tablet and last dekstop,
     the best practice is to create different .css files for each one -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 600px)">
-    <link rel="stylesheet" href="./css/dekstop.css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./css/tablet.css"
+      media="screen and (min-width: 600px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/dekstop.css"
+      media="screen and (min-width: 1024px)"
+    />
     <script src="./footer-header-components/header.js"></script>
     <script src="./footer-header-components/footer.js"></script>
 
     <!-- usign image for favicon icon -->
-    <link rel="shortcut icon" href="./images/halloween(10).svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./images/halloween(10).svg"
+      type="image/x-icon"
+    />
 
     <!-- documents for swipper js -->
     <link
@@ -40,134 +59,554 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
     <title>Johnn's Portfolio</title>
   </head>
 
   <body>
     <my-header
-      text = "Portfolio home page"
-      link1 = "./index.html"
-      link2 = "./certifications/index.html"
-      link3 = "./contact/index.html"
+      text="Portfolio home page"
+      link1="./index.html"
+      link2="./certifications/index.html"
+      link3="./contact/index.html"
     ></my-header>
 
     <main>
       <aside class="paginas">
         <!-- Lista con links a los diferentes proyectos -->
-        <details class="lista"> 
+        <details class="lista">
           <summary>Vanilla JS projects:</summary>
           <ul>
-          <li class="lista_item"> <a href="./Udemy/canvas_js_games/game1.html" title="Canvas JS games">Canvas JS games</a> </li>
-          <li class="lista_item"> <a href="./projects/canvas-tag/index.html" title="Canvas Tag">Trying the Canvas Tag</a> </li>
-          <li class="lista_item"> <a href="./Udemy/index.html" title="Diferentes projectos de cursos de Udemy">Udemy projects</a> </li>
-          <li class="lista_item"> <a href="./uCenfotec/index.html" title="Proyectos del curso Frontend web developed en UCenfotec">UCenfotec Projects Page</a> </li>
-          <li class="lista_item"> <a href="./projects/googleClone/index.html" title="Curso Práctico de HTML y CSS de platzi">Google clon page</a> </li>
-          <li class="lista_item"> <a href="./projects/cssGrids/index.html" title="Curso de CSS Grid Layout de platzi">Css grid layout projects page</a> </li>
-          <li class="lista_item"> <a href="./projects/cursoMobileFirst/index.html" title="Curso de Mobile First de platzi">Mobile first project page</a> </li>
-          <li class="lista_item"> <a href="./projects/platziVideo/index.html" title="Curso de Frontend Developer de platzi">Platzi video page</a> </li>
-          <li class="lista_item"> <a href="./projects/js-basic/rock-paper-scissors.html" title="Rock papwer scissors game page">Rock paper scissors</a> </li>
-          <li class="lista_item"> <a href="./projects/otherProjects/rickAndMorthyList/index.html" title="Rick And Morty Characters List">Rick And Morty List</a> </li>
-          <li class="lista_item"> <a href="./projects/platziMediaPlayer/index.html" title="Curso Profesional de JavaScript en Platzi">Platzi Media Player</a> </li>
-          <li class="lista_item"> <a href="./projects/js-basic/promisesExercises/index.html" title="Curso Profesional de JavaScript en Platzi">Top movies page</a> </li>
-          <li class="lista_item"> <a href="./projects/otherProjects/moviesMemoryGame/index.html" title="Movies Memory Game page">Movies memory game</a> </li>
-          <li class="lista_item"> <a href="./projects/100tifico/dist/index.html" title="Curso de Single Page Application con JavaScript Vanilla">Rick And Morty SPA</a> </li>
-          <li class="lista_item"> <a href="./projects/accesibilityCourse/index.html" title="Curso de Accesibilidad Web en Platzi">Portfolio template</a> </li>
-          <li class="lista_item"> <a href="./projects/blog/index.html" title="Curso Pr&aacute;ctico de Maquetaci&oacute;n en CSS en Platzi">Blog page</a> </li>
-          <li class="lista_item"> <a href="./projects/platziGames/html/pagina-principal.html" title="Curso de Preprocesadores CSS en Platzi">PlatziGames home page</a> </li>
-          <li class="lista_item"> <a href="./projects/lazyLoadingPluginFuntional/" title="Curso manipulacion de DOM de platzi">Lazy loading fox page</a> </li>
-          <li class="lista_item"> <a href="./projects/webComponents/Project/index.html" title="Curso B&aacutesico de Web Components con JavaScript">Web components project page</a> </li>
-          <li class="lista_item"> <a href="./projects/otherProjects/javascript-infinite-scroll/index.html" title="Testing Vanilla JavaScript infinite scroll">Testing Vanilla JavaScript infinite scroll</a> </li>
-          <li class="lista_item"> <a href="./projects/tailwindCSS/index.html" title="Testing some tailwind features">Tailwind awful example</a> </li>
-          <li class="lista_item"> <a href="./projects/tailwind_page/index.html" title="Responsive design with tailwind">Tailwind beautiful page</a> </li>
+            <li class="lista_item">
+              <a
+                href="./Udemy/canvas_js_games/game1.html"
+                title="Canvas JS games"
+                >Canvas JS games</a
+              >
+            </li>
+            <li class="lista_item">
+              <a href="./projects/canvas-tag/index.html" title="Canvas Tag"
+                >Trying the Canvas Tag</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./Udemy/index.html"
+                title="Diferentes projectos de cursos de Udemy"
+                >Udemy projects</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./uCenfotec/index.html"
+                title="Proyectos del curso Frontend web developed en UCenfotec"
+                >UCenfotec Projects Page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/googleClone/index.html"
+                title="Curso Práctico de HTML y CSS de platzi"
+                >Google clon page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/cssGrids/index.html"
+                title="Curso de CSS Grid Layout de platzi"
+                >Css grid layout projects page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/cursoMobileFirst/index.html"
+                title="Curso de Mobile First de platzi"
+                >Mobile first project page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/platziVideo/index.html"
+                title="Curso de Frontend Developer de platzi"
+                >Platzi video page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/js-basic/rock-paper-scissors.html"
+                title="Rock papwer scissors game page"
+                >Rock paper scissors</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/otherProjects/rickAndMorthyList/index.html"
+                title="Rick And Morty Characters List"
+                >Rick And Morty List</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/platziMediaPlayer/index.html"
+                title="Curso Profesional de JavaScript en Platzi"
+                >Platzi Media Player</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/js-basic/promisesExercises/index.html"
+                title="Curso Profesional de JavaScript en Platzi"
+                >Top movies page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/otherProjects/moviesMemoryGame/index.html"
+                title="Movies Memory Game page"
+                >Movies memory game</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/100tifico/dist/index.html"
+                title="Curso de Single Page Application con JavaScript Vanilla"
+                >Rick And Morty SPA</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/accesibilityCourse/index.html"
+                title="Curso de Accesibilidad Web en Platzi"
+                >Portfolio template</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/blog/index.html"
+                title="Curso Pr&aacute;ctico de Maquetaci&oacute;n en CSS en Platzi"
+                >Blog page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/platziGames/html/pagina-principal.html"
+                title="Curso de Preprocesadores CSS en Platzi"
+                >PlatziGames home page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/lazyLoadingPluginFuntional/"
+                title="Curso manipulacion de DOM de platzi"
+                >Lazy loading fox page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/webComponents/Project/index.html"
+                title="Curso B&aacutesico de Web Components con JavaScript"
+                >Web components project page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/otherProjects/javascript-infinite-scroll/index.html"
+                title="Testing Vanilla JavaScript infinite scroll"
+                >Testing Vanilla JavaScript infinite scroll</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/tailwindCSS/index.html"
+                title="Testing some tailwind features"
+                >Tailwind awful example</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/tailwind_page/index.html"
+                title="Responsive design with tailwind"
+                >Tailwind beautiful page</a
+              >
+            </li>
           </ul>
-          
         </details>
-        <details class="lista"> 
+        <details class="lista">
           <summary>React projects</summary>
           <ul>
-            <li class="lista_item"> <a href="./reactTest/" title="Testing re-rendering">Several tests on react</a> </li>
-            <li class="lista_item"> <a href="./reactTypescritpTestCourse/" title="Result of the Typescript and Jest Course">Simple page with login</a> </li>
-            <li class="lista_item"> <a href="./reactBootstrap/" title="Testing Bootstrap and form with controlled components">Bootstrap and form</a> </li>
-            <li class="lista_item"> <a href="./reactAjax/" title="Elevating states and Ajax examples">Temp convertor and Ajax</a> </li>
-            <li class="lista_item"> <a href="./reactHooks/" title="Testing several hooks (including a custom one)">Testing several hooks</a> </li>
-            <li class="lista_item"> <a href="./react-tests/highcharts/" title="Testing Highcharts">Testing Highcharts</a> </li>
-            <li class="lista_item"> <a href="./react-tests/ag-grip/" title="Testing AgGrip">Testing AgGrip</a> </li>
-            <li class="lista_item"> <a href="./battle-of-pokemon/" title="Battle of Pokemon (Origninal idea from Fulltask Labs code challenge)">Battle of Pokemon</a> </li>
-            <li class="lista_item"> <a href="./reactProject/" title="React Course Final Project">React Course Final Project</a> </li>
-            <li class="lista_item"> <a href="./react-tests/inifinite-scroll/" title="React infinite Scroll">React infinite Scroll</a> </li>
-            <li class="lista_item"> <a href="./Udemy/firebase-axios/index.html" title="Project with Firebase, axios and redux">Firebase, axios and redux</a> </li>
-            <li class="lista_item"> <a href="./Udemy/firebase-redux-graphql/index.html" title="Project with Firebase, graphQL and redux">Firebase, graphQL and redux</a> </li>
-            <li class="lista_item"> <a href="./Udemy/mern_blog/index.html" title="MERN project">Mearn Blog</a> </li>
-            <li class="lista_item"> <a href="https://shoppingapp-nu.vercel.app/" title="Next.js project">Shopping app (Next.js)</a> </li>
+            <li class="lista_item">
+              <a href="./reactTest/" title="Testing re-rendering"
+                >Several tests on react</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./reactTypescritpTestCourse/"
+                title="Result of the Typescript and Jest Course"
+                >Simple page with login</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./reactBootstrap/"
+                title="Testing Bootstrap and form with controlled components"
+                >Bootstrap and form</a
+              >
+            </li>
+            <li class="lista_item">
+              <a href="./reactAjax/" title="Elevating states and Ajax examples"
+                >Temp convertor and Ajax</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./reactHooks/"
+                title="Testing several hooks (including a custom one)"
+                >Testing several hooks</a
+              >
+            </li>
+            <li class="lista_item">
+              <a href="./react-tests/highcharts/" title="Testing Highcharts"
+                >Testing Highcharts</a
+              >
+            </li>
+            <li class="lista_item">
+              <a href="./react-tests/ag-grip/" title="Testing AgGrip"
+                >Testing AgGrip</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./battle-of-pokemon/"
+                title="Battle of Pokemon (Origninal idea from Fulltask Labs code challenge)"
+                >Battle of Pokemon</a
+              >
+            </li>
+            <li class="lista_item">
+              <a href="./reactProject/" title="React Course Final Project"
+                >React Course Final Project</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./react-tests/inifinite-scroll/"
+                title="React infinite Scroll"
+                >React infinite Scroll</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./Udemy/firebase-axios/index.html"
+                title="Project with Firebase, axios and redux"
+                >Firebase, axios and redux</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./Udemy/firebase-redux-graphql/index.html"
+                title="Project with Firebase, graphQL and redux"
+                >Firebase, graphQL and redux</a
+              >
+            </li>
+            <li class="lista_item">
+              <a href="./Udemy/mern_blog/index.html" title="MERN project"
+                >Mearn Blog</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="https://shoppingapp-nu.vercel.app/"
+                title="Next.js project"
+                >Shopping app (Next.js)</a
+              >
+            </li>
           </ul>
         </details>
-        <details class="lista"> 
+        <details class="lista">
           <summary>Angular projects</summary>
           <ul>
-          <li class="lista_item"> <a href="https://platzi-store-b0f7a.web.app/home" title="Curso de Angular en Platzi">Platzi-store (Angular SPA)</a> </li>
+            <li class="lista_item">
+              <a
+                href="https://platzi-store-b0f7a.web.app/home"
+                title="Curso de Angular en Platzi"
+                >Platzi-store (Angular SPA)</a
+              >
+            </li>
+            <li class="lista_item">
+              <a href="./Udemy/angular20/browser/index.html"
+                >Angular 20 operis</a
+              >
+            </li>
           </ul>
         </details>
-        <details class="lista"> 
+        <details class="lista">
           <summary>Others</summary>
           <ul>
-          <li class="lista_item"> <a href="./powerBi/index.html" title="Diferentes cursos de Power Bi">Various Power BI reports</a> </li>
-          <li class="lista_item"> <a href="./design/index.html" title="Escuela de diseño gr&aacute;fico">Various Graphic design projects</a> </li>
-          <li class="lista_item"> <a href="https://www.notion.so/Personal-Home-2391032d83bc48d1875f31fafbb9bcc5" title="Curso de Sistemas de Diseño de platzi">Design system home page (on notion.com)</a> </li>
-          <li class="lista_item"> <a href="./projects/platziConfHawaii/index.html" title="Curso de Bootstrap en Platzi">Platzi conf Hawaii (Bootstrap)</a> </li>
-          <li class="lista_item"> <a href="./projects/tvify(jQuery)/index.html" title="Curso de JS y jQuery en Platzi">TVify (jQuery)</a> </li>
-          <li class="lista_item"> <a href="https://nestjsapp-1zju.onrender.com/graphql" target="_blank" title="GraphQL server">GraphQL server</a> </li>
-          <li class="lista_item"> <a href="./projects/otherProjects/ionic/index.html" target="_blank" title="GraphQL server">Ionic web</a> </li>
-          <details class="lista lista2">
-            <summary>HTML Emails</summary>
-            <ul>
-              <li class="lista_item"> <a href="./projects/Email/FromResponsiveHTMLEmailChannel/indexRemoteIMGs.html" title="Responsive Email">Responsive Email Template</a> </li>
-              <li class="lista_item"> <a href="./projects/Email/sailChimp/index.html" title="SailChimp Email Template">SailChimp Email Template</a> </li>
-            </ul>
-          </details>
+            <li class="lista_item">
+              <a
+                href="./powerBi/index.html"
+                title="Diferentes cursos de Power Bi"
+                >Various Power BI reports</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./design/index.html"
+                title="Escuela de diseño gr&aacute;fico"
+                >Various Graphic design projects</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="https://www.notion.so/Personal-Home-2391032d83bc48d1875f31fafbb9bcc5"
+                title="Curso de Sistemas de Diseño de platzi"
+                >Design system home page (on notion.com)</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/platziConfHawaii/index.html"
+                title="Curso de Bootstrap en Platzi"
+                >Platzi conf Hawaii (Bootstrap)</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/tvify(jQuery)/index.html"
+                title="Curso de JS y jQuery en Platzi"
+                >TVify (jQuery)</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="https://nestjsapp-1zju.onrender.com/graphql"
+                target="_blank"
+                title="GraphQL server"
+                >GraphQL server</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/otherProjects/ionic/index.html"
+                target="_blank"
+                title="GraphQL server"
+                >Ionic web</a
+              >
+            </li>
+            <details class="lista lista2">
+              <summary>HTML Emails</summary>
+              <ul>
+                <li class="lista_item">
+                  <a
+                    href="./projects/Email/FromResponsiveHTMLEmailChannel/indexRemoteIMGs.html"
+                    title="Responsive Email"
+                    >Responsive Email Template</a
+                  >
+                </li>
+                <li class="lista_item">
+                  <a
+                    href="./projects/Email/sailChimp/index.html"
+                    title="SailChimp Email Template"
+                    >SailChimp Email Template</a
+                  >
+                </li>
+              </ul>
+            </details>
           </ul>
         </details>
-        <details class="lista"> 
+        <details class="lista">
           <summary>old list</summary>
           <ul>
-            <li class="lista_item"> <a href="./projects/canvas-tag/index.html" title="UCanvas Tag">Trying the Canvas Tag</a> </li>
-            <li class="lista_item"> <a href="./Udemy/index.html" title="Diferentes projectos de cursos de Udemy">Udemy projects</a> </li>
-            <li class="lista_item"> <a href="./uCenfotec/index.html" title="Proyectos del curso Frontend web developed en UCenfotec">UCenfotec Projects Page</a> </li>
-            <li class="lista_item"> <a href="./powerBi/index.html" title="Diferentes cursos de Power Bi">Various Power BI reports</a> </li>
-            <li class="lista_item"> <a href="./design/index.html" title="Escuela de diseño gr&aacute;fico">Various Graphic design projects</a> </li>
-            <li class="lista_item"> <a href="./projects/googleClone/index.html" title="Curso Práctico de HTML y CSS de platzi">Google clon page</a> </li>
-            <li class="lista_item"> <a href="https://www.notion.so/Personal-Home-2391032d83bc48d1875f31fafbb9bcc5" title="Curso de Sistemas de Diseño de platzi">Design system home page (on notion.com)</a> </li>
-            <li class="lista_item"> <a href="./projects/cssGrids/index.html" title="Curso de CSS Grid Layout de platzi">Css grid layout projects page</a> </li>
-            <li class="lista_item"> <a href="./projects/cursoMobileFirst/index.html" title="Curso de Mobile First de platzi">Mobile first project page</a> </li>
-            <li class="lista_item"> <a href="./projects/platziVideo/index.html" title="Curso de Frontend Developer de platzi">Platzi video page</a> </li>
-            <li class="lista_item"> <a href="./projects/js-basic/rock-paper-scissors.html" title="Rock papwer scissors game page">Rock paper scissors</a> </li>
-            <li class="lista_item"> <a href="./projects/otherProjects/rickAndMorthyList/index.html" title="Rick And Morty Characters List">Rick And Morty List</a> </li>
-            <li class="lista_item"> <a href="./projects/platziMediaPlayer/index.html" title="Curso Profesional de JavaScript en Platzi">Platzi Media Player</a> </li>
-            <li class="lista_item"> <a href="./projects/js-basic/promisesExercises/index.html" title="Curso Profesional de JavaScript en Platzi">Top movies page</a> </li>
-            <li class="lista_item"> <a href="./projects/otherProjects/moviesMemoryGame/index.html" title="Movies Memory Game page">Movies memory game</a> </li>
-            <li class="lista_item"> <a href="./projects/100tifico/dist/index.html" title="Curso de Single Page Application con JavaScript Vanilla">Rick And Morty SPA</a> </li>
-            <li class="lista_item"> <a href="./projects/accesibilityCourse/index.html" title="Curso de Accesibilidad Web en Platzi">Portfolio template</a> </li>
-            <li class="lista_item"> <a href="./projects/blog/index.html" title="Curso Pr&aacute;ctico de Maquetaci&oacute;n en CSS en Platzi">Blog page</a> </li>
-            <li class="lista_item"> <a href="./projects/platziGames/html/pagina-principal.html" title="Curso de Preprocesadores CSS en Platzi">PlatziGames home page</a> </li>
-            <li class="lista_item"> <a href="https://platzi-store-b0f7a.web.app/home" title="Curso de Angular en Platzi">Platzi-store (Angular SPA)</a> </li>
-            <li class="lista_item"> <a href="./projects/platziConfHawaii/index.html" title="Curso de Bootstrap en Platzi">Platzi conf Hawaii (Bootstrap)</a> </li>
-            <li class="lista_item"> <a href="./projects/tvify(jQuery)/index.html" title="Curso de JS y jQuery en Platzi">TVify (jQuery)</a> </li>
-  <!--           <li class="lista_item"> <a href="http://johnender.epizy.com/" title="Curso de Creaci&oacute;n de Tiendas en Línea con WooCommerce en Platzi">John's Store (Wordpress)</a> </li>
+            <li class="lista_item">
+              <a href="./projects/canvas-tag/index.html" title="UCanvas Tag"
+                >Trying the Canvas Tag</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./Udemy/index.html"
+                title="Diferentes projectos de cursos de Udemy"
+                >Udemy projects</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./uCenfotec/index.html"
+                title="Proyectos del curso Frontend web developed en UCenfotec"
+                >UCenfotec Projects Page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./powerBi/index.html"
+                title="Diferentes cursos de Power Bi"
+                >Various Power BI reports</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./design/index.html"
+                title="Escuela de diseño gr&aacute;fico"
+                >Various Graphic design projects</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/googleClone/index.html"
+                title="Curso Práctico de HTML y CSS de platzi"
+                >Google clon page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="https://www.notion.so/Personal-Home-2391032d83bc48d1875f31fafbb9bcc5"
+                title="Curso de Sistemas de Diseño de platzi"
+                >Design system home page (on notion.com)</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/cssGrids/index.html"
+                title="Curso de CSS Grid Layout de platzi"
+                >Css grid layout projects page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/cursoMobileFirst/index.html"
+                title="Curso de Mobile First de platzi"
+                >Mobile first project page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/platziVideo/index.html"
+                title="Curso de Frontend Developer de platzi"
+                >Platzi video page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/js-basic/rock-paper-scissors.html"
+                title="Rock papwer scissors game page"
+                >Rock paper scissors</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/otherProjects/rickAndMorthyList/index.html"
+                title="Rick And Morty Characters List"
+                >Rick And Morty List</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/platziMediaPlayer/index.html"
+                title="Curso Profesional de JavaScript en Platzi"
+                >Platzi Media Player</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/js-basic/promisesExercises/index.html"
+                title="Curso Profesional de JavaScript en Platzi"
+                >Top movies page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/otherProjects/moviesMemoryGame/index.html"
+                title="Movies Memory Game page"
+                >Movies memory game</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/100tifico/dist/index.html"
+                title="Curso de Single Page Application con JavaScript Vanilla"
+                >Rick And Morty SPA</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/accesibilityCourse/index.html"
+                title="Curso de Accesibilidad Web en Platzi"
+                >Portfolio template</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/blog/index.html"
+                title="Curso Pr&aacute;ctico de Maquetaci&oacute;n en CSS en Platzi"
+                >Blog page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/platziGames/html/pagina-principal.html"
+                title="Curso de Preprocesadores CSS en Platzi"
+                >PlatziGames home page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="https://platzi-store-b0f7a.web.app/home"
+                title="Curso de Angular en Platzi"
+                >Platzi-store (Angular SPA)</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/platziConfHawaii/index.html"
+                title="Curso de Bootstrap en Platzi"
+                >Platzi conf Hawaii (Bootstrap)</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/tvify(jQuery)/index.html"
+                title="Curso de JS y jQuery en Platzi"
+                >TVify (jQuery)</a
+              >
+            </li>
+            <!--           <li class="lista_item"> <a href="http://johnender.epizy.com/" title="Curso de Creaci&oacute;n de Tiendas en Línea con WooCommerce en Platzi">John's Store (Wordpress)</a> </li>
             <li class="lista_item"> <a href="http://johnender2.epizy.com/" title="Cursos Pr&aacute;ctico y Profesional de Wordpress en Platzi">John's Gifts (Wordpress)</a> </li> -->
-            <li class="lista_item"> <a href="./projects/lazyLoadingPluginFuntional/" title="Curso manipulacion de DOM de platzi">Lazy loading fox page</a> </li>
-            <li class="lista_item"> <a href="./projects/webComponents/Project/index.html" title="Curso B&aacutesico de Web Components con JavaScript">Web components project page</a> </li>
+            <li class="lista_item">
+              <a
+                href="./projects/lazyLoadingPluginFuntional/"
+                title="Curso manipulacion de DOM de platzi"
+                >Lazy loading fox page</a
+              >
+            </li>
+            <li class="lista_item">
+              <a
+                href="./projects/webComponents/Project/index.html"
+                title="Curso B&aacutesico de Web Components con JavaScript"
+                >Web components project page</a
+              >
+            </li>
           </ul>
         </details>
       </aside>
 
-
       <section class="content">
-        
         <text class="first-paragraph">
-          <h2>Welcome to my <a href="https://github.com/johnender/portafolio" title="Link to portfolio repository">portfolio</a> </h2>
-          <h3>Here you can find links to the projects that I have developed while i was studying on my one.</h3>
-          <h3>There is also a page with some of the certificates that I have obtained.</h3>
-          <br>
+          <h2>
+            Welcome to my
+            <a
+              href="https://github.com/johnender/portafolio"
+              title="Link to portfolio repository"
+              >portfolio</a
+            >
+          </h2>
+          <h3>
+            Here you can find links to the projects that I have developed while
+            i was studying on my one.
+          </h3>
+          <h3>
+            There is also a page with some of the certificates that I have
+            obtained.
+          </h3>
+          <br />
         </text>
 
         <text>
@@ -182,49 +621,111 @@
             <!-- Slides -->
             <div class="swiper-slide">
               <article class="projects-container--card">
-                <button class="project" onclick="window.location.href='./projects/otherProjects/moviesMemoryGame/index.html';">
-                  <figure><img src="./projects/otherProjects/moviesMemoryGame/assets/img/movie-icon-6.png" class="project-img" alt="Movies memory game thumbnail" data-rel="./projects/otherProjects/moviesMemoryGame/index.html">
-                  <figcaption>Memory game</figcaption> </figure>
+                <button
+                  class="project"
+                  onclick="
+                    window.location.href =
+                      './projects/otherProjects/moviesMemoryGame/index.html'
+                  "
+                >
+                  <figure>
+                    <img
+                      src="./projects/otherProjects/moviesMemoryGame/assets/img/movie-icon-6.png"
+                      class="project-img"
+                      alt="Movies memory game thumbnail"
+                      data-rel="./projects/otherProjects/moviesMemoryGame/index.html"
+                    />
+                    <figcaption>Memory game</figcaption>
+                  </figure>
                 </button>
               </article>
             </div>
             <div class="swiper-slide">
               <article class="projects-container--card">
-                <button class="project" onclick="window.location.href='./Udemy/canvas_js_games/game1.html';">
-                  <figure><img src="./Udemy/canvas_js_games/images/spaceShips/cara.webp" class="project-img" alt="Space invaders miniature">
-                  <figcaption>Space invaders</figcaption> </figure>
+                <button
+                  class="project"
+                  onclick="
+                    window.location.href = './Udemy/canvas_js_games/game1.html'
+                  "
+                >
+                  <figure>
+                    <img
+                      src="./Udemy/canvas_js_games/images/spaceShips/cara.webp"
+                      class="project-img"
+                      alt="Space invaders miniature"
+                    />
+                    <figcaption>Space invaders</figcaption>
+                  </figure>
                 </button>
               </article>
             </div>
             <div class="swiper-slide">
               <article class="projects-container--card">
-                <button class="project" onclick="window.location.href='./Udemy/qr/index.html';">
-                  <figure><img src="./images/qr-image.png" class="project-img" alt="QR code generator miniature">
-                  <figcaption>QR code Generator</figcaption> </figure>
+                <button
+                  class="project"
+                  onclick="window.location.href = './Udemy/qr/index.html'"
+                >
+                  <figure>
+                    <img
+                      src="./images/qr-image.png"
+                      class="project-img"
+                      alt="QR code generator miniature"
+                    />
+                    <figcaption>QR code Generator</figcaption>
+                  </figure>
                 </button>
               </article>
             </div>
             <div class="swiper-slide">
               <article class="projects-container--card">
-                <button class="project" onclick="window.location.href='./battle-of-pokemon/';">
-                  <figure><img src="./images/battle-pokemon.png" class="project-img" alt="Battle of Pokemon miniature">
-                  <figcaption>Battle of Pokemon</figcaption> </figure>
+                <button
+                  class="project"
+                  onclick="window.location.href = './battle-of-pokemon/'"
+                >
+                  <figure>
+                    <img
+                      src="./images/battle-pokemon.png"
+                      class="project-img"
+                      alt="Battle of Pokemon miniature"
+                    />
+                    <figcaption>Battle of Pokemon</figcaption>
+                  </figure>
                 </button>
               </article>
             </div>
             <div class="swiper-slide">
               <article class="projects-container--card">
-                <button class="project" onclick="window.location.href='./reactProject/';">
-                  <figure><img src="./images/react_spa.png" class="project-img" alt="Battle of Pokemon miniature">
-                  <figcaption>React SPA project</figcaption> </figure>
+                <button
+                  class="project"
+                  onclick="window.location.href = './reactProject/'"
+                >
+                  <figure>
+                    <img
+                      src="./images/react_spa.png"
+                      class="project-img"
+                      alt="Battle of Pokemon miniature"
+                    />
+                    <figcaption>React SPA project</figcaption>
+                  </figure>
                 </button>
               </article>
             </div>
             <div class="swiper-slide">
-              <article id="page5"  class="projects-container--card">
-                <button class="project" onclick="window.open('https://shoppingapp-nu.vercel.app/', '_blank');">
-                  <figure><img src="./images/shopping_app.jpg" class="project-img" alt="E-commerce project miniature">
-                  <figcaption>E-commerce</figcaption> </figure>
+              <article id="page5" class="projects-container--card">
+                <button
+                  class="project"
+                  onclick="
+                    window.open('https://shoppingapp-nu.vercel.app/', '_blank')
+                  "
+                >
+                  <figure>
+                    <img
+                      src="./images/shopping_app.jpg"
+                      class="project-img"
+                      alt="E-commerce project miniature"
+                    />
+                    <figcaption>E-commerce</figcaption>
+                  </figure>
                 </button>
               </article>
             </div>
@@ -241,7 +742,6 @@
         </div>
         <!-- -------------------------Swiper Ends----------------------------------- -->
 
-        
         <!-- <div class="games">
           <div onclick="window.location.href='./projects/otherProjects/moviesMemoryGame/index.html';" class="pikachu">
           <figure><img class="image" id="sennin" src= "./projects/otherProjects/moviesMemoryGame/assets/img/movie-icon-6.png" alt="Movies memory game thumbnail" title="Movies memory game">
@@ -337,32 +837,27 @@
           </div>
         </section>
  -->
-
       </section>
-
 
       <text class="last-paragraph">
         <h3>As my learning process, this page is work in progress</h3>
       </text>
-      
-      <br>
+
+      <br />
     </main>
-    
+
     <my-footer
-    link1="https://www.facebook.com/"
-    img1="./images/facebook_logos.png"
-    img1Alt="Logo de Facebook"
-    img1Title = "Facebook Profile Link"
-    
-    link2 = "https://www.linkedin.com/in/johnn-hern%C3%A1ndez-delgado-a974bbb3/"
-    img2 = "./images/linkedin-png-logo-5.png"
-    img2Alt = "Logo de LinkedIn"
-    img2Title = "LinkedIn profile link"
+      link1="https://www.facebook.com/"
+      img1="./images/facebook_logos.png"
+      img1Alt="Logo de Facebook"
+      img1Title="Facebook Profile Link"
+      link2="https://www.linkedin.com/in/johnn-hern%C3%A1ndez-delgado-a974bbb3/"
+      img2="./images/linkedin-png-logo-5.png"
+      img2Alt="Logo de LinkedIn"
+      img2Title="LinkedIn profile link"
     ></my-footer>
-    
 
     <!-- Importing the logic for the pagination -->
     <script src="./index.js"></script>
   </body>
-
 </html>
