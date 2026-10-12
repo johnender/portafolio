@@ -629,6 +629,12 @@
       "src": "./certificatesJPG/Complementaria/CodigoFacilito/certificado_bootcamp_premium_python.jpg",
       "alt": "Bootcamp Premium de Python profesional",
       "date": "2025/10/15"
+      },
+      "9": {
+      "name": "10-Bootcamp de Desarrollo de Aplicaciones y Agentes con Azure AI",
+      "src": "./certificatesJPG/Complementaria/CodigoFacilito/certificado_bootcamp_agentes_azure.jpg",
+      "alt": "Bootcamp de Desarrollo de Aplicaciones y Agentes con Azure AI",
+      "date": "2026/10/11"
       }
     }
   },
